@@ -1,0 +1,26 @@
+{
+  "name": "docs.getleon.ai",
+  "description": "Leon's documentation",
+  "author": {
+    "name": "Louis Grenard",
+    "email": "louis.grenard@gmail.com",
+    "url": "https://twitter.com/louistiti_fr"
+  },
+  "license": "MIT",
+  "homepage": "https://docs.getleon.ai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leon-ai/docs.getleon.ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leon-ai/docs.getleon.ai/issues"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.0",
+    "vuepress": "^1.0.0-alpha.30"
+  }
+}
