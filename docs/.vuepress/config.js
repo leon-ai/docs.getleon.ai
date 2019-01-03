@@ -28,7 +28,6 @@ module.exports = {
     }
   },
   plugins: {
-    '@vuepress/last-updated': true,
     '@vuepress/plugin-back-to-top': true
   }
 };
