@@ -14,7 +14,8 @@ module.exports = {
           'demo',
           'motivations',
           'prerequisites',
-          'installation'
+          'installation',
+          'usage'
         ]
       }
     ],
