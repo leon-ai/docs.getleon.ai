@@ -7,12 +7,12 @@ This repository contains the main documentation of Leon. It is available on [doc
 ## Development
 
 ```
-# install dependencies
+# Install dependencies
 npm install
 
-# run in development
+# Run in development
 npm run dev
 
-# build
+# Build
 npm run build 
 ```

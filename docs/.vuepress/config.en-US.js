@@ -10,7 +10,6 @@ module.exports = {
         title: 'Getting Started',
         collapsable: false,
         children: [
-          '',
           'what-is-leon',
           'demo',
           'motivations',
@@ -24,7 +23,6 @@ module.exports = {
         title: 'Documentation',
         collapsable: false,
         children: [
-          '',
           'architecture',
           'glossary',
           'configuration',

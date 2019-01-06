@@ -1,11 +1,11 @@
 module.exports = [
   {
     text: 'Getting Started',
-    link: '/getting-started/'
+    link: '/getting-started/what-is-leon'
   },
   {
     text: 'Documentation',
-    link: '/documentation/'
+    link: '/documentation/architecture'
   },
   {
     text: 'Links',

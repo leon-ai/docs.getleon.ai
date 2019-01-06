@@ -1,11 +1,11 @@
 module.exports = [
   {
     text: 'Débuter',
-    link: '/fr-FR/getting-started/'
+    link: '/fr-FR/getting-started/what-is-leon'
   },
   {
     text: 'Documentation',
-    link: '/fr-FR/documentation/'
+    link: '/fr-FR/documentation/architecture'
   },
   {
     text: 'Liens',
