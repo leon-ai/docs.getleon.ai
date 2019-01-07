@@ -1,19 +1,19 @@
 module.exports = [
   {
-    text: 'Débuter',
-    link: '/fr-FR/getting-started/what-is-leon'
+    text: 'Guide',
+    link: '/fr-FR/'
   },
   {
-    text: 'Documentation',
-    link: '/fr-FR/documentation/architecture'
+    text: 'Manuel',
+    link: '/fr-FR/how-to/'
   },
   {
     text: 'Liens',
     items: [
       { text: 'Roadmap', link: 'https://roadmap.getleon.ai' },
       { text: 'Blog', link: 'https://blog.getleon.ai' },
-      { text: 'Changelog', link: 'https://github.com/leon-ai/leon/blob/develop/CHANGELOG.md' },
-      { text: 'Faire un don', link: 'https://www.paypal.me/louistiti' }
+      { text: 'Changelog', link: 'https://changelog.getleon.ai' },
+      { text: 'Faire un don', link: 'https://donate.getleon.ai' }
     ],
   }
 ];

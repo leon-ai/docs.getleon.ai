@@ -1,3 +1,0 @@
-# Qu'est-ce que Léon ?
-
-WIP...

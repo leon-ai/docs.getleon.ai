@@ -5,27 +5,15 @@ module.exports = {
   editLinkText: 'Éditer cette page sur GitHub',
   nav: require('./nav/nav.fr-FR.js'),
   sidebar: {
-    '/fr-FR/getting-started/': [
+    '/fr-FR/how-to/': false,
+    '/fr-FR/': [
       {
-        title: 'Débuter',
+        title: 'Guide',
         collapsable: false,
         children: [
-          'what-is-leon',
-          'demo',
-          'motivations',
-          'prerequisites',
-          'installation',
-          'usage'
-        ]
-      }
-    ],
-    '/fr-FR/documentation/': [
-      {
-        title: 'Documentation',
-        collapsable: false,
-        children: [
-          'architecture',
+          '',
           'glossary',
+          'architecture',
           'configuration',
           'deployment',
           'offline',
