@@ -22,9 +22,9 @@ WIP...
 
 ## Motivations
 
-1. En tant que développeurs (ou pas), nous **aimons créer** des choses, d'autant plus lorsqu'il s'agit d'**améliorer** notre **quotidien**. Alors plutôt que de construire un projet dédié pour chacune de ces idées, Léon peut nous aider grâce à sa structure de **paquets / modules** (compétences). Nous croyons que c'est toujours mieux que de laisser vos idées prendre la poussière pour toujours, n'est-ce pas ?
-2. Grâce à cette structure générique, **tout le monde** peut **créer** ses propres **modules** et les **partager avec d'autres**. De cette façon, il y a seulement un noyau (pour les gouverner tous).
-3. Léon utilise des **concepts** de l'**IA**, plutôt cool.
+1. En tant que développeurs (ou pas), nous **aimons créer** des choses, d'autant plus lorsqu'il s'agit d'**améliorer** notre **quotidien**. Alors plutôt que de construire un projet dédié pour chacune de ces idées, Léon peut nous aider grâce à sa structure de **paquets / modules** (compétences). Nous pensons que c'est toujours mieux que de laisser vos idées prendre la poussière pour toujours, n'est-ce pas ?
+2. Grâce à cette structure générique, **tout le monde** peut **créer** ses propres **modules** et les **partager**. De cette façon il y a seulement un noyau (pour les gouverner tous).
+3. Léon utilise des **concepts** d'**IA**, plutôt cool.
 4. La **vie privée** est **importante**, vous pouvez configurer Léon pour discuter avec lui **hors ligne**. Vous pouvez déjà correspondre avec lui par **message écrit** sans **aucun service tiers**.
 5. Et enfin parce que l'**open source** c'est génial.
 
@@ -33,7 +33,7 @@ WIP...
 - **[Node.js](https://nodejs.org/) >= 10**  
 > Le noyau de Léon est développé avec le runtime JavaScript Node.js.
 - **npm >= 5**  
-> npm est le gestionnaire de paquets de Node.js. Léon en a besoin pour son arbre de dépendances.
+> npm est le gestionnaire de paquets de Node.js. Léon en a besoin pour l'arbre de dépendances de son noyau.
 - **[Python](https://www.python.org/downloads/) 3.6.x**  
 > Aujourd'hui, les modules de Léon sont écrits en Python.
 - **[Pipenv](https://docs.pipenv.org)**
