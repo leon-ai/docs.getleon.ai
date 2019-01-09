@@ -2,11 +2,11 @@
 
 WIP...
 
-## Unit
+## Unitaire
 
 WIP...
 
-## End-to-End
+## De bout en bout
 
 WIP...
 

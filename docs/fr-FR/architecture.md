@@ -1,3 +1,7 @@
 # Architecture
 
 WIP...
+
+## Scénario
+
+WIP...
