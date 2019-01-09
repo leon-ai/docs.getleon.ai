@@ -10,6 +10,7 @@ module.exports = [
   {
     text: 'Links',
     items: [
+      { text: 'Website', link: 'https://getleon.ai' },
       { text: 'Roadmap', link: 'https://roadmap.getleon.ai' },
       { text: 'Blog', link: 'https://blog.getleon.ai' },
       { text: 'Changelog', link: 'https://changelog.getleon.ai' },
