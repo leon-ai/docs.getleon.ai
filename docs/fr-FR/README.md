@@ -38,7 +38,7 @@ WIP...
 > Aujourd'hui, les modules de Léon sont écrits en Python.
 - **[Pipenv](https://docs.pipenv.org)**
 > Pipenv permet aux modules de Léon d'être exécutés dans un environnement dédié. Pipenv embarque également un gestionnaire de paquets Python pour l'arbre de dépendances des modules de Léon.
-- **OS supported: Linux, macOS and Windows**  
+- **OS supportés: Linux, macOS and Windows**  
 > Devons-nous expliquer celui-ci ? :)
 
 ::: tip

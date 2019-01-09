@@ -38,7 +38,7 @@ WIP...
 > Today, the modules of Leon are only written in Python.
 - **[Pipenv](https://docs.pipenv.org)**
 > Pipenv allows Leon's modules to be executed in a dedicated environment. It also embeds a Python packages manager for the dependencies tree of his modules.
-- **OS supported: Linux, macOS and Windows**
+- **Supported OS: Linux, macOS and Windows**
 > Should we explain that one? :)
 
 ::: tip
