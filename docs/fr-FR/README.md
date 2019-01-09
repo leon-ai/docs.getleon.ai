@@ -22,11 +22,11 @@ WIP...
 
 ## Motivations
 
-1. En tant que développeurs (ou pas), nous aimons créer des choses, d'autant plus lorsqu'il s'agit d'améliorer notre quotidien. Alors plutôt que de construire un projet dédié pour chacune de ces idées, Léon peut nous aider grâce à sa structure de paquets / modules (compétences). Nous croyons que c'est toujours mieux que de laisser vos idées prendre la poussière pour toujours, n'est-ce pas ?
-2. Grâce à cette structure générique, tout le monde peut créer ses propres modules et les partager avec d'autres. De cette façon, il y a seulement un noyau (pour les gouverner tous).
-3. Léon utilise des concepts de l'IA, plutôt cool.
-4. La vie privée est importante, vous pouvez configurer Léon pour discuter avec lui hors ligne. Vous pouvez déjà correspondre avec lui par message écrit sans aucun service tiers.
-5. Et enfin parce que l'open source c'est génial.
+1. En tant que développeurs (ou pas), nous **aimons créer** des choses, d'autant plus lorsqu'il s'agit d'**améliorer** notre **quotidien**. Alors plutôt que de construire un projet dédié pour chacune de ces idées, Léon peut nous aider grâce à sa structure de **paquets / modules** (compétences). Nous croyons que c'est toujours mieux que de laisser vos idées prendre la poussière pour toujours, n'est-ce pas ?
+2. Grâce à cette structure générique, **tout le monde** peut **créer** ses propres **modules** et les **partager avec d'autres**. De cette façon, il y a seulement un noyau (pour les gouverner tous).
+3. Léon utilise des **concepts** de l'**IA**, plutôt cool.
+4. La **vie privée** est **importante**, vous pouvez configurer Léon pour discuter avec lui **hors ligne**. Vous pouvez déjà correspondre avec lui par **message écrit** sans **aucun service tiers**.
+5. Et enfin parce que l'**open source** c'est génial.
 
 ## Prérequis
 
