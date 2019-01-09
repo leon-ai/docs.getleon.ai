@@ -2,7 +2,7 @@ module.exports = {
   base: '/',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/assets/img/favicon.png' }],
-    ['meta', { name: 'theme-color', content: '#0071F0' }]
+    ['meta', { name: 'theme-color', content: '#1c75bd' }]
   ],
   locales: {
     '/': {
