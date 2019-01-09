@@ -13,7 +13,7 @@ If you want to, Leon can communicate with you offline to protect your privacy.
 You can think about him as a second brain.
 
 ::: tip
-Leon is still pretty young today. If you wish, you can help by [contributing](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
+Leon is still pretty young today. If you wish, you can help by [contributing](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
 :::
 
 ## Demo
@@ -30,9 +30,20 @@ WIP...
 
 ## Prerequisites
 
-You can read the How To section to install these prerequisites...
+- **[Node.js](https://nodejs.org/) >= 10**
+> The core of Leon is developed on the top of the Node.js JavaScript runtime.
+- **npm >= 5**
+> npm is the packages manager of Node.js, Leon needs it for the dependencies tree.
+- **[Python](https://www.python.org/downloads/) 3.6.x**
+> Today, the modules of Leon are only written in Python.
+- **[Pipenv](https://docs.pipenv.org)**
+> Pipenv allows Leon's modules to be executed in a dedicated environment. It also embeds a Python packages manager for the dependencies tree of his modules.
+- **OS supported: Linux, macOS and Windows**
+> Should we explain that one? :)
 
-WIP...
+::: tip
+You can read the [How To](/how-to/) section to install these prerequisites.
+:::
 
 ## Installation
 

@@ -30,9 +30,20 @@ WIP...
 
 ## Prérequis
 
-Vous pouvez suivre le manuel pour installer ces prérequis...
+- **[Node.js](https://nodejs.org/) >= 10**  
+> Le noyau de Léon est développé avec le runtime JavaScript Node.js.
+- **npm >= 5**  
+> npm est le gestionnaire de paquets de Node.js. Léon en a besoin pour son arbre de dépendances.
+- **[Python](https://www.python.org/downloads/) 3.6.x**  
+> Aujourd'hui, les modules de Léon sont écrits en Python.
+- **[Pipenv](https://docs.pipenv.org)**
+> Pipenv permet aux modules de Léon d'être exécutés dans un environnement dédié. Pipenv embarque également un gestionnaire de paquets Python pour l'arbre de dépendances des modules de Léon.
+- **OS supported: Linux, macOS and Windows**  
+> Devons-nous expliquer celui-ci ? :)
 
-WIP...
+::: tip
+Vous pouvez suivre le [manuel](/fr-FR/how-to/) pour installer ces prérequis.
+:::
 
 ## Installation
 
