@@ -2,7 +2,7 @@
 
 ## Qu'est-ce que Léon ?
 
-Léon est un assistant personnel open-source qui peut vivre sur votre serveur.
+Léon est un assistant personnel open source qui peut vivre sur votre serveur.
 
 Il fait des choses lorsque vous lui demandez.
   
@@ -26,7 +26,7 @@ WIP...
 2. Grâce à cette structure générique, tout le monde peut créer ses propres modules et les partager avec d'autres. De cette façon, il y a seulement un noyau (pour les gouverner tous).
 3. Léon utilise des concepts de l'IA, plutôt cool.
 4. La vie privée est importante, vous pouvez configurer Léon pour discuter avec lui hors ligne. Vous pouvez déjà correspondre avec lui par message écrit sans aucun service tiers.
-5. Et enfin parce que l'open-source c'est génial.
+5. Et enfin parce que l'open source c'est génial.
 
 ## Prérequis
 
