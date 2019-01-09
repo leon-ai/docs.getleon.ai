@@ -12,7 +12,7 @@ If you want to, Leon can communicate with you offline to protect your privacy.
 
 You can think about him as a second brain.
 
-::: tip  
+::: tip
 Leon is still pretty young today. If you wish, you can help by [contributing](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
 :::
 
