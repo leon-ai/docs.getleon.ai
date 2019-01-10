@@ -5,13 +5,13 @@
 Léon est un assistant personnel open source qui peut vivre sur votre serveur.
 
 Il fait des choses lorsque vous lui demandez.
-  
+
 Vous pouvez lui parler et il peut vous parler.
 Vous pouvez lui écrire et il peut également vous écrire.
 Si vous le voulez, Léon peut communiquer avec vous en étant hors ligne afin de protéger votre vie privée.
-  
+
 Vous pouvez l'imaginer comme étant un deuxième cerveau.
-  
+
 ::: tip
 Léon est encore très jeune aujourd'hui. Si vous le souhaitez, vous pouvez aider en [contributant](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
 :::
@@ -30,15 +30,15 @@ WIP...
 
 ## Prérequis
 
-- **[Node.js](https://nodejs.org/) >= 10**  
+- **[Node.js](https://nodejs.org/) >= 10**
 > Le noyau de Léon est développé avec le runtime JavaScript Node.js.
-- **npm >= 5**  
+- **npm >= 5**
 > npm est le gestionnaire de paquets de Node.js. Léon en a besoin pour l'arbre de dépendances de son noyau.
-- **[Python](https://www.python.org/downloads/) 3.6.x**  
+- **[Python](https://www.python.org/downloads/) 3.6.x**
 > Aujourd'hui, les modules de Léon sont écrits en Python.
 - **[Pipenv](https://docs.pipenv.org)**
 > Pipenv permet aux modules de Léon d'être exécutés dans un environnement dédié. Pipenv embarque également un gestionnaire de paquets Python pour l'arbre de dépendances des modules de Léon.
-- **OS supportés: Linux, macOS et Windows**  
+- **OS supportés: Linux, macOS et Windows**
 > Devons-nous expliquer celui-ci ? :)
 
 ::: tip
