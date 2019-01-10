@@ -47,7 +47,45 @@ You can read the [How To](/how-to/) section to install these prerequisites.
 
 ## Installation
 
-WIP...
+### Download
+
+You have two main options to download Leon:
+
+#### 1. Git
+
+You can clone the [GitHub repository](https://github.com/leon-ai/leon) from different branches.
+
+##### Master Branch
+
+The `master` branch is actually used as a snapshot of the latest release:
+
+```bash
+git clone -b master https://github.com/leon-ai/leon.git leon
+```
+
+##### Develop Branch
+
+The `develop` branch is the default one, this is where the latest changes are merged. Which means on this branch you will get the latest changes in advance but be aware that it will not be as stable as the `master` one:
+
+```bash
+git clone https://github.com/leon-ai/leon.git leon
+```
+
+#### 2. Release Archives
+
+Or you can download the latest release by following [this link](https://github.com/leon-ai/leon/releases/latest).
+
+### Install
+
+Once you have installed the prerequisites and downloaded Leon, you can install:
+
+```bash
+# Go to the project root
+cd leon
+
+# Install
+npm install
+```
 
 ## Usage
 

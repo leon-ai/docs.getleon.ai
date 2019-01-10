@@ -16,7 +16,7 @@ Autrement, vous pouvez télécharger le fichier d'installation de Node.js corres
   
 Assurez-vous que Node.js est bien installé en exécutant la commande suivante :
 
-```sh  
+```bash  
 node --version  
 ```  
   
@@ -42,11 +42,11 @@ Une fois le fichier d'installation exécuté, cochez `Ajouter Python au PATH`, p
   
 Assurez-vous que Python est correctement installé à l'aide de la commande suivante :
 
-```sh
+```bash
 python --version
 ```  
 Ou 
-```sh  
+```bash  
 python3 --version  
 ```
 
@@ -60,7 +60,7 @@ Avant d'installer Pipenv, vérifiez que Python est installé.
 
 [pip](https://pip.pypa.io/en/stable/installing/) est un gestionnaire de paquets pour Python, il permet de télécharger et d'installer les paquets Python. Nous pouvons l'utiliser ici pour installer Pipenv grâce à la commande ci-dessous :
 
-```sh
+```bash
 pip install pipenv --user
 ```
 
@@ -68,7 +68,7 @@ pip install pipenv --user
 
 [Homebrew](https://brew.sh/) est un gestionnaire de paquets pour macOS. Il est facile d'installer vos paquets via cet outil. Pour installer Pipenv, exécutez simplement la commande suivante :
 
-```sh
+```bash
 brew install pipenv
 ```
 
@@ -80,6 +80,6 @@ brew install pipenv
   
 Assurez-vous que Pipenv est proprement installé via la commande suivante :  
   
-```sh  
+```bash  
 pipenv --version  
 ```
