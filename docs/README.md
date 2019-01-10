@@ -113,5 +113,5 @@ npm start
 Basically on that level you can already communicate with him by text and ask him to do things.
 
 ::: tip
-To see what he can do, please refer to the [list of packages](https://github.com/leon-ai/leon/tree/develop/packages).
+To see what he can do, please refer to the [packages list](https://github.com/leon-ai/leon/tree/develop/packages).
 :::
