@@ -18,9 +18,27 @@ WIP...
 
 WIP...
 
+## Expressions
+
+WIP...
+
+## Modules
+
+WIP...
+
 ## NLP
 
 Programmation neuro-linguistique, WIP...
+
+## Paquets
+
+WIP...
+
+## Réponses
+
+[Ici](https://github.com/leon-ai/leon/blob/develop/packages/checker/data/answers/fr.json) est un exemple des réponses françaises du paquet `Checker`.
+
+WIP...
 
 ## STT
 

@@ -2,7 +2,7 @@
 
 ## Qu'est-ce que Léon ?
 
-Léon est un assistant personnel open source qui peut vivre sur votre serveur.
+Léon est un **assistant personnel open source** qui peut vivre sur votre serveur.
 
 Il fait des choses lorsque vous lui demandez.
 
