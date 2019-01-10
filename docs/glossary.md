@@ -61,13 +61,13 @@ Do not hesitate to [contribute](https://github.com/leon-ai/leon/blob/develop/.gi
 
 NLP for (*Natural Language Processing*) helps computers understand, interpret and manipulate human language.
 
-Leon uses it to load the [classifier](/glossary.md#classifier), classify what you tell him and pick-up the right classification by taking decisions he thinks are the most accurate.
+Leon uses it to load the [classifier](/glossary.md#classifier), classify what you tell him and pick-up the right classification by taking decisions he judges are the most accurate.
 
 > Attachment: [server/src/core/nlp.js](https://github.com/leon-ai/leon/blob/develop/server/src/core/nlp.js) *Leon's NLP*.
 
 ## Packages
 
-The Leon's packages contain one or an infinity of [modules](/glossary.md#modules). You can see packages as a category of modules. This is where the [answers](/glossary.md#answers) and [expressions](/glossary.md#expressions) are stored.
+The Leon's packages contain one or an infinity of [modules](/glossary.md#modules). You can consider packages as a category of modules. This is where the [answers](/glossary.md#answers) and [expressions](/glossary.md#expressions) are stored.
 
 > Attachment: [packages/leon](https://github.com/leon-ai/leon/tree/develop/packages/leon) *example of the `Leon` package including modules related to Leon himself*.
 
