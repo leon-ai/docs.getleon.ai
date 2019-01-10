@@ -89,5 +89,31 @@ npm install
 
 ## Utilisation
 
-WIP...
+Veuillez vous assurer que l'installation s'est correctement déroulée à l'aide de cette commande :
+
+```bash
+npm run check
+```
+
+Cette commande vous donne un rapport qui vous permet de voir à quel point Léon est installé / configuré. Ne vous inquiétez pas si vous voyez des avertissements dans le rapport, c'est simplement parce que vous n'avez probablement pas encore [configuré Léon](/fr-FR/configuration.md).
+
+Si le rapport mentionne que *Leon peut fonctionner correctement*, alors vous pouvez construire et lancer Léon :
+
+```bash
+# Construire
+npm run build
+
+# Lancer
+npm start
+
+# Allez sur http://localhost:1337
+# Hourra ! Léon fonctionne
+```
+
+À ce stade vous pouvez déjà correspondre avec Léon par écrit et lui demander des choses.
+
+::: tip
+Pour voir ce qu'il peut faire, merci de vous référer à la [liste des paquets](https://github.com/leon-ai/leon/tree/develop/packages).
+:::
+
 
