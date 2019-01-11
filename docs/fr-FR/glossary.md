@@ -50,13 +50,13 @@ Plus Léon a de modules, plus il devient compétent.
 N'hésitez pas à [contributer](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
 :::
 
-## NLP
+## NLU
 
-NLP pour (*Natural Language Processing* ou *Programmation neuro-linguistique*) aide les machines à comprendre, interpréter et à manipuler le langage humain.
+NLU pour (*Natural Language Processing* ou *Compréhension du langage naturel*) aide les machines à comprendre le langage humain.
 
 Léon l'utilise pour charger le [classifieur](/fr-FR/glossary.md#classifieur), classifier ce que vous lui dites et sélectionner la bonne classification en prenant les décisions qu'il juge être les plus exactes.
 
-> Pièce jointe : [server/src/core/nlp.js](https://github.com/leon-ai/leon/blob/develop/server/src/core/nlp.js) *NLP de Léon*.
+> Pièce jointe : [server/src/core/nlu.js](https://github.com/leon-ai/leon/blob/develop/server/src/core/nlu.js) *NLU de Léon*.
 
 ## Paquets
 
