@@ -23,5 +23,8 @@
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.30",
     "@vuepress/plugin-google-analytics": "^1.0.0-alpha.30",
     "vuepress": "^1.0.0-alpha.30"
+  },
+  "dependencies": {
+    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.30"
   }
 }
