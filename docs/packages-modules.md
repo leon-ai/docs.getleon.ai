@@ -21,3 +21,10 @@ WIP...
 ### Test a Module
 
 WIP...
+
+## Translations
+
+Each translation has its own confidence, etc.
+
+- Expressions, WIP...
+- Answers, WIP..
