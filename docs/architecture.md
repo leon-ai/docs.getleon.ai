@@ -8,7 +8,7 @@ Please make sure you read the [glossary](/glossary.md) to have a better understa
 
 ## Scenario
 
-This scenario describes the steps of the schema above. Please note that most of the interactions are done via WebSockets.
+This scenario describes the steps of the above schema. Please note that most interactions are done through WebSockets.
 
 1. Client (web app, etc.) makes an HTTP request to GET some information about Leon.
 2. [HTTP API](/glossary.md#api) responds information to client.
@@ -22,7 +22,7 @@ This scenario describes the steps of the schema above. Please note that most of 
 7. <i style="opacity: 0;">.</i>
 	- a. User receives string and string is forwarded to [NLU](/glossary.md#nlu).
 	- b. Or user type `Hello!` with his keyboard (and ignores steps 1. to 7.a.). `Hello!` string is forwarded to NLU.
-8. NLU classifies string and pick-up classification.
+8. NLU classifies string and pick up classification.
 9. If [collaborative logger](/collaborative-logger.md) is enabled, classification is sent to collaborative logger.
 10. [Brain](/glossary.md#brain) creates a child process and executes the chosen [module](/glossary.md#modules).
 11. If [synchronizer](/glossary.md#synchronizer) is enabled and module has this option, it synchronizes content.
