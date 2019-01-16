@@ -1,6 +1,6 @@
-# Paquets / Modules
+# Paquets & Modules
 
-## Packages
+## Paquets
 
 La liste complète des paquets est disponible [ici](https://github.com/leon-ai/leon/tree/develop/packages).
 

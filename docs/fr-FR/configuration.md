@@ -7,35 +7,47 @@ WIP...
 - `env1`: WIP...
 - `env2`: WIP...
 
-## TTS
-
-### Flite
+## Voix
 
 WIP...
 
-### Amazon Polly
+### Hors ligne
+
+Merci de suivre [cette section](/fr-FR/offline.md).
+
+### Amazon
 
 WIP...
 
-### Google Cloud TTS
+#### Amazon Polly (TTS)
+
+> Situé dans : `server/src/config/voice/amazon.json`.
 
 WIP...
 
-### Watson TTS
+### Google Cloud
 
 WIP...
 
-## STT
+#### STT & TTS
 
-### DeepSpeech
-
-WIP...
-
-### Google Cloud STT
+> Situé dans : `server/src/config/voice/google-cloud.json`.
 
 WIP...
 
-### Watson STT
+### Watson
+
+WIP...
+
+#### Watson STT
+
+> Situé dans : `server/src/config/voice/watson-stt.json`.
+
+WIP...
+
+#### Watson TTS
+
+> Situé dans : `server/src/config/voice/watson-tts.json`.
 
 WIP...
 

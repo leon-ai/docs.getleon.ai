@@ -1,41 +1,57 @@
 # Configuration
 
-WIP...
+This section helps you to configure options such as giving Leon a voice, understand your voice, etc.
+
+::: warning
+These files should stay on the machine you are working with, never push them to a remote repository. By default, they are already being ignored thanks to the `.gitignore` file.
+:::
 
 ## Environment Variables
 
 - `env1`: WIP...
 - `env2`: WIP...
 
-## TTS
+## Voice
 
-### Flite
+Leon has multiple providers for his STT and TTS. You can configure one (or several) and choose your favorite.
 
-WIP...
+### Offline
 
-### Amazon Polly
+Please follow [this section](/offline.md).
 
-WIP...
-
-### Google Cloud TTS
+### Amazon
 
 WIP...
 
-### Watson TTS
+#### Amazon Polly (TTS)
+
+> Located in `server/src/config/voice/amazon.json`.
 
 WIP...
 
-## STT
-
-### DeepSpeech
+### Google Cloud
 
 WIP...
 
-### Google Cloud STT
+#### STT & TTS
+
+> Located in `server/src/config/voice/google-cloud.json`.
 
 WIP...
 
-### Watson STT
+### Watson
+
+WIP...
+
+#### Watson STT
+
+> Located in `server/src/config/voice/watson-stt.json`.
+
+WIP...
+
+#### Watson TTS
+
+> Located in `server/src/config/voice/watson-tts.json`.
 
 WIP...
 

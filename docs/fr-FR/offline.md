@@ -2,13 +2,17 @@
 
 WIP...
 
+## DeepSpeech (STT)
+
+WIP...
+
 ## Flite (TTS)
 
 WIP...
 
-## DeepSpeech (STT)
-
-WIP...
+::: tip
+Cette voix est... Intéressante :)
+:::
 
 ## Hotword
 

@@ -1,4 +1,4 @@
-# Packages/Modules
+# Packages & Modules
 
 ## Packages
 

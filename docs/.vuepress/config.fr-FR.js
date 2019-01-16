@@ -15,7 +15,6 @@ module.exports = {
           'glossary',
           'architecture',
           'configuration',
-          'deployment',
           'offline',
           'bridges',
           'clients',
