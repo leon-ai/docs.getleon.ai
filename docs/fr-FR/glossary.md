@@ -79,7 +79,7 @@ Chaque [paquet](/fr-FR/glossary.md#paquets) a son propre ensemble de réponses a
 
 STT pour (*Speech-To-Text* ou *Reconnaissance vocale*) transforme un flux audio en chaîne de caractères.
 
-Léon a plusieurs parseurs, vous pouvez en choisir un (ou plusieurs) et le [configurer](/fr-FR/configuration.md#stt).
+Léon a plusieurs parseurs, vous pouvez en choisir un (ou plusieurs) et le [configurer](/fr-FR/configuration.md#voix).
 
 > Pièce jointe : [server/src/stt/stt.js](https://github.com/leon-ai/leon/blob/develop/server/src/stt/stt.js) *STT de Léon*.
 
@@ -95,6 +95,6 @@ Pour chaque module qui inclut cette fonctionnalité, vous pouvez [configurer](/f
 
 TTS pour (*Text-To-Speech* ou *Synthèse vocale*) transforme une chaîne de caractères en flux audio.
 
-Léon a plusieurs synthétiseurs de synthèse vocale, vous pouvez en choisir un (ou plusieurs) et le [configurer](/fr-FR/configuration.md#tts).
+Léon a plusieurs synthétiseurs de synthèse vocale, vous pouvez en choisir un (ou plusieurs) et le [configurer](/fr-FR/configuration.md#voix).
 
 > Pièce jointe : [server/src/tts/tts.js](https://github.com/leon-ai/leon/blob/develop/server/src/tts/tts.js) *TTS de Léon*.

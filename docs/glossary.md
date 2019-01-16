@@ -79,7 +79,7 @@ The full packages list is available [here](https://github.com/leon-ai/leon/tree/
 
 STT for (*Speech-To-Text*) transforms an audio stream (speech) to a string (text).
 
-Leon has several STT parsers, you can choose one (or several) and [configure](/configuration.md#stt) it.
+Leon has several STT parsers, you can choose one (or several) and [configure](/configuration.md#voice) it.
 
 > Attachment: [server/src/stt/stt.js](https://github.com/leon-ai/leon/blob/develop/server/src/stt/stt.js) *Leon's STT*.
 
@@ -95,6 +95,6 @@ For each module that includes this feature, you can [configure](/configuration.m
 
 TTS for (*Text-To-Speech*) transforms a string (text) to an audio stream (speech).
 
-Leon has several TTS synthesizers, you can choose one (or several) and [configure](/configuration.md#tts) it.
+Leon has several TTS synthesizers, you can choose one (or several) and [configure](/configuration.md#voice) it.
 
 > Attachment: [server/src/tts/tts.js](https://github.com/leon-ai/leon/blob/develop/server/src/tts/tts.js) *Leon's TTS*.
