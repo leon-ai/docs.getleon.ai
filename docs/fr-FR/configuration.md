@@ -29,9 +29,9 @@ WIP...
 
 WIP...
 
-#### STT & TTS
-
 > Situé dans : `server/src/config/voice/google-cloud.json`.
+
+#### Google Cloud STT & Google Cloud TTS
 
 WIP...
 
