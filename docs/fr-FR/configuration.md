@@ -72,12 +72,16 @@ IBM Watson a des identifiants pour chaque service STT et chaque service TTS.
 #### Watson STT
 
 1. [Cliquez ici](https://console.bluemix.net/catalog/services/speech-to-text) pour récupérer vos identifiants.
-2. Copiez l'`URL`, `Username` et `Password` dans le fichier Léon suivant : `server/src/config/voice/watson-tts.json`.
+2. Cliquez sur `Create` (ou sur `Sign up to Create` si vous n'avez pas encore de compte).
+3. Cliquez sur `Manage` dans le menu de gauche, ensuite sur `Show Credentials`.
+4. Copiez `API Key` et `URL`, puis collez-les dans le fichier Léon suivant : `server/src/config/voice/watson-stt.json`.
 
 #### Watson TTS
 
 1. [Cliquez ici](https://console.bluemix.net/catalog/services/text-to-speech) pour récupérer vos identifiants.
-2. Copiez l'`URL`, `Username` et `Password` dans le fichier Léon suivant : `server/src/config/voice/watson-tts.json`.
+2. Cliquez sur `Create` (ou sur `Sign up to Create` si vous n'avez pas encore de compte).
+3. Cliquez sur `Manage` dans le menu de gauche, ensuite sur `Show Credentials`.
+4. Copiez `API Key` et `URL`, puis collez-les dans le fichier Léon suivant : `server/src/config/voice/watson-tts.json`.
 
 ## Synchroniseur
 

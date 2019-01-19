@@ -69,12 +69,16 @@ IBM Watson has credentials for each STT service and each TTS service.
 #### Watson STT
 
 1. [Click here](https://console.bluemix.net/catalog/services/speech-to-text) to get your credentials.
-2. Copy the `URL`, `Username` and `Password` to the following Leon's file: `server/src/config/voice/watson-stt.json`.
+2. Click on `Create` (or `Sign up to Create` if you do not have an account yet).
+3. Click on `Manage` in the left menu, then on `Show Credentials`.
+4. Copy `API Key` and `URL`, then paste them to the following Leon's file: `server/src/config/voice/watson-stt.json`.
 
 #### Watson TTS
 
 1. [Click here](https://console.bluemix.net/catalog/services/text-to-speech) to get your credentials.
-2. Copy the `URL`, `Username` and `Password` to the following Leon's file: `server/src/config/voice/watson-tts.json`.
+2. Click on `Create` (or `Sign up to Create` if you do not have an account yet).
+3. Click on `Manage` in the left menu, then on `Show Credentials`.
+4. Copy `API Key` and `URL`, then paste them to the following Leon's file: `server/src/config/voice/watson-tts.json`.
 
 ## Synchronizer
 
