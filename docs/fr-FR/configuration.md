@@ -63,7 +63,11 @@ Avec ce fournisseur, les identifiants sont les mêmes pour le STT et TTS.
 2. Activez l'[API STT](https://console.cloud.google.com/apis/library/speech.googleapis.com) et / ou l'[API TTS](https://console.cloud.google.com/apis/library/texttospeech.googleapis.com).
 3. [Créez une clé de compte service](https://console.cloud.google.com/apis/credentials/serviceaccountkey).
 4. Téléchargez le fichier JSON et copiez son contenu dans le fichier Léon : `server/src/config/voice/google-cloud.json`.
-5. Attribuez la variable d'environnement : `GOOGLE_APPLICATION_CREDENTIALS` avec la valeur : `server/src/config/voice/google-cloud.json`. Ce chemin doit être absolu sur votre machine, ça devrait donc ressembler à : `/my/root/path/server/src/config/voice/google-cloud.json`.
+
+::: tip
+La variable d'environnement `GOOGLE_APPLICATION_CREDENTIALS` est utilisée par Google pour charger les identifiants.
+Léon créé et attribue la valeur de cette variable d'environnement pour vous.
+:::
 
 ### Watson
 

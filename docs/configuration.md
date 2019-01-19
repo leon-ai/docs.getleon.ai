@@ -60,7 +60,11 @@ When using this provider, the credentials are the same for the STT and TTS.
 2. Enable the [STT API](https://console.cloud.google.com/apis/library/speech.googleapis.com) and/or the [TTS API](https://console.cloud.google.com/apis/library/texttospeech.googleapis.com).
 3. [Create a service account key](https://console.cloud.google.com/apis/credentials/serviceaccountkey).
 4. Download the JSON file and copy its content to the: `server/src/config/voice/google-cloud.json` Leon's file.
-5. Set the environment variable: `GOOGLE_APPLICATION_CREDENTIALS` to: `server/src/config/voice/google-cloud.json`. This path must be absolute on your machine, so it should be something like: `/my/root/path/server/src/config/voice/google-cloud.json`.
+
+::: tip
+The `GOOGLE_APPLICATION_CREDENTIALS` environment variable is used by Google to load the credentials.
+Leon creates and set the value of this environment variable for you.
+:::
 
 ### Watson
 
