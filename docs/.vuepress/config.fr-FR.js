@@ -5,7 +5,15 @@ module.exports = {
   editLinkText: 'Éditer cette page sur GitHub',
   nav: require('./nav/nav.fr-FR.js'),
   sidebar: {
-    '/fr-FR/how-to/': false,
+    '/fr-FR/how-to/': [
+      {
+        title: 'Manuel',
+        collapsable: false,
+        children: [
+          ''
+        ]
+      }
+    ],
     '/fr-FR/': [
       {
         title: 'Guide',
