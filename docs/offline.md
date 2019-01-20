@@ -29,7 +29,7 @@ Then in your `.env` file, set `LEON_STT=true` and `LEON_STT_PROVIDER=deepspeech`
 
 ::: tip
 Leon uses the CPU version by default.
-You can download the GPU version to make the recognition faster, with: `npm install deepspeech-gpu`.
+You can download the GPU version to make the recognition faster with: `npm install deepspeech-gpu`.
 To install it correctly on your machine, you can follow [this link](https://medium.com/@taylordenouden/installing-tensorflow-gpu-on-ubuntu-18-04-89a142325138).
 Once it has been installed, Leon automatically detects it and run with the GPU version.
 :::
@@ -62,7 +62,7 @@ The hotword process needs **Node.js 8** to be installed and to run.
 :::
 
 ::: tip
-Use [nvm](/how-to/#how-to-install-node-js) to easily switch between your Node.js versions.
+Use [nvm](/how-to/#using-nvm-recommended) to easily switch between your Node.js versions.
 :::
 
 If you wish to only install the offline hotword, then run the following command:
