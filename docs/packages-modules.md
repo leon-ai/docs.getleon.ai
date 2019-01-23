@@ -10,6 +10,39 @@ Packages contain an infinity of modules. A package is nothing more than a **fold
 
 The full packages list is available [here](https://github.com/leon-ai/leon/tree/develop/packages).
 
+### Directory Structure
+
+Packages are listed in the `packages` directory. We will take the *Video Downloader* package as example.
+
+Note the **package name must be lowercase**.
+
+::: vue
+videodownloader
+├── `config`
+│   ├── config.json
+│   └── config.sample.json
+├── `data`
+│   ├── answers
+│   │   ├── en.json
+│   │   └── fr.json
+│   ├── db
+│   └── expressions
+│       ├── en.json
+│       └── fr.json
+├── `test`
+│   └── youtube.spec.js
+├── README.md
+├── \_\_init\_\_.py
+├── version.txt
+└── youtube.py
+:::
+
+- `packages/videodownloader/config/config.json`: WIP...
+- `packages/videodownloader/config/config.sample.json`: WIP...
+- `packages/videodownloader/data`: WIP...
+
+WIP...
+
 ## Modules
 
 **Modules are the skills of Leon**. When Leon understands what you told him, he triggers a module and returns you the output of that module.
@@ -23,24 +56,35 @@ Today, modules are written in Python but in the future they could also support o
 Creating a module is one of the best way to contribute in Leon! Before doing that, please make sure you review [this document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
 :::
 
-#### Structure
-
-Use tool to generate ASCII tree here, WIP...
-
-Each modules:
+Each module:
 - Is included in a package (e.g. `packages/{PACKAGE NAME}/{MODULE NAME}.py`).
 - Has its own version (e.g. WIP...).
 - Has its own configuration (e.g. WIP...).
 - Has its own dataset (e.g. WIP...).
 - Has its own test (e.g. WIP...).
 
+If your module does not correspond to an existing package, then feel free to create a new package.
+To do so, choose a package name and make sure it follows the [package directory structure](#directory-structure).
+
+#### Naming Convention
+
 WIP...
 
-#### Development
+#### Database
+
+WIP...
+
+#### Utils
+
+WIP...
+
+#### Outputs
 
 WIP...
 
 ### Test a Module
+
+Mention about inline command (execution) and how to write a unit test for the module.
 
 WIP...
 
