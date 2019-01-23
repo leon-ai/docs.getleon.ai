@@ -100,7 +100,9 @@ In each package configuration file, you can add new keys/value as much as you wa
 In this example, they keys `api_key` and `playlist_id` have been added to the *YouTube* module configuration.
 It allows the module to pick the values to request the YouTube API.
 
-You can add any new key/value you want when you create a module. To have access to this file, you can use the [utils.config(key)](https://github.com/leon-ai/leon/blob/develop/bridges/python/utils.py) function to access them.
+You can add any new key/value you want to this file when you create a module. To have access to these properties, you can use the [utils.config(key)](/packages-modules.md#config-key) function.
+
+Options are used when it needs interaction between a module and the Leon's core. It can be used for the [synchronizer](/configuration.md#synchronizer) for example.
 
 ::: tip
 Do not hesitate to take a look at the other modules.
@@ -161,6 +163,16 @@ Description...
 
 ```python
 utils.translate(.....)
+```
+
+#### config(key)
+
+Description...
+
+- `key`: WIP...
+
+```python
+utils.config(.....)
 ```
 
 #### WIP...
