@@ -43,6 +43,25 @@ videodownloader
 
 WIP...
 
+Each package:
+- Has its own version (e.g. WIP...).
+- Has its own configuration (e.g. WIP...).
+- Has its own dataset (e.g. WIP...).
+- Has its own test (e.g. WIP...).
+
+### Configuration
+
+### Dataset
+
+### Translations
+
+Each translation has its own confidence, etc.
+
+- Expressions, WIP...
+- Answers, WIP..
+
+### Versioning
+
 ## Modules
 
 **Modules are the skills of Leon**. When Leon understands what you told him, he triggers a module and returns you the output of that module.
@@ -56,12 +75,7 @@ Today, modules are written in Python but in the future they could also support o
 Creating a module is one of the best way to contribute in Leon! Before doing that, please make sure you review [this document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
 :::
 
-Each module:
-- Is included in a package (e.g. `packages/{PACKAGE NAME}/{MODULE NAME}.py`).
-- Has its own version (e.g. WIP...).
-- Has its own configuration (e.g. WIP...).
-- Has its own dataset (e.g. WIP...).
-- Has its own test (e.g. WIP...).
+Each module is included in a package (e.g. `packages/{PACKAGE NAME}/{MODULE NAME}.py`).
 
 If your module does not correspond to an existing package, then feel free to create a new package.
 To do so, choose a package name and make sure it follows the [package directory structure](#directory-structure).
@@ -70,7 +84,7 @@ To do so, choose a package name and make sure it follows the [package directory 
 
 WIP...
 
-#### Database
+#### Persistent Data
 
 WIP...
 
@@ -87,10 +101,3 @@ WIP...
 Mention about inline command (execution) and how to write a unit test for the module.
 
 WIP...
-
-## Translations
-
-Each translation has its own confidence, etc.
-
-- Expressions, WIP...
-- Answers, WIP..
