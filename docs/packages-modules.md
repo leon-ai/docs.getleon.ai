@@ -135,36 +135,36 @@ Here are the basics steps to create a module. For those steps, we will take a tw
 
 #### 1. Define the Purpose
 
-> - I want to create a tweets grabber module. When I say or write:
-> ```
-> Grab my latest tweets
-> ```
-> - I want Leon tells me my 5 latest tweets with the stats for each.
-> - It seems this module does not correspond to any existing package (category). So I create the Twitter package by creating the `packages/twitter` folder.
-> - To do so, I make sure it follows the [package directory structure](#directory-structure) and contains the required files mentioned in that structure.
+- I want to create a tweets grabber module. When I say or write:
+```
+Grab my latest tweets
+```
+- I want Leon tells me my 5 latest tweets with the stats for each.
+- It seems this module does not correspond to any existing package (category). So I create the Twitter package by creating the `packages/twitter` folder.
+- To do so, I make sure it follows the [package directory structure](#directory-structure) and contains the required files mentioned in that structure.
 
 #### 2. Name Your Module
 
-> - I choose to name my module `Tweets Grabber`.
+- I choose to name my module `Tweets Grabber`.
 
 #### 3. Write the Code
 
-> - To request the Twitter API, I need API credentials. So I set the Twitter API key(s) in the `packages/twitter/config/config.json` file I previously created in the step 1.
-> - In addition, I create the `packages/twitter/tweetsgrabber.py` file and I write the code for my module.
-> - While I'm writing the code, from the project directory I use the following command:
-> ```bash
-> PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py en twitter tweetsgrabber "Grab my latest tweets"
-> # It executes my module
-> ```
+- To request the Twitter API, I need API credentials. So I set the Twitter API key(s) in the `packages/twitter/config/config.json` file I previously created in the step 1.
+- In addition, I create the `packages/twitter/tweetsgrabber.py` file and I write the code for my module.
+- While I'm writing the code, from the project directory I use the following command:
+```bash
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py en twitter tweetsgrabber "Grab my latest tweets"
+# It executes my module
+```
 
 #### 4. Write the Tests
 
-> - Now that I'm satisfied with my module, I create the `packages/twitter/test/tweetsgrabber.spec.js` file.
-> - I write my [module unit tests](#test-a-module) in that file.
+- Now that I'm satisfied with my module, I create the `packages/twitter/test/tweetsgrabber.spec.js` file.
+- I write my [module unit tests](#test-a-module) in that file.
 
 #### 5. Share
 
-> - I share my module to the world by [contributing](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
+- I share my module to the world by [contributing](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
 
 ### Naming Convention
 
