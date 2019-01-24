@@ -12,7 +12,7 @@ The full packages list is available [here](https://github.com/leon-ai/leon/tree/
 
 ### Directory Structure
 
-Packages are listed in the `packages` directory. We will take the *Video Downloader* package as example.
+Packages are listed in the `packages` directory. We will take the [*Video Downloader* package](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) as example.
 
 Note the **package name must be lowercase**.
 
@@ -97,15 +97,15 @@ Let's take the [*Video Downloader* package](https://github.com/leon-ai/leon/tree
 
 In each package configuration file, you can add new keys/value as much as you want.
 
-In this example, they keys `api_key` and `playlist_id` have been added to the *YouTube* module configuration.
+In this example, the keys `api_key` and `playlist_id` have been added to the *YouTube* module configuration.
 It allows the module to pick the values to request the YouTube API.
 
 You can add any new key/value you want to this file when you create a module. To have access to these properties, you can use the [utils.config(key)](/packages-modules.md#config-key) function.
 
-Options are used when it needs interaction between a module and the Leon's core. It can be used for the [synchronizer](/configuration.md#synchronizer) for example.
+Options are used when it needs interaction between a module and the core. It can be used for the [synchronizer](/configuration.md#synchronizer) for example.
 
 ::: tip
-Do not hesitate to take a look at the other modules.
+Do not hesitate to take a look at the other modules to have a better understanding.
 :::
 
 ### Dataset
@@ -122,15 +122,49 @@ Each translation has its own confidence, etc.
 ## Create a Module
 
 ::: tip
-Creating a module is one of the best way to contribute in Leon! Before doing that, please make sure you review [this document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
-
-Don't hesitate to [open an issue](https://github.com/leon-ai/leon/issues/new/choose) if you have any questions.
+- Creating a module is one of the best way to contribute in Leon! Before doing that, please make sure you review [this document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
+- For example, you could think about creating a todo list module *(for such module, the Leon's NLP should be improved)*. Check out the [roadmap](https://roadmap.getleon.ai) to see what is in the pipeline.
+- Don't hesitate to [open an issue](https://github.com/leon-ai/leon/issues/new/choose) if you have any questions.
 :::
 
 Each module is included in a package *(e.g. `packages/{PACKAGE NAME}/{MODULE NAME}.py`)*.
 
-If your module does not correspond to an existing package, then feel free to create a new package.
-To do so, choose a package name and make sure it follows the [package directory structure](#directory-structure).
+### Steps
+
+Here are the basics steps to create a module. For those steps, we will take a tweets grabber module as example.
+
+#### 1. Define the Purpose
+
+> - I want to create a tweets grabber module. When I say or write:
+> ```
+> Grab my latest tweets
+> ```
+> - I want Leon tells me my 5 latest tweets with the stats for each.
+> - It seems this module does not correspond to any existing package (category). So I create the Twitter package by creating the `packages/twitter` folder.
+> - To do so, I make sure it follows the [package directory structure](#directory-structure) and contains the required files mentioned in that structure.
+
+#### 2. Name Your Module
+
+> - I choose to name my module `Tweets Grabber`.
+
+#### 3. Write the Code
+
+> - To request the Twitter API, I need API credentials. So I set the Twitter API key(s) in the `packages/twitter/config/config.json` file I previously created in the step 1.
+> - In addition, I create the `packages/twitter/tweetsgrabber.py` file and I write the code for my module.
+> - While I'm writing the code, from the project directory I use the following command:
+> ```bash
+> PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py en twitter tweetsgrabber "Grab my latest tweets"
+> # It executes my module
+> ```
+
+#### 4. Write the Tests
+
+> - Now that I'm satisfied with my module, I create the `packages/twitter/test/tweetsgrabber.spec.js` file.
+> - I write my [module unit tests](#test-a-module) in that file.
+
+#### 5. Share
+
+> - I share my module to the world by [contributing](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
 
 ### Naming Convention
 
@@ -142,7 +176,17 @@ Leon uses [TinyDB](https://github.com/msiemens/tinydb) to deal with package data
 
 WIP...
 
-### Utils
+### Outputs
+
+WIP...
+
+## Test a Module
+
+Mention about inline command (execution) and how to write a unit test for the module.
+
+WIP...
+
+## Utils Functions
 
 Utils functions are available in [bridges/python/utils.py](https://github.com/leon-ai/leon/blob/develop/bridges/python/utils.py).
 
@@ -154,7 +198,7 @@ import utils
 # utils.myFunc()
 ```
 
-#### translate(code, d = { })
+### translate(code, d = { })
 
 Description...
 
@@ -165,7 +209,40 @@ Description...
 utils.translate(.....)
 ```
 
-#### config(key)
+### output(type, code, speech = '')
+
+Description...
+
+- `type`:
+- `code`:
+- `speech`:
+
+```python
+utils.output(.....)
+```
+
+### finddomains(string)
+
+Description...
+
+- `string`:
+
+```python
+utils.finddomains(.....)
+```
+
+### http(method, url)
+
+Description...
+
+- `method`:
+- `url`:
+
+```python
+utils.http(.....)
+```
+
+### config(key)
 
 Description...
 
@@ -175,25 +252,34 @@ Description...
 utils.config(.....)
 ```
 
+### info()
+
+Description...
+
+```python
+utils.info(.....)
+```
+
+### createdldir()
+
+Description...
+
+```python
+utils.createdldir(.....)
+```
+
+### db(dbtype = 'tinydb')
+
+Description...
+
+- `dbtype`:
+
+```python
+utils.db(.....)
+```
+
 #### WIP...
 
-List all the functions here with a description + usage.
-
-
-Access config file, db
-
-WIP...
-
 ::: tip
-You can also contribute by adding new functions here to make the module creation even better.
+You can also [contribute](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) by improving these functions or by adding new to make the module creation even better.
 :::
-
-### Outputs
-
-WIP...
-
-## Test a Module
-
-Mention about inline command (execution) and how to write a unit test for the module.
-
-WIP...
