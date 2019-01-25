@@ -53,7 +53,7 @@ This voice is... Quite funny :)
 
 ## Hotword
 
-The hotword node is an independent Node.js process which allows you to listen for the `Leon` hotword. Once Leon hears his name, he will listen for your request.
+The hotword node is an independent Node.js process which allows you to listen for the `Leon` hotword. Once Leon hears his name, he listens for your request.
 
 ### Setup
 

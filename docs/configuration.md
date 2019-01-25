@@ -128,4 +128,4 @@ Pour déterminer si un module comprend cette option, vérifiez simplement la con
 ```
 > *`packages/{PACKAGE NAME}/config/config.json`*
 
-An email will be sent to this email address once Leon has synchronized your content on your Google Drive.
+An email is sent to this email address once Leon has synchronized your content on your Google Drive.

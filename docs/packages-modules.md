@@ -12,7 +12,7 @@ The full packages list is available [here](https://github.com/leon-ai/leon/tree/
 
 ### Directory Structure
 
-Packages are listed in the `packages` directory. We will take the [*Video Downloader* package](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) as example.
+Packages are listed in the `packages` directory. Let's take the [*Video Downloader* package](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) as example.
 
 Note the **package name must be lowercase**.
 
@@ -108,16 +108,57 @@ Options are used when it needs interaction between a module and the core. It can
 Do not hesitate to take a look at the other modules to have a better understanding.
 :::
 
-### Dataset
+### Dataset & Translations
 
-WIP...
+To reply and understand you, Leon needs dataset and translations.
+Indeed, dataset are divided into two parts: expressions and answers.
 
-### Translations
+Each package expressions and each package answers have their own translations files.
 
-Each translation has its own confidence, etc.
+#### Expressions
 
-- Expressions, WIP...
-- Answers, WIP..
+[Expressions](/glossary.md#expressions) are the data used to train the Leon's understanding. When you execute the [training script](/scripts.md), all of the expressions of each module are browsed to generate the [classifier](/glossary.md#classifier).
+
+Note that each module expression has its own confidence.
+
+> ```json
+> {
+>   "whoami": [
+>     "Who are you?",
+>     "How they call you?",
+>     "What's your name?",
+>     "Tell me who you are",
+>     "Introduce yourself"
+>   ]
+> }
+> ```
+
+> E.g. [*Who Am I* module English expressions](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/expressions/en.json) belonging to the *Leon* package.
+
+#### Answers
+
+[Answers](/glossary.md#answers) are the data used by Leon to provide you results binded with the modules output. In addition, answers contains sub properties to have different kind of answers per module.
+
+> ```json
+> {
+>   "greeting": {
+>     "default": [
+>       "Hello there!"
+>     ],
+>     "morning_good_day": [
+>       "Good morning, I hope your day will be full of joy and productivity!"
+>     ],
+>     "morning": [
+>       "Good morning!"
+>     ],
+>     "too_late": [
+>       "Hello! I'm feeling grateful you still talk to me, but you should get some sleep now."
+>     ]
+>   }
+> }
+> ```
+
+> E.g. part of the [*Greeting* module English answers](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/answers/en.json) belonging to the *Leon* package.
 
 ## Create a Module
 
@@ -139,7 +180,7 @@ Here are the basics steps to create a module. For those steps, we will take a tw
 ```
 Grab my latest tweets
 ```
-- I want Leon tells me my 5 latest tweets with the stats for each.
+- I want Leon tells me my 5 latest tweets with the stats of each.
 - It seems this module does not correspond to any existing package (category). So I create the Twitter package by creating the `packages/twitter` folder.
 - To do so, I make sure it follows the [package directory structure](#directory-structure) and contains the required files mentioned in that structure.
 
@@ -177,6 +218,8 @@ Leon uses [TinyDB](https://github.com/msiemens/tinydb) to deal with package data
 WIP...
 
 ### Outputs
+
+Data binding, etc.
 
 WIP...
 

@@ -59,7 +59,7 @@ Before installing Pipenv, make sure you have Python installed.
 
 ### Using pip (Linux/Windows)
 
-[pip](https://pip.pypa.io/en/stable/installing/) is a packages manager for Python, it will allow you to download and install Python packages easily. We can use it here to install Pipenv thanks to the command below:
+[pip](https://pip.pypa.io/en/stable/installing/) is a packages manager for Python, it allows you to download and install Python packages easily. We can use it here to install Pipenv thanks to the command below:
 
 ```bash
 pip install pipenv --user
