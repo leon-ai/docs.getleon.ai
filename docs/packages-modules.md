@@ -111,13 +111,15 @@ Do not hesitate to take a look at the other modules to have a better understandi
 ### Dataset & Translations
 
 To reply and understand you, Leon needs dataset and translations.
-Indeed, dataset are divided into two parts: expressions and answers.
+Indeed, dataset are divided into two parts: [expressions](/glossary.md#expressions) and [answers](/glossary.md#answers).
 
-Each package expressions and each package answers have their own translations files.
+- Every module has their own expressions and answers.
+- Each of these dataset has their own translations.
+- Translations are represented by the filename of these dataset, such as `en.json`, `fr.json`, etc.
 
 #### Expressions
 
-[Expressions](/glossary.md#expressions) are the data used to train the Leon's understanding. When you execute the [training script](/scripts.md), all of the expressions of each module are browsed to generate the [classifier](/glossary.md#classifier).
+Expressions are the data used to train the Leon's understanding. When you execute the [training script](/scripts.md), all of the expressions of each module are browsed to generate the [classifier](/glossary.md#classifier).
 
 Note that each module expression has its own confidence.
 
@@ -137,7 +139,7 @@ Note that each module expression has its own confidence.
 
 #### Answers
 
-[Answers](/glossary.md#answers) are the data used by Leon to provide you results binded with the modules output. In addition, answers contains sub properties to have different kind of answers per module.
+Answers are the data used by Leon to provide you results binded with the modules output. In addition, answers contains sub properties to have different kind of answers per module.
 
 > ```json
 > {
