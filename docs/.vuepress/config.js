@@ -2,17 +2,15 @@ module.exports = {
   base: '/',
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/assets/img/favicon.png' }],
-    ['meta',
-      { name: 'og:type', content: 'website' },
-      { name: 'og:title', content: 'Leon Docs' },
-      { name: 'og:description', content: 'Leon Documentation - Your Open-Source Personal Assistant' },
-      { name: 'og:image', content: 'https://docs.getleon.ai/assets/img/logo_t.png' },
-      { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:title', content: 'Leon Docs' },
-      { name: 'twitter:description', content: 'Leon Documentation - Your Open-Source Personal Assistant' },
-      { name: 'twitter:image', content: 'https://docs.getleon.ai/assets/img/logo_t.png' },
-      { name: 'theme-color', content: '#1c75bd' }
-    ]
+    ['meta', { name: 'og:type', content: 'website' }],
+    ['meta', { name: 'og:title', content: 'Leon Docs' }],
+    ['meta', { name: 'og:description', content: 'Leon Documentation - Your Open-Source Personal Assistant' }],
+    ['meta', { name: 'og:image', content: 'https://docs.getleon.ai/assets/img/logo_t.png' }],
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['meta', { name: 'twitter:title', content: 'Leon Docs' }],
+    ['meta', { name: 'twitter:description', content: 'Leon Documentation - Your Open-Source Personal Assistant' }],
+    ['meta', { name: 'twitter:image', content: 'https://docs.getleon.ai/assets/img/logo_t.png' }],
+    ['meta', { name: 'theme-color', content: '#1c75bd' }]
   ],
   locales: {
     '/': {
