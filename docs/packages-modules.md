@@ -211,9 +211,10 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py e
 
 ### Naming Convention
 
-filename and function name.
-
-WIP...
+- The module filename must contains only lowercase alphabetic characters.
+> E.g. Meaning of Life module filename: `meaningoflife.py`
+- The module function name must be the same as the filename.
+> E.g. Meaning of Life function: `def meaningoflife(string):`
 
 ### Module Function
 
