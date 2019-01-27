@@ -193,7 +193,7 @@ Grab my latest tweets
 #### 3. Write the Code
 
 - To request the Twitter API, I need API credentials. So I set the Twitter API key(s) in the `packages/twitter/config/config.json` file I previously created in the step 1.
-- In addition, I create the `packages/twitter/tweetsgrabber.py` file and I write the code for my module.
+- In addition, I create the `packages/twitter/tweetsgrabber.py` file, define my module function and I write the code for my module.
 - While I'm writing the code, from the project directory I use the following command:
 ```bash
 PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py en twitter tweetsgrabber "Grab my latest tweets"
@@ -211,7 +211,31 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py e
 
 ### Naming Convention
 
+filename and function name.
+
 WIP...
+
+### Module Function
+
+In the module file, you should name the module function by the name of the module. This function takes the input string (query) as parameter.
+
+```
+What is the meaning of life?
+```
+
+```python
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+
+import utils
+
+def meaningoflife(string):
+	"""Leon says what's the meaning of life"""
+	
+	# string: What is the meaning of life?
+
+	return utils.output('end', 'meaning_of_life', utils.translate('meaning_of_life'))
+```
 
 ### Persistent Data
 
@@ -221,7 +245,8 @@ WIP...
 
 ### Outputs
 
-Data binding, output types, etc.
+String interpolation, output types, etc.
+`end` type must be interpreted only one time.
 
 WIP...
 
@@ -243,48 +268,82 @@ import utils
 # utils.myFunc()
 ```
 
-### translate(code, d = { })
+### translate(key, d = { })
 
-Description...
+Randomly pick up a module answer via the given key, do string interpolation via the given data object and return the plain string answer.
 
-- `code`: WIP...
-- `d`: WIP...
+- `key`: module answer key to pick up the right string.
+- `d`: data object for string interpolation.
+
+```json
+{
+  "greeting": {
+    "morning_good_day": [
+      "Good morning, I wish you a very pleasant day!",
+      "Good morning, I hope your day will be full of joy and productivity!"
+    ],
+    "funny_hello": [
+      "%fun_hello%, yes I try to be fun here."
+    ]
+  }
+}
+```
 
 ```python
-utils.translate(.....)
+utils.translate('morning_good_day')
+
+# >> Good morning, I wish you a very pleasant day!
+# OR >> Good morning, I hope your day will be full of joy and productivity!
+```
+
+```python
+fun_hello = 'Heeey'
+utils.translate('funny_hello', { 'fun_hello': fun_hello })
+
+# >> Heeey, yes I try to be fun here.
 ```
 
 ### output(type, code, speech = '')
 
-Description...
+Communicate the module data to the core.
 
-- `type`:
-- `code`:
-- `speech`:
+- `type` (inter|end): output type to inform the core if the module execution is done or not. The `end` type must be interpreted only one time.
+- `code`: output code to provide an additional information about the type of output. Usually used by the modules tests.
+- `speech`: plain string answer.
 
 ```python
-utils.output(.....)
+utils.output('inter', 'just_a_code', 'This is an intermediate answer.')
+
+# >> Object output
+
+utils.output('end', 'done', utils.translate('done_answer'))
+
+# >> Object output
 ```
 
 ### finddomains(string)
 
-Description...
+Find one or multiple domain name(s) substring from a string.
 
-- `string`:
+- `string`: input string.
 
 ```python
-utils.finddomains(.....)
+utils.finddomains('Go on github.com and mozilla.org please')
+
+# >> ['github.com', 'mozilla.org']
 ```
 
 ### http(method, url)
 
-Description...
+Send HTTP request. Use the [Request](http://docs.python-requests.org) Python library and 
 
-- `method`:
-- `url`:
+- `method`: HTTP method.
+- `url`: URL to request.
 
 ```python
-utils.http(.....)
+utils.http('GET', 'https://getleon.ai')
+
+# >> cf. http://docs.python-requests.org/en/master/user/advanced/#request-and-response-objects
 ```
 
 ### config(key)
@@ -322,8 +381,6 @@ Description...
 ```python
 utils.db(.....)
 ```
-
-#### WIP...
 
 ::: tip
 You can also [contribute](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) by improving these functions or by adding new to make the module creation even better.
