@@ -258,10 +258,6 @@ WIP...
 
 ## Utils Functions
 
-::: tip
-You can also [contribute](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) by improving these functions or by adding new ones to make the modules creation even better.
-:::
-
 Utils functions are available in [bridges/python/utils.py](https://github.com/leon-ai/leon/blob/develop/bridges/python/utils.py).
 
 To use the following functions, do not forget to import the Python utils module at the beginning of your Leon's module:
@@ -271,6 +267,10 @@ import utils
 
 # utils.myFunc()
 ```
+
+::: tip
+You can also [contribute](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) by improving these functions or by adding new ones to make the modules creation even better.
+:::
 
 ### translate(key, d = { })
 
