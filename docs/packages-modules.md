@@ -221,7 +221,7 @@ WIP...
 
 ### Outputs
 
-Data binding, etc.
+Data binding, output types, etc.
 
 WIP...
 
