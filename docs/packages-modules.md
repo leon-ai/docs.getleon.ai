@@ -274,7 +274,7 @@ You can also [contribute](https://github.com/leon-ai/leon/blob/develop/.github/C
 
 ### translate(key, d = { })
 
-Randomly pick up a module answer via the given key, do string interpolation via the given data object and return the plain string answer.
+Randomly pick up a module answer from the `packages/{PACKAGE NAME}/data/answers/{LANG}.json` file via the given key, do string interpolation via the given data object and return the plain string answer.
 
 - `key`: module answer key to pick up the right string.
 - `d`: data object for string interpolation.
@@ -318,11 +318,11 @@ Communicate the module data to the core.
 ```python
 utils.output('inter', 'just_a_code', 'This is an intermediate answer.')
 
-# >> Object output
+# >> <object output>
 
 utils.output('end', 'done', utils.translate('done_answer'))
 
-# >> Object output
+# >> <object output>
 ```
 
 ### finddomains(string)
@@ -352,36 +352,53 @@ utils.http('GET', 'https://getleon.ai')
 
 ### config(key)
 
-Description...
+Get a module configuration value from the `packages/{PACKAGE NAME}/config/config.json` file.
 
-- `key`: WIP...
+- `key`: module configuration key.
+
+```json
+{
+  "anawesomemodule": {
+    "api_key": "my-super-api-key",
+    "options": {}
+  }
+}
+```
 
 ```python
-utils.config(.....)
+utils.config('api_key')
+
+# >> my-super-api-key
 ```
 
 ### info()
 
-Description...
+Get information from the current query.
 
 ```python
-utils.info(.....)
+utils.info()
+
+# >> { 'lang': 'en', 'package': 'checker', 'module': 'isitdown' }
 ```
 
 ### createdldir()
 
-Description...
+Create the downloads folder of the current module. When Leon needs to download something, it is saved into that download module folder.
 
 ```python
-utils.createdldir(.....)
+utils.createdldir()
+
+# >> <download module folder path>
 ```
 
 ### db(dbtype = 'tinydb')
 
-Description...
+Create a new dedicated database for a specific package.
 
-- `dbtype`:
+- `dbtype` (tinydb): database type. Only supports [TinyDB](https://tinydb.readthedocs.io) today.
 
 ```python
-utils.db(.....)
+utils.db()
+
+# >> { 'db': db_instance, 'query': Query, 'operations': operations }
 ```
