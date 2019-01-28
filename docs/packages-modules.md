@@ -240,9 +240,12 @@ def meaningoflife(string):
 
 ### Persistent Data
 
-Leon uses [TinyDB](https://github.com/msiemens/tinydb) to deal with package databases. Each package can have its own database and the database can be managed by modules.
+Leon uses [TinyDB](https://github.com/msiemens/tinydb) to deal with packages databases. Each package can have its own database and the database can be managed by modules.
 
-WIP...
+For more information, you can refer to the:
+- [utils.db()](#db-dbtype-tinydb) function.
+- [TinyDB](https://tinydb.readthedocs.io) documentation.
+- [YouTube module](https://github.com/leon-ai/leon/blob/develop/packages/videodownloader/youtube.py) as example.
 
 ### Outputs
 
@@ -340,7 +343,7 @@ utils.finddomains('Go on github.com and mozilla.org please')
 
 ### http(method, url)
 
-Send HTTP request. Use the [Request](http://docs.python-requests.org) Python library and 
+Send HTTP request with the user-agent `Leon/{VERSION NUMBER}`. It uses the [Request](http://docs.python-requests.org) Python library.
 
 - `method`: HTTP method.
 - `url`: URL to request.
@@ -384,7 +387,7 @@ utils.info()
 
 ### createdldir()
 
-Create the downloads folder of the current module. When Leon needs to download something, it is saved into that download module folder.
+Create the downloads folder of the current module. When Leon needs to download something, it is saved into: `downloads/{PACKAGE NAME}/{MODULE NAME}`.
 
 ```python
 utils.createdldir()
