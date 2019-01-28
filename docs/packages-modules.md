@@ -249,10 +249,14 @@ For more information, you can refer to the:
 
 ### Outputs
 
-String interpolation, output types, etc.
-`end` type must be interpreted only one time.
+Every module does something, and the outputs allow the core to understand what the module did and what is the state of its execution.
+This is thanks to the outputs that Leon knows what to do next.
 
-WIP...
+The core understands two types of outputs:
+- `inter`, which are the intermediate outputs. You can have **as many intermediate outputs as you want**.
+- `end`, which is the final output. You must **only have one final output**, that allows Leon to know that the module execution is done.
+
+Outputs are represented by the [utils.output()](#output-type-code-speech) function.
 
 ## Test a Module
 
