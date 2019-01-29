@@ -9,7 +9,7 @@ API for (*Application Programming Interface*) is an interface allowing the commu
 Examples of Leon's APIs:
 - The [HTTP API](https://github.com/leon-ai/leon/tree/develop/server/src/api) allows him to exchange data between the server and client.
 - The [WebSocket API](https://github.com/leon-ai/leon/blob/develop/server/src/core/server.js) allows him to have a bidirectional communication between the client and the server.
-- The [Python library API](https://github.com/leon-ai/leon/blob/develop/bridges/python/utils.py) allows developers to pick-up functions to work on Leon's modules.
+- The [Python library API](https://github.com/leon-ai/leon/blob/develop/bridges/python/utils.py) allows developers to pick up functions to work on Leon's modules.
 
 ## ASR
 
@@ -30,7 +30,7 @@ Each [package](/glossary.md#packages) has their own set of answers with the diff
 
 ## Brain
 
-The Leon's brain is a major part of his core. This is where he executes his [modules](/glossary.md#modules), talk, pick-up sentences, etc.
+The Leon's brain is a major part of his core. This is where he executes his [modules](/glossary.md#modules), talk, pick up sentences, etc.
 
 > Attachment: [server/src/core/brain.js](https://github.com/leon-ai/leon/blob/develop/server/src/core/brain.js) *Leon's brain*.
 
@@ -61,7 +61,7 @@ Do not hesitate to [contribute](https://github.com/leon-ai/leon/blob/develop/.gi
 
 NLU for (*Natural Language Understanding*) helps computers to understand human language.
 
-Leon uses it to load the [classifier](/glossary.md#classifier), classify what you tell him and pick-up the right classification by taking decisions he judges are the most accurate.
+Leon uses it to load the [classifier](/glossary.md#classifier), classify what you tell him and pick up the right classification by taking decisions he judges are the most accurate.
 
 > Attachment: [server/src/core/nlu.js](https://github.com/leon-ai/leon/blob/develop/server/src/core/nlu.js) *Leon's NLU*.
 
