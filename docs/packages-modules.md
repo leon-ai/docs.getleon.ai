@@ -43,7 +43,7 @@ videodownloader
 - [`packages/videodownloader/data/answers`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/answers): folder containing answers translations of each module.
 - [`packages/videodownloader/data/db`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/db): folder containing the package database.
 - [`packages/videodownloader/data/expressions`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/expressions): folder containing understanding dataset of each module. Those dataset are used to train the understanding model.
-- [`packages/videodownloader/test`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/test): folder containing unit tests of each module.
+- [`packages/videodownloader/test`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/test): folder containing tests of each module.
 - [`packages/videodownloader/README.md`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/README.md): file containing package/modules purposes.
 - [`packages/videodownloader/__init__.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/__init__.py): empty file allowing to load the package as a Python package.
 - [`packages/videodownloader/version.txt`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/version.txt): file containing the package version.
@@ -203,7 +203,7 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py e
 #### 4. Write the Tests
 
 - Now that I'm satisfied with my module, I create the `packages/twitter/test/tweetsgrabber.spec.js` file.
-- I write my [module unit tests](#test-a-module) in that file.
+- I write my [module tests](#test-a-module) in that file.
 
 #### 5. Share
 
