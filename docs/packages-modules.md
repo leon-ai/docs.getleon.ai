@@ -260,9 +260,65 @@ Outputs are represented by the [utils.output()](#output-type-code-speech) functi
 
 ## Test a Module
 
-Mention about inline command (execution) and how to write a unit test for the module.
+### End-to-End
 
-WIP...
+Modules come with their own tests. They are represented by a unique file for every module that can be found at: `packages/{PACKAGE NAME}/test/{MODULE NAME}.spec.js`.
+
+As you may noticed, JavaScript is used to test modules because the core is written in JavaScript and we do end-to-end tests by processing a query to the NLU. Then the Leon's brain is executed and returns the output. This is the output, especially the code, that you need to consider.
+
+Leon uses [Jest](https://jestjs.io/) as a testing framework.
+
+Here are two tests examples of the *Is It Down* module:
+
+```js
+// You must use describe() with the following name syntax: {PACKAGE NAME}:{MODULE NAME}
+describe('checker:isitdown', async () => {
+  // Each test must be represented by the test()
+  test('detects invalid domain name', async () => {
+    global.nlu.brain.execute = jest.fn()
+    // The string you want to test
+    global.nlu.process('Check if github is up')
+
+    const [obj] = global.nlu.brain.execute.mock.calls
+    await global.brain.execute(obj[0])
+
+	// Grab the code and verify if it is the expected one
+    expect(global.brain.finalOutput.code).toBe('invalid_domain_name')
+  })
+
+  test('detects down domain name', async () => {
+    global.nlu.brain.execute = jest.fn()
+    global.nlu.process('Check if fakedomainnametotestleon.fr is up')
+
+    const [obj] = global.nlu.brain.execute.mock.calls
+    await global.brain.execute(obj[0])
+
+    expect(global.brain.interOutput.code).toBe('down')
+    expect(global.brain.finalOutput.code).toBe('done')
+  })
+})
+```
+*These tests can be found in [`packages/checker/test/isitdown.spec.js`](https://github.com/leon-ai/leon/blob/develop/packages/checker/test/isitdown.spec.js)*
+
+Once you finished to write your tests, you can execute the following command to run them:
+
+```bash
+npm run test:module {PACKAGE NAME}:{MODULE NAME}
+
+# E.g.
+npm run test:module checker:isitdown
+```
+
+### Inline
+
+To test the behavior of your module while you are creating it, you can run this following command **from the project root**:
+
+```bash
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py {LANG} {PACKAGE NAME} {MODULE NAME} "{QUERY}"
+
+# E.g.
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py en checker isitdown "Check github.com is up"
+```
 
 ## Utils Functions
 
