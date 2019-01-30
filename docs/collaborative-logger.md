@@ -2,17 +2,17 @@
 
 The collaborative logger helps to improve the Leon's understanding. For each query you will submit to Leon, if the collaborative logger is enabled, it sends an HTTP request to an external Leon's server.
 
-Here are the stored data:
+Here are the data that Leon store:
 
-- Leon's version number.
+- His version number.
 - Query (string).
 - Language.
 - Package that Leon picked up.
 - Module that Leon picked up.
-- Leon's confidence.
+- His confidence about his understanding.
 - Current timestamp.
 
-The collaborative logger is **enabled by default**. If you wish to disable it, simply set the `LEON_LOGGER` in your `.env` file to `FALSE` and rerun the server.
+The collaborative logger is **enabled by default**. If you wish to disable it, simply set the environment variable `LEON_LOGGER` in your `.env` file to `FALSE` and rerun the server.
 
 ::: tip
 If you wish to dig into the code, you can find the:
