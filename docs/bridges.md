@@ -11,9 +11,9 @@ Bridges can be found in the `bridges` folder.
 
 ## Python
 
-The Python bridge is the reason why Leon needs Python to work today. Because there is only one bridge available until now.
+The Python bridge is the reason whyLeon needs Python to work today. Because there is only one bridge available until now.
 
 If you wish to execute a Python module standalone, without a child process, run the following command from the project root directory:
 ```bash
-PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py {LANG} {PACKAGE} ${MODULE} "${STRING}"
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py {LANG} {PACKAGE} {MODULE} "{STRING}"
 ```
