@@ -1,6 +1,6 @@
 # Connecteurs
 
-Les connecteurs sont une partie de Léon qui permettent d'avoir une connexion entre son noyau et ses modules. Les connecteurs exécutent les modules de Léon. En effet, le noyau créé un [processus enfant Node.js](https://nodejs.org/api/child_process.html) qui exécute le module donné.
+Les connecteurs sont une partie de Léon qui permettent d'avoir une connexion entre son noyau et ses modules. Les connecteurs exécutent les modules de Léon. En effet, le noyau crée un [processus enfant Node.js](https://nodejs.org/api/child_process.html) qui exécute le module donné.
 
 À l'avenir, nous aimerions avoir la possibilité d'écrire des modules Léon avec d'autres langages et pas seulement avec Python.
 

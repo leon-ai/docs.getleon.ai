@@ -66,7 +66,7 @@ Avec ce fournisseur, les identifiants sont les mêmes pour le STT et TTS.
 
 ::: tip
 La variable d'environnement `GOOGLE_APPLICATION_CREDENTIALS` est utilisée par Google pour charger les identifiants.
-Léon créé et attribue la valeur de cette variable d'environnement pour vous.
+Léon crée et attribue la valeur de cette variable d'environnement pour vous.
 :::
 
 ### Watson

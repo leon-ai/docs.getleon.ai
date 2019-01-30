@@ -24,7 +24,7 @@ Ce scénario décrit les étapes du schéma ci-dessus. Merci de prendre conscien
 	- b. Ou alors, utilisateur écrit `Bonjour !` avec son clavier (et ignore les étapes 1. à 7.a.). Chaîne de caractères `Bonjour ` est envoyée à NLU.
 8. NLU classifie chaîne de caractères et sélectionne classification.
 9. Si [journal collaboratif](/fr-FR/collaborative-logger.md) est activé, classification est envoyée au journal collaboratif.
-10. [Cerveau](/fr-FR/glossary.md#cerveau) créé un processus enfant et exécute le [module](/fr-FR/glossary.md#modules) choisi.
+10. [Cerveau](/fr-FR/glossary.md#cerveau) crée un processus enfant et exécute le [module](/fr-FR/glossary.md#modules) choisi.
 11. Si [synchroniseur](/fr-FR/glossary.md#synchroniseur) est activé et module contient cette option, le contenu se synchronise.
-12. Cerveau créé une [réponse](/fr-FR/glossary.md#reponses) et la transfère au synthétiseur [TTS](/fr-FR/glossary.md#tts).
+12. Cerveau crée une [réponse](/fr-FR/glossary.md#reponses) et la transfère au synthétiseur [TTS](/fr-FR/glossary.md#tts).
 13. Synthétiseur TTS transforme réponse texte (et l'envoie à utilisateur en tant que texte) en buffeur audio qui est joué par client.
