@@ -8,7 +8,7 @@ Clients are what the end users see and explicitly use. This is thanks to the cli
 
 The web app is the only client today. It allows you to interact with Leon via your browser.
 
-Once Leon is installed, you can access to this client by following the next sections.
+Once Leon is installed, you can access to this client by following one of the next sections.
 
 ### Development
 
