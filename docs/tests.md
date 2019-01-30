@@ -6,7 +6,7 @@ In Leon, there are several kinds of tests, let's discover them in the next secti
 
 ## Unit
 
-Software are made of chunks and the purpose of unit tests is to test these chunks of the project.
+Softwares are made of chunks and the purpose of unit tests is to test these chunks of the project.
 
 Leon uses unit testing to test the chunks of his core.
 

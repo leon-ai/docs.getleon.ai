@@ -1,4 +1,4 @@
-# Leon Documentation (WIP)
+# Leon Documentation
 
 ## Overview
 
