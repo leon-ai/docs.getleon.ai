@@ -1,6 +1,6 @@
 # Clients
 
-Client are what the end users see and explicitly use. This is thanks to the clients you can interact with Leon.
+Clients are what the end users see and explicitly use. This is thanks to the clients you can interact with Leon.
 
 ## Web App
 
