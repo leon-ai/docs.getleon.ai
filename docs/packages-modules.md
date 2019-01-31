@@ -309,7 +309,7 @@ npm run test:module {PACKAGE NAME}:{MODULE NAME}
 npm run test:module checker:isitdown
 ```
 
-### Inline
+### On The Fly
 
 To test the behavior of your module while you are creating it, you can run this following command **from the project root**:
 
