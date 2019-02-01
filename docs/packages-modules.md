@@ -12,7 +12,7 @@ The full packages list is available [here](https://github.com/leon-ai/leon/tree/
 
 ### Directory Structure
 
-Packages are listed in the `packages` directory. Let's take the [*Video Downloader* package](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) as example.
+Packages are listed in the `packages` directory. Let's take the [*Video Downloader*](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) package as example.
 
 Note the **package name must be lowercase**.
 
@@ -38,7 +38,7 @@ videodownloader
 :::
 
 - [`packages/videodownloader`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader): package name.
-- `packages/videodownloader/config/config.json`: package configuration. It contains the configuration for each module.
+- `packages/videodownloader/config/config.json`: package configuration. It contains the configuration of each of its module.
 - [`packages/videodownloader/config/config.sample.json`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/config/config.sample.json): sample configuration file. This file is copied during the setup to generate the file above.
 - [`packages/videodownloader/data/answers`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/answers): folder containing answers translations of each module.
 - [`packages/videodownloader/data/db`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/db): folder containing the package database.
@@ -47,7 +47,7 @@ videodownloader
 - [`packages/videodownloader/README.md`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/README.md): file containing package/modules purposes.
 - [`packages/videodownloader/__init__.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/__init__.py): empty file allowing to load the package as a Python package.
 - [`packages/videodownloader/version.txt`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/version.txt): file containing the package version.
-- [`packages/videodownloader/youtube.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/youtube.py): YouTube module.
+- [`packages/videodownloader/youtube.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/youtube.py): *YouTube* module.
 
 Each package:
 - Has its own version.
@@ -77,7 +77,7 @@ Today, modules are written in Python but in the future they could also support o
 
 ### Configuration
 
-Let's take the [*Video Downloader* package](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) again as example.
+Let's take the [*Video Downloader*](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) package again as example.
 ```json
 {
   "youtube": {
@@ -95,14 +95,14 @@ Let's take the [*Video Downloader* package](https://github.com/leon-ai/leon/tree
 ```
 > *`packages/videodownloader/config/config.json`*
 
-In each package configuration file, you can add new keys/value as much as you want.
+In each package configuration file, you can add new keys/value as much as you want while you are creating a module.
 
 In this example, the keys `api_key` and `playlist_id` have been added to the *YouTube* module configuration.
 It allows the module to pick the values to request the YouTube API.
 
-You can add any new key/value you want to this file when you create a module. To have access to these properties, you can use the [utils.config(key)](/packages-modules.md#config-key) function.
+To have access to these properties, you can use the [utils.config(key)](#config-key) function.
 
-Options are used when it needs interaction between a module and the core. It can be used for the [synchronizer](/configuration.md#synchronizer) for example.
+Options are used when it needs interaction between a module and the core. They can be used for the [synchronizer](/configuration.md#synchronizer) for example.
 
 ::: tip
 Do not hesitate to take a look at the other modules to have a better understanding.
@@ -110,8 +110,8 @@ Do not hesitate to take a look at the other modules to have a better understandi
 
 ### Dataset & Translations
 
-To reply and understand you, Leon needs dataset and translations.
-Indeed, dataset are divided into two parts: [expressions](/glossary.md#expressions) and [answers](/glossary.md#answers).
+To reply and understand you, Leon needs his dataset and translations.
+Indeed, his dataset are divided into two parts: [expressions](/glossary.md#expressions) and [answers](/glossary.md#answers).
 
 - Every module has their own expressions and answers.
 - Each of these dataset has their own translations.
@@ -136,6 +136,16 @@ Note that each module expression has its own confidence.
 > ```
 
 > E.g. [*Who Am I* module English expressions](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/expressions/en.json) belonging to the *Leon* package.
+
+##### Fallbacks
+
+Despite the expressions you wrote, it might be possible Leon still does not understand some of them. This is where fallbacks jump in the game.
+
+In the [`core/langs.json`](https://github.com/leon-ai/leon/blob/develop/core/langs.json) file, you can find the list of the supported languages with several properties:
+
+- `short`: the short language code.
+- `min_confidence`: the minimum confidence of the Leon's comprehension. If the confidence is smaller than the given one, Leon replies you he is not sure about what you said. 
+- `fallbacks`: force the module selection. Use the `words` key to determine on which words you want Leon pick up a module. And use the `package` and `module` keys to define which module should be executed on the given words.
 
 #### Answers
 
