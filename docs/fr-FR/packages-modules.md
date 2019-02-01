@@ -37,17 +37,17 @@ videodownloader
 └── youtube.py
 :::
 
-- [`packages/videodownloader`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader): nom du paquet.
-- `packages/videodownloader/config/config.json`: configuration du paquet. Il contient la configuration de tous ses modules.
-- [`packages/videodownloader/config/config.sample.json`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/config/config.sample.json): exemple de fichier de configuration. Ce fichier est copié pendant l'installation afin de générer le fichier ci-dessus.
-- [`packages/videodownloader/data/answers`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/answers): dossier contenant la traduction des réponses de chaque module.
-- [`packages/videodownloader/data/db`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/db): dossier contenant la base de donnée du paquet.
-- [`packages/videodownloader/data/expressions`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/expressions): dossier contenant le jeux de données de compréhension de chaque module. Ces jeux de données sont utilisés pour entraîner le modèle de compréhension.
-- [`packages/videodownloader/test`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/test): dossier contenant les tests de chaque module.
-- [`packages/videodownloader/README.md`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/README.md): fichier contenant les objectifs du paquet et de ses modules.
-- [`packages/videodownloader/__init__.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/__init__.py): fichier vide permettant de charger le paquet comme un paquet Python.
-- [`packages/videodownloader/version.txt`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/version.txt): fichier contenant la version du paquet.
-- [`packages/videodownloader/youtube.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/youtube.py): module *YouTube*.
+- [`packages/videodownloader`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) : nom du paquet.
+- `packages/videodownloader/config/config.json` : configuration du paquet. Il contient la configuration de tous ses modules.
+- [`packages/videodownloader/config/config.sample.json`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/config/config.sample.json) : exemple de fichier de configuration. Ce fichier est copié pendant l'installation afin de générer le fichier ci-dessus.
+- [`packages/videodownloader/data/answers`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/answers) : dossier contenant la traduction des réponses de chaque module.
+- [`packages/videodownloader/data/db`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/db) : dossier contenant la base de donnée du paquet.
+- [`packages/videodownloader/data/expressions`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/expressions) : dossier contenant le jeux de données de compréhension de chaque module. Ces jeux de données sont utilisés pour entraîner le modèle de compréhension.
+- [`packages/videodownloader/test`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/test) : dossier contenant les tests de chaque module.
+- [`packages/videodownloader/README.md`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/README.md) : fichier contenant les objectifs du paquet et de ses modules.
+- [`packages/videodownloader/__init__.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/__init__.py) : fichier vide permettant de charger le paquet comme un paquet Python.
+- [`packages/videodownloader/version.txt`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/version.txt) : fichier contenant la version du paquet.
+- [`packages/videodownloader/youtube.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/youtube.py) : module *YouTube*.
 
 Chaque paquet :
 - À sa propre version.
