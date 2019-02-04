@@ -183,7 +183,7 @@ Les réponses sont les données utilisées par Léon qui permettent de vous four
 - N'hésitez pas à [ouvrir une issue](https://github.com/leon-ai/leon/issues/new/choose) si vous avez la moindre question.
 :::
 
-Chaque module est inclus dans un paquet *(ex. `packages/{PACKAGE NAME}/{MODULE NAME}.py`)*.
+Chaque module est inclus dans un paquet *(ex. `packages/{NOM DU PAQUET}/{NOM DU MODULE}.py`)*.
 
 ### Étapes
 
@@ -272,48 +272,208 @@ Les sorties sont représentées par la fonction [utils.output()](#output-type-co
 
 ## Tester un module
 
-WIP...
+### Bout en bout (fonctionnel)
 
-### Bout en bout
+Les modules ont leur propre tests. Ils sont représentés par un fichier unique pour chaque module que vous pouvez trouver ici : `packages/{NOM DU PAQUET}/test/{NOM DU MODULE}.spec.js`.
 
-WIP...
+Comme vous pouvez le constater, JavaScript est utilisé pour tester les modules parce que le noyau est écrit en JavaScript et nous utilisons les tests de bout en bout (fonctionnels) en exécutant une query au NLU. Puis le cerveau de Léon est exécuté et retourne la sortie. C'est cette sortie, particulièrement le code de celle-ci que vous devez considérer.
+
+Léon utilise [Jest](https://jestjs.io/) comme framework de test.
+
+Voici deux exemples de tests du module *Is It Down* :
+
+```js
+// Vous devez utiliser describe() avec la syntaxe suivante : {PACKAGE NAME}:{MODULE NAME}
+describe('checker:isitdown', async () => {
+  // Chaque test doit être représenté par test()
+  test('detects invalid domain name', async () => {
+    global.nlu.brain.execute = jest.fn()
+    // La chaîne de caractères à tester
+    global.nlu.process('Vérifies si github est en ligne')
+
+    const [obj] = global.nlu.brain.execute.mock.calls
+    await global.brain.execute(obj[0])
+
+	// Récupérer le code et vérifier qu'il est celui attendu
+    expect(global.brain.finalOutput.code).toBe('invalid_domain_name')
+  })
+
+  test('detects down domain name', async () => {
+    global.nlu.brain.execute = jest.fn()
+    global.nlu.process('Vérifies si fakedomainnametotestleon.fr est en ligne')
+
+    const [obj] = global.nlu.brain.execute.mock.calls
+    await global.brain.execute(obj[0])
+
+    expect(global.brain.interOutput.code).toBe('down')
+    expect(global.brain.finalOutput.code).toBe('done')
+  })
+})
+```
+*Ces tests peuvent être trouvés dans [`packages/checker/test/isitdown.spec.js`](https://github.com/leon-ai/leon/blob/develop/packages/checker/test/isitdown.spec.js)*
+
+Une fois que vous avez terminé d'écrire vos tests, vous pouvez exécuter la commande suivante pour les exécuter :
+```bash
+npm run test:module {NOM DU PAQUET}:{NOM DU MODULE}
+
+# Ex.
+npm run test:module checker:isitdown
+```
 
 ### À la volée
 
-WIP...
+Pour tester le comportement de votre module pendant que vous êtes en train de le créer, vous pouvez utiliser la commande suivante **depuis le dossier racine du projet** :
+
+```bash
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py {LANGUE} {NOM DU PAQUET} {NOM DU MODULE} "{QUERY}"
+
+# Ex.
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py fr checker isitdown "Vérifies si github.com est en ligne"
+```
 
 ## Fonctions utiles
 
-WIP...
+Les fonctions utilitaires sont disponibles dans [bridges/python/utils.py](https://github.com/leon-ai/leon/blob/develop/bridges/python/utils.py).
+
+Pour utiliser ces fonctions, n'oubliez pas d'importer le module Python *utils* au début de votre module Léon :
+
+```python
+import utils
+
+# utils.myFunc()
+```
+
+::: tip
+Vous pouvez également [contribuer](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) en améliorant ces fonctions ou en ajoutant de nouvelles afin de rendre la création de modules encore meilleure.
+:::
 
 ### translate(key, d = { })
 
-WIP...
+Sélectionne aléatoirement une réponse du module depuis le fichier `packages/{PACKAGE NAME}/data/answers/{LANG}.json` grâce à la clé donnée. Aussi, cette fonction permet l'interpolation via l'objet de données donné et retourne la réponse sous forme de chaîne de caractères.
+
+- `key`: clé de réponse du module pour sélectionner la bonne chaîne de caractères.
+- `d`: objet de données pour effectuer l'interpolation de chaîne de caractères.
+
+```json
+{
+  "greeting": {
+    "morning_good_day": [
+      "Bonjour, passez une agréable journée !",
+      "Bonjour, j'espère que votre journée sera pleine de joie et de productivité !"
+    ],
+    "funny_hello": [
+      "%fun_hello%, oui j'essaie d'être drôle là."
+    ]
+  }
+}
+```
+
+```python
+utils.translate('morning_good_day')
+
+# >> Bonjour, passez une agréable journée !
+# OR >> Bonjour, j'espère que votre journée sera pleine de joie et de productivité !
+```
+
+```python
+fun_hello = 'Booonnjouuur'
+utils.translate('funny_hello', { 'fun_hello': fun_hello })
+
+# >> Booonnjouuur, oui j'essaie d'être drôle là.
+```
 
 ### output(type, code, speech = '')
 
-WIP...
+Communique les données du module vers le noyau.
+
+- `type` (inter|end): type de sortie afin d'informer le noyau si l'exécution du module est terminée ou non. Le type `end` doit apparaître une fois.
+- `code`: code de sortie fournissant une information additionnel quant au type de sortie. Habituellement utilisé pour les tests de modules.
+- `speech`: réponse sous forme de chaîne de caractères.
+
+```python
+utils.output('inter', 'just_a_code', 'Ceci est une réponse intermédiaire.')
+
+# >> <object output>
+
+utils.output('end', 'done', utils.translate('done_answer'))
+
+# >> <object output>
+```
 
 ### finddomains(string)
 
-WIP...
+Trouve un ou plusieurs nom(s) de domaine à partir d'une chaîne de caractères.
+
+- `string`: chaîne de caractères d'entrée.
+
+```python
+utils.finddomains('Visite github.com et mozilla.org s\'il te plaît')
+
+# >> ['github.com', 'mozilla.org']
+```
 
 ### http(method, url)
 
-WIP...
+Envoie une requête HTTP avec l'agent utilisateur `Leon/{NUMÉRO DE VERSION}`. La librairie Python [Request](http://docs.python-requests.org) est utilisée.
+
+- `method`: méthode HTTP.
+- `url`: URL à requêter.
+
+```python
+utils.http('GET', 'https://getleon.ai')
+
+# >> cf. http://docs.python-requests.org/en/master/user/advanced/#request-and-response-objects
+```
 
 ### config(key)
 
-WIP...
+Récupére la configuration du module depuis le fichier `packages/{PACKAGE NAME}/config/config.json`.
+
+- `key`:clé de configuration du module.
+
+```json
+{
+  "anawesomemodule": {
+    "api_key": "ma-super-clé-api",
+    "options": {}
+  }
+}
+```
+
+```python
+utils.config('api_key')
+
+# >> ma-super-clé-api
+```
 
 ### info()
 
-WIP...
+Retourne les informations de la query actuelle.
+
+```python
+utils.info()
+
+# >> { 'lang': 'fr', 'package': 'checker', 'module': 'isitdown' }
+```
 
 ### createdldir()
 
-WIP...
+Crée le dossier de téléchargements du module courant. Lorsque Léon a besoin de télécharger un contenu, ce dernier est sauvegardé dans : `downloads/{NOM DU PAQUET}/{NOM DU MODULE}`.
+
+```python
+utils.createdldir()
+
+# >> <chemin du dossier de téléchargement du module>
+```
 
 ### db(dbtype = 'tinydb')
 
-WIP...
+Crée une base de données dédiée d'un paquet.
+
+- `dbtype` (tinydb): type de la base de données. Aujourd'hui seulement [TinyDB](https://tinydb.readthedocs.io) est supporté.
+
+```python
+utils.db()
+
+# >> { 'db': db_instance, 'query': Query, 'operations': operations }
+```

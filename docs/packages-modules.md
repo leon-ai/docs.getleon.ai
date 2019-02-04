@@ -334,7 +334,7 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py e
 
 Utils functions are available in [bridges/python/utils.py](https://github.com/leon-ai/leon/blob/develop/bridges/python/utils.py).
 
-To use the following functions, do not forget to import the Python utils module at the beginning of your Leon's module:
+To use the following functions, do not forget to import the Python *utils* module at the beginning of your Leon's module:
 
 ```python
 import utils
@@ -385,7 +385,7 @@ utils.translate('funny_hello', { 'fun_hello': fun_hello })
 
 Communicate the module data to the core.
 
-- `type` (inter|end): output type to inform the core if the module execution is done or not. The `end` type must be interpreted only one time.
+- `type` (inter|end): output type to inform the core if the module execution is done or not. The `end` type must appears one time.
 - `code`: output code to provide an additional information about the type of output. Usually used by the modules tests.
 - `speech`: plain string answer.
 
@@ -426,7 +426,7 @@ utils.http('GET', 'https://getleon.ai')
 
 ### config(key)
 
-Get a module configuration value from the `packages/{PACKAGE NAME}/config/config.json` file.
+Get a module configuration from the `packages/{PACKAGE NAME}/config/config.json` file.
 
 - `key`: module configuration key.
 
@@ -447,7 +447,7 @@ utils.config('api_key')
 
 ### info()
 
-Get information from the current query.
+Returns information from the current query.
 
 ```python
 utils.info()
