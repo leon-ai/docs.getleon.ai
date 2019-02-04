@@ -14,7 +14,7 @@ La liste complète des paquets est disponible [ici](https://github.com/leon-ai/l
 
 Les paquets sont listés dans le répertoire `packages`. Prenons le paquet [*Video Downloader*](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) comme exemple.
 
-Notez que le **nom du paquet doit être en minuscule**.
+Notez que le **nom du paquet doit être en minuscule et en anglais**.
 
 ::: vue
 videodownloader
@@ -152,55 +152,123 @@ Dans le fichier [`core/langs.json`](https://github.com/leon-ai/leon/blob/develop
 
 #### Réponses
 
-WIP...
+Les réponses sont les données utilisées par Léon qui permettent de vous fournir les résultats couplés aux sorties des modules.
+
+> ```json
+> {
+>   "greeting": {
+>     "default": [
+>       "Salutations !"
+>     ],
+>     "morning_good_day": [
+>       "Bonjour, j'espère que votre journée sera pleine de joie et de productivité !"
+>     ],
+>     "morning": [
+>       "Bonjour !"
+>     ],
+>     "too_late": [
+>       "Bonsoir ! Je suis honoré que vous me parliez à cette heure tardive, mais vous devriez aller vous coucher maintenant."
+>     ]
+>   }
+> }
+> ```
+
+> Ex. une partie des [réponses françaises du module *Greeting*](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/answers/fr.json) appartenant au paquet *Leon*.
 
 ### Créer un module
 
 ::: tip
-La création d'un module est l'une des meilleures façons de contribuer à Léon ! Avant toute chose, assurez-vous de prendre connaissance de [ce document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
+- La création d'un module est l'une des meilleures façons de contribuer à Léon ! Avant toute chose, assurez-vous de prendre connaissance de [ce document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
+- Par exemple, vous pouvez imaginer créer un module todo liste *(pour un tel module, le NLP de Léon doit être amélioré)*. Faites un tour sur la [roadmap](https://roadmap.getleon.ai) pour voir ce qu'il y a de prévu..
+- N'hésitez pas à [ouvrir une issue](https://github.com/leon-ai/leon/issues/new/choose) si vous avez la moindre question.
 :::
 
-WIP...
+Chaque module est inclus dans un paquet *(ex. `packages/{PACKAGE NAME}/{MODULE NAME}.py`)*.
 
 ### Étapes
 
-WIP...
+Voici les étapes basiques pour créer un module. Pour ces étapes, nous prendrons un module tweets grabber en tant qu'exemple.
 
 #### 1. Définir l'objectif
 
-WIP...
+- Je veux créer un module tweets grabber. Quand je dis ou lorsque j'écris :
+```
+Récupère mes derniers tweets
+```
+- Je veux que léon me donne mes 5 derniers tweets avec les statistiques de chaque.
+- Il semblerait que ce module ne correspond pas à un paquet (catégorie) existant. Alors je crée le paquet *Twitter* en créant le dossier `packages/twitter`.
+- Pour ce faire, je m'assure de suivre la [structure des dossiers d'un paquet](#structure-des-dossiers) et que cette structure contienne les fichiers requis.
 
 #### 2. Nommer votre module
 
-WIP...
+- Je choisis de nommer mon module `Tweets Grabber`.
 
 #### 3. Écrire le code
 
-WIP...
+- Afin de requêter l'API de Twitter, j'ai besoin des identifiants API. Alors je renseigne les clés de l'API Twitter dans le fichier `packages/twitter/config/config.json` que j'ai précédemment créé à l'étape 1.
+- De plus, je crée le fichier `packages/twitter/tweetsgrabber.py`, définis la fonction de mon module puis j'écris mon code.
+- Pendant que j'écris le code, depuis le répertoire racine du projet, j'utilise cette commande :
+```bash
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py en twitter tweetsgrabber "Grab my latest tweets"
+# Exécute mon module à la volée
+```
 
 #### 4. Écrire les tests
 
-WIP...
+- Maintenant que je suis satisfait avec mon module, je crée le fichier `packages/twitter/test/tweetsgrabber.spec.js`.
+- J'écris les [tests de mon module](#tester-un-module) dans ce fichier.
 
 #### 5. Partager
 
-WIP...
+- Je partage mon module au monde entier en [contribuant](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
 
 ### Convention de nommage
 
-WIP...
+- Le nom de fichier d'un module doit uniquement contenir des lettres minuscules et doit être nommé en anglais.
+> Ex. le nom de fichier du module *Meaning of Life* : `meaningoflife.py`
+- Le nom de fonction d'un module doit être le même que le nom du fichier.
+> Ex. le nom de fonction du module *Meaning of Life* : `def meaningoflife(string):`
 
 ### Fonction du module
 
-WIP...
+Dans le fichier du module, vous devez nommer la fonction par le nom du module. Cette fonction prend la chaîne de caractères d'entrée (query) en paramètre.
+
+```
+Quel est le but de la vie ?
+```
+
+```python
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+
+import utils
+
+def meaningoflife(string):
+	"""Leon says what's the meaning of life"""
+	
+	# string: Quel est le but de la vie ?
+
+	return utils.output('end', 'meaning_of_life', utils.translate('meaning_of_life'))
+```
 
 ### Données persistentes
 
-WIP...
+Léon utilise [TinyDB](https://github.com/msiemens/tinydb) pour gérer les bases de données des paquets. Chaque paquet peut voir sa propre base de données et cette base de données est gérée par les modules.
+
+Pour plus d'informations, veuillez vous référer à :
+- La fonction [utils.db()](#db-dbtype-tinydb).
+- La documentation [TinyDB](https://tinydb.readthedocs.io).
+- L'exemple du [module YouTube](https://github.com/leon-ai/leon/blob/develop/packages/videodownloader/youtube.py).
 
 ### Sorties
 
-WIP...
+Tous les modules font quelque chose, et les sorties permettent au noyau de comprendre ce qu'un module a fait et de connaître l'état de l'exécution du module. C'est grâce aux sorties que Léon sait ce qu'il doit faire ensuite.
+
+Le noyau comprend deux types de sorties :
+- `inter`, qui sont les sorties intermédiaires. Vous pouvez avoir  **autant de sorties intermédiaires que vous souhaitez**.
+- `end`, qui sont les sorties finales.. Vous devez **uniquement avoir une sortie finale**, elle permet à Léon de savoir que l'exécution du module est terminée.
+
+Les sorties sont représentées par la fonction [utils.output()](#output-type-code-speech).
 
 ## Tester un module
 

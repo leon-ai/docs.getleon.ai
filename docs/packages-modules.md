@@ -14,7 +14,7 @@ The full packages list is available [here](https://github.com/leon-ai/leon/tree/
 
 Packages are listed in the `packages` directory. Let's take the [*Video Downloader*](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) package as example.
 
-Note the **package name must be lowercase**.
+Note the **package name must be lowercase and in English**.
 
 ::: vue
 videodownloader
@@ -149,7 +149,7 @@ In the [`core/langs.json`](https://github.com/leon-ai/leon/blob/develop/core/lan
 
 #### Answers
 
-Answers are the data used by Leon to provide you results binded with the modules output. In addition, answers contains sub properties to have different kind of answers per module.
+Answers are the data used by Leon to provide you results binded with the modules outputs. In addition, answers contains sub properties to have different kind of answers per module.
 
 > ```json
 > {
@@ -193,7 +193,7 @@ Here are the basics steps to create a module. For those steps, we will take a tw
 Grab my latest tweets
 ```
 - I want Leon tells me my 5 latest tweets with the stats of each.
-- It seems this module does not correspond to any existing package (category). So I create the Twitter package by creating the `packages/twitter` folder.
+- It seems this module does not correspond to any existing package (category). So I create the *Twitter* package by creating the `packages/twitter` folder.
 - To do so, I make sure it follows the [package directory structure](#directory-structure) and contains the required files mentioned in that structure.
 
 #### 2. Name Your Module
@@ -207,7 +207,7 @@ Grab my latest tweets
 - While I'm writing the code, from the project root directory I use the following command:
 ```bash
 PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py en twitter tweetsgrabber "Grab my latest tweets"
-# It executes my module
+# It executes my module on the fly
 ```
 
 #### 4. Write the Tests
@@ -221,14 +221,14 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py e
 
 ### Naming Convention
 
-- The module filename must contains only lowercase alphabetic characters.
-> E.g. Meaning of Life module filename: `meaningoflife.py`
+- The module filename must contains only lowercase alphabetic characters and must use the English language.
+> E.g. *Meaning of Life* module filename: `meaningoflife.py`
 - The module function name must be the same as the filename.
-> E.g. Meaning of Life function: `def meaningoflife(string):`
+> E.g. *Meaning of Life* function: `def meaningoflife(string):`
 
 ### Module Function
 
-In the module file, you should name the module function by the name of the module. This function takes the input string (query) as parameter.
+In the module file, you must name the module function by the name of the module. This function takes the input string (query) as parameter.
 
 ```
 What is the meaning of life?
@@ -250,7 +250,7 @@ def meaningoflife(string):
 
 ### Persistent Data
 
-Leon uses [TinyDB](https://github.com/msiemens/tinydb) to deal with packages databases. Each package can have its own database and the database can be managed by modules.
+Leon uses [TinyDB](https://github.com/msiemens/tinydb) to deal with packages databases. Each package can have its own database and the database is managed by modules.
 
 For more information, you can refer to the:
 - [utils.db()](#db-dbtype-tinydb) function.
