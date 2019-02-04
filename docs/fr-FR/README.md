@@ -18,7 +18,7 @@ Léon est encore très jeune aujourd'hui. Si vous le souhaitez, vous pouvez aide
 
 ## Démo
 
-WIP...
+Une vidéo est disponible [ici](http://www.youtube.com/watch?v=kXiOD6J0WIk).
 
 ## Motivations
 

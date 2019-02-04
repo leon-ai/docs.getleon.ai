@@ -18,7 +18,7 @@ Leon is still pretty young today. If you wish, you can help by [contributing](ht
 
 ## Demo
 
-WIP...
+A video is available [here](http://www.youtube.com/watch?v=p7GRGiicO1c).
 
 ## Motivations
 
