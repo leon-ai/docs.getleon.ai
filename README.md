@@ -1,4 +1,4 @@
-# Leon Documentation
+# Leon Documentation [![Netlify Status](https://api.netlify.com/api/v1/badges/b11afed8-5947-4cdc-871d-1db5323cad25/deploy-status)](https://app.netlify.com/sites/leon-docs/deploys)
 
 ## Overview
 
