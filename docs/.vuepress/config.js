@@ -10,7 +10,7 @@ module.exports = {
     ['meta', { name: 'twitter:title', content: 'Leon Docs' }],
     ['meta', { name: 'twitter:description', content: 'Leon Documentation - Your Open-Source Personal Assistant' }],
     ['meta', { name: 'twitter:image', content: 'https://getleon.ai/img/logo_t.png' }],
-    ['meta', { name: 'theme-color', content: '#1c75bd' }]
+    ['meta', { name: 'theme-color', content: '#1C75DB' }]
   ],
   locales: {
     '/': {
