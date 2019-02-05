@@ -1,15 +1,15 @@
 module.exports = {
   base: '/',
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/assets/img/favicon.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: 'https://getleon.ai/img/favicon.png' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:title', content: 'Leon Docs' }],
     ['meta', { name: 'og:description', content: 'Leon Documentation - Your Open-Source Personal Assistant' }],
-    ['meta', { name: 'og:image', content: 'https://docs.getleon.ai/assets/img/logo_t.png' }],
+    ['meta', { name: 'og:image', content: 'https://getleon.ai/img/logo_t.png' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:title', content: 'Leon Docs' }],
     ['meta', { name: 'twitter:description', content: 'Leon Documentation - Your Open-Source Personal Assistant' }],
-    ['meta', { name: 'twitter:image', content: 'https://docs.getleon.ai/assets/img/logo_t.png' }],
+    ['meta', { name: 'twitter:image', content: 'https://getleon.ai/img/logo_t.png' }],
     ['meta', { name: 'theme-color', content: '#1c75bd' }]
   ],
   locales: {
@@ -25,7 +25,7 @@ module.exports = {
     }
   },
   themeConfig: {
-    logo: '/assets/img/logo.svg',
+    logo: 'https://getleon.ai/img/logo.svg',
     repo: 'leon-ai/leon',
     docsRepo: 'leon-ai/docs.getleon.ai',
     docsDir: 'docs',
