@@ -4,11 +4,11 @@ module.exports = {
     ['link', { rel: 'icon', type: 'image/png', href: 'https://getleon.ai/img/favicon.png' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:title', content: 'Leon Docs' }],
-    ['meta', { name: 'og:description', content: 'Leon Documentation - Your Open-Source Personal Assistant.' }],
+    ['meta', { name: 'og:description', content: 'Leon Documentation - Main documentation of your open-source personal assistant Leon.' }],
     ['meta', { name: 'og:image', content: 'https://getleon.ai/img/logo_t.png' }],
     ['meta', { name: 'twitter:card', content: 'summary' }],
     ['meta', { name: 'twitter:title', content: 'Leon Docs' }],
-    ['meta', { name: 'twitter:description', content: 'Leon Documentation - Your Open-Source Personal Assistant.' }],
+    ['meta', { name: 'twitter:description', content: 'Leon Documentation - Main documentation of your open-source personal assistant Leon.' }],
     ['meta', { name: 'twitter:image', content: 'https://getleon.ai/img/logo_t.png' }],
     ['meta', { name: 'theme-color', content: '#1C75DB' }]
   ],
@@ -16,12 +16,12 @@ module.exports = {
     '/': {
       lang: 'en-US',
       title: 'Leon Docs',
-      description: 'Leon Documentation - Your Open-Source Personal Assistant.'
+      description: 'Leon Documentation - Main documentation of your open-source personal assistant Leon.'
     },
     '/fr-FR/': {
       lang: 'fr-FR',
       title: 'Léon Docs',
-      description: 'Documentation de Léon - Votre assistant personnel open source.'
+      description: 'Documentation de Léon - Documentation principale de votre assistant personnel open source Léon.'
     }
   },
   themeConfig: {
