@@ -68,7 +68,7 @@ Use [nvm](/how-to/#using-nvm-recommended) to easily switch between your Node.js 
 If you wish to only install the offline hotword, then run the following command:
 
 ```bash
-npm install setup:offline-hotword
+npm run setup:offline-hotword
 ```
 
 ### Usage

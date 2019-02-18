@@ -69,7 +69,7 @@ Utilisez [nvm](/fr-FR/how-to/#en-utilisant-nvm-recommande) pour changer vos vers
 Si vous voulez seulement installer le hotword hors ligne, alors exécutez la commande suivante :
 
 ```bash
-npm install setup:offline-hotword
+npm run setup:offline-hotword
 ```
 
 ### Utilisation
