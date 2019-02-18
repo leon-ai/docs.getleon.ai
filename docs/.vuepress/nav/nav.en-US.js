@@ -19,8 +19,7 @@ module.exports = [
         ]
       },
       { text: 'Contributing', items: [
-          { text: 'Contribute', link: 'https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md' },
-          { text: 'Donate', link: 'https://donate.getleon.ai' }
+          { text: 'Contribute', link: 'https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md' }
         ]
       },
       { text: 'Help', items: [
@@ -28,5 +27,9 @@ module.exports = [
         ]
       }
     ]
+  },
+  {
+    text: 'Donate',
+    link: 'https://donate.getleon.ai'
   }
 ];
