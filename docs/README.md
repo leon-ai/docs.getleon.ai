@@ -23,7 +23,7 @@ A video is available [here](http://www.youtube.com/watch?v=p7GRGiicO1c).
 ## Motivations
 
 1. As developers (or not), we **love creating** things, even more when those things can **help** in our **daily life**. So instead of building a dedicated project for each of those things, Leon can help us with his **packages/modules** (skills) structure. We believe it's better than keeping your awesome ideas in backlog forever, right?
-2. With this generic structure, **everyone** can **create** his own **modules** and **share them**. Therefore there is only one core (to govern all of them).
+2. With this generic structure, **everyone** can **create** his own **modules** and **share them**. Therefore there is only one core (to rule them all).
 3. Leon uses **AI concepts**, which is cool.
 4. **Privacy matters**, you can configure Leon to talk with him **offline**. You can already **text** with him **without** any **third party** services.
 5. Last but not least: **open-source** is great.
