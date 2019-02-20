@@ -12,7 +12,7 @@ This scenario describes the steps of the above schema. Please note that most int
 
 1. Client (web app, etc.) makes an HTTP request to GET some information about Leon.
 2. [HTTP API](/glossary.md#api) responds information to client.
-3. User talks with his microphone.
+3. User talks with their microphone.
 4. <i style="opacity: 0;">.</i>
 	- a. If [hotword](/offline.md#hotword) server is launched, Leon listens (offline) if user is calling him by saying `Leon`.
 	- b. If Leon understands user is calling him, Leon emits a message to the main server via a WebSocket. Now Leon is listening (offline) to user.
@@ -21,7 +21,7 @@ This scenario describes the steps of the above schema. Please note that most int
 6. [STT](/glossary.md#stt) parser transforms wave file to string (`Hello`).
 7. <i style="opacity: 0;">.</i>
 	- a. User receives string and string is forwarded to [NLU](/glossary.md#nlu).
-	- b. Or user type `Hello!` with his keyboard (and ignores steps 1. to 7.a.). `Hello!` string is forwarded to NLU.
+	- b. Or user type `Hello!` with their keyboard (and ignores steps 1. to 7.a.). `Hello!` string is forwarded to NLU.
 8. NLU classifies string and pick up classification.
 9. If [collaborative logger](/collaborative-logger.md) is enabled, classification is sent to collaborative logger.
 10. [Brain](/glossary.md#brain) creates a child process and executes the chosen [module](/glossary.md#modules).
