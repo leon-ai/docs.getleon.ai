@@ -115,3 +115,18 @@ Basically on that level you can already communicate with him by text and ask him
 ::: tip
 To see what he can do, please refer to the [packages list](https://github.com/leon-ai/leon/tree/develop/packages).
 :::
+
+## Docker Installation <Badge text="1.0.0-beta.1+"/>
+
+You can also use Docker to install and run Leon.
+
+```bash
+# Build
+npm run docker:build
+
+# Run 
+npm run docker:run
+
+# Go to http://localhost:1337
+# Hooray! Leon is running
+```

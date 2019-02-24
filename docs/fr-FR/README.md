@@ -116,4 +116,17 @@ npm start
 Pour voir ce qu'il peut faire, merci de vous référer à la [liste des paquets](https://github.com/leon-ai/leon/tree/develop/packages).
 :::
 
+## Installer avec Docker <Badge text="1.0.0-beta.1+"/>
 
+Vous pouvez aussi utiliser Docker pour installer et exécuter Léon.
+
+```bash
+# Construire
+npm run docker:build
+
+# Lancer 
+npm run docker:run
+
+# Allez sur http://localhost:1337
+# Hourra ! Léon fonctionne
+```
