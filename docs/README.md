@@ -4,7 +4,7 @@
 
 Leon is an **open-source personal assistant** who can live on your server.
 
-He does stuff when you ask for it.
+He does stuff when you ask him for.
 
 You can talk to him and he can talk to you.
 You can also text him and he can also text you.
