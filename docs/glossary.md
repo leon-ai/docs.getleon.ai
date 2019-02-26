@@ -4,7 +4,7 @@ Some terms in the docs might be unknown to you; this section should help you ach
 
 ## API
 
-API stands for *Application Programming Interface* and is an interface allowing the communication between different nodes of a project. These nodes can be a server, library, etc.
+API stands for *Application Programming Interface* and it allows the communication between different nodes of a project. These nodes can be a server, library, etc.
 
 Examples of Leon APIs:
 - The [HTTP API](https://github.com/leon-ai/leon/tree/develop/server/src/api) allows him to exchange data between the server and the client.
@@ -87,7 +87,7 @@ Leon has multiple STT parsers; you can choose one (or several) to [configure](/c
 The synchronizer allows you to synchronize your content via different methods (Google Drive, on your current device, etc.)
 restricted by the requested [module](/glossary.md#modules)'s offerings.
 
-You can [configure](/configuration.md#synchronizer) your favorite method for each module supports this feature.
+You can [configure](/configuration.md#synchronizer) your favorite method for each module that supports this feature.
 
 > Attachment: [server/src/core/synchronizer.js](https://github.com/leon-ai/leon/blob/develop/server/src/core/synchronizer.js) *Leon's synchronizer*.
 
