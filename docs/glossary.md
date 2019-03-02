@@ -36,7 +36,7 @@ Leon's brain is a major part of his core. This is where he executes his [modules
 
 ## Classifier
 
-A classifier is a specific model. Once trained, it outputs a result via an algorithm.
+A classifier is a type of model. Once trained, it outputs a result via an algorithm.
 This result is used to make decisions.
 
 Leon uses it to store the outcomes of his [expressions](/glossary.md#expressions) training phase.
