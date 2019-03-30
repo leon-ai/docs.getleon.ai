@@ -257,6 +257,18 @@ For more information, you can refer to the:
 - [TinyDB](https://tinydb.readthedocs.io) documentation.
 - [YouTube module](https://github.com/leon-ai/leon/blob/develop/packages/videodownloader/youtube.py) as example.
 
+### Installing Third Party Python Packages
+
+Leon runs in a virtual environment to ensure that the project's packages/dependencies doesn't conflict with the ones installed system wide.
+
+To install third party packages, kindly follow these steps;
+
+1. Open a terminal window at the `bridges/python` directory.
+2. Perform `pipenv install {PACKAGE NAME}={PACKAGE VERSION}`. Note that it must use a specific package version.
+3. Import the newly installed package in the required module file with `import {PACKAGE NAME}`.
+
+Kindly note that `{PACKAGE NAME}` and `{PACKAGE VERSION}` are placeholders. They should be replaced with the name and version of the actual package you wish to install.
+
 ### Outputs
 
 Every module does something, and the outputs allow the core to understand what the module did and what is the state of its execution.

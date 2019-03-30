@@ -260,6 +260,18 @@ Pour plus d'informations, veuillez vous référer à :
 - La documentation [TinyDB](https://tinydb.readthedocs.io).
 - L'exemple du [module YouTube](https://github.com/leon-ai/leon/blob/develop/packages/videodownloader/youtube.py).
 
+### Installer des paquets Python tiers
+
+Léon tourne dans un environnement virtuel afin d'assurer que les paquets / dépendances du projet ne soient pas en conflit avec ceux installés sur votre système.
+
+Afin d'installer les paquets tiers, veuillez suivre les étapes suivantes :
+
+1. Ouvrez votre terminal au dossier `bridges/python`.
+2. Exécutez `pipenv install {NOM DU PAQUET}={VERSION DU PAQUET}`. Notez qu'il doit y avoir une version spécifique du paquet.
+3. Importez le nouveau paquet installé dans le fichier du module requis via `import {NOM DU PAQUET}`.  
+
+`{NOM DU PAQUET}` et `{VERSION DU PAQUET}` sont des placeholders. N'oubliez pas de les remplacer par le nom et la version du paquet que vous souhaitez installer.
+
 ### Sorties
 
 Tous les modules font quelque chose, et les sorties permettent au noyau de comprendre ce qu'un module a fait et de connaître l'état de l'exécution du module. C'est grâce aux sorties que Léon sait ce qu'il doit faire ensuite.
