@@ -302,7 +302,7 @@ Outputs are represented by the [utils.output()](#output-type-code-speech) functi
 
 Modules come with their own tests. They are represented by a unique file for every module that can be found at: `packages/{PACKAGE NAME}/test/{MODULE NAME}.spec.js`.
 
-As you may noticed, JavaScript is used to test modules because the core is written in JavaScript and we do end-to-end tests by processing a query to the NLU. Then the Leon's brain is executed and returns the output. This is the output, especially the code, that you need to consider.
+As you may noticed, JavaScript is used to test modules because the core is written in JavaScript and we do end-to-end tests by processing a query to the NLU. Then the Leon's brain is executed and returns the output. This is the output, especially the codes that have been interpreted by your module that you need to consider.
 
 Leon uses [Jest](https://jestjs.io/) as a testing framework.
 
@@ -313,26 +313,29 @@ Here are two tests examples of the *Is It Down* module:
 describe('checker:isitdown', async () => {
   // Each test must be represented by the test()
   test('detects invalid domain name', async () => {
-    global.nlu.brain.execute = jest.fn()
-    // The string you want to test
-    global.nlu.process('Check if github is up')
-
-    const [obj] = global.nlu.brain.execute.mock.calls
-    await global.brain.execute(obj[0])
-
-	// Grab the code and verify if it is the expected one
-    expect(global.brain.finalOutput.code).toBe('invalid_domain_name')
+  	global.nlu.brain.execute = jest.fn()
+  	// The string you want to test
+  	await global.nlu.process('Check if github is up')
+  
+  	const [obj] = global.nlu.brain.execute.mock.calls
+  	await global.brain.execute(obj[0])
+  
+    // Grab the accumulated codes and verify if they are the expected ones
+  	expect(global.brain.finalOutput.codes).toIncludeSameMembers(['invalid_domain_name'])
   })
 
   test('detects down domain name', async () => {
-    global.nlu.brain.execute = jest.fn()
-    global.nlu.process('Check if fakedomainnametotestleon.fr is up')
-
-    const [obj] = global.nlu.brain.execute.mock.calls
-    await global.brain.execute(obj[0])
-
-    expect(global.brain.interOutput.code).toBe('down')
-    expect(global.brain.finalOutput.code).toBe('done')
+  	global.nlu.brain.execute = jest.fn()
+  	await global.nlu.process('Check if fakedomainnametotestleon.fr is up')
+  
+  	const [obj] = global.nlu.brain.execute.mock.calls
+  	await global.brain.execute(obj[0])
+  
+  	expect(global.brain.finalOutput.codes).toIncludeSameMembers([
+  	  'checking',
+  	  'down',
+  	  'done'
+  	])
   })
 })
 ```

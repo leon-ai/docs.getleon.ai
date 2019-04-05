@@ -304,7 +304,7 @@ Les sorties sont représentées par la fonction [utils.output()](#output-type-co
 
 Les modules ont leur propre tests. Ils sont représentés par un fichier unique pour chaque module que vous pouvez trouver ici : `packages/{NOM DU PAQUET}/test/{NOM DU MODULE}.spec.js`.
 
-Comme vous pouvez le constater, JavaScript est utilisé pour tester les modules parce que le noyau est écrit en JavaScript et nous utilisons les tests de bout en bout (fonctionnels) en exécutant une query au NLU. Puis le cerveau de Léon est exécuté et retourne la sortie. C'est cette sortie, particulièrement le code de celle-ci que vous devez considérer.
+Comme vous pouvez le constater, JavaScript est utilisé pour tester les modules parce que le noyau est écrit en JavaScript et nous utilisons les tests de bout en bout (fonctionnels) en exécutant une query au NLU. Puis le cerveau de Léon est exécuté et retourne la sortie. C'est cette sortie, particulièrement les codes qui ont été interprétés par votre module que vous devez considérer.
 
 Léon utilise [Jest](https://jestjs.io/) comme framework de test.
 
@@ -312,29 +312,32 @@ Voici deux exemples de tests du module *Is It Down* :
 
 ```js
 // Vous devez utiliser describe() avec la syntaxe suivante : {PACKAGE NAME}:{MODULE NAME}
-describe('checker:isitdown', async () => {
+describe('checker:isitdown', async () => {  
   // Chaque test doit être représenté par test()
   test('detects invalid domain name', async () => {
     global.nlu.brain.execute = jest.fn()
     // La chaîne de caractères à tester
-    global.nlu.process('Vérifies si github est en ligne')
-
+    await global.nlu.process('Check if github is up')
+  
     const [obj] = global.nlu.brain.execute.mock.calls
     await global.brain.execute(obj[0])
-
-	// Récupérer le code et vérifier qu'il est celui attendu
-    expect(global.brain.finalOutput.code).toBe('invalid_domain_name')
+  
+    // Récupérer les codes accumulés et vérifier qu'ils soient ceux attendus
+    expect(global.brain.finalOutput.codes).toIncludeSameMembers(['invalid_domain_name'])
   })
 
   test('detects down domain name', async () => {
     global.nlu.brain.execute = jest.fn()
-    global.nlu.process('Vérifies si fakedomainnametotestleon.fr est en ligne')
-
+    await global.nlu.process('Check if fakedomainnametotestleon.fr is up')
+  
     const [obj] = global.nlu.brain.execute.mock.calls
     await global.brain.execute(obj[0])
-
-    expect(global.brain.interOutput.code).toBe('down')
-    expect(global.brain.finalOutput.code).toBe('done')
+  
+    expect(global.brain.finalOutput.codes).toIncludeSameMembers([
+      'checking',
+      'down',
+      'done'
+    ])
   })
 })
 ```
