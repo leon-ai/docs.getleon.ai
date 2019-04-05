@@ -144,7 +144,7 @@ Notez que chaque expression de module a sa propre confiance (précision).
 
 Malgré les expressions que vous avez écrit, il se peut que Léon ne les comprend toujours pas. C'est là que les fallbacks entrent en jeu.
 
-Dans le fichier [`core/langs.json`](https://github.com/leon-ai/leon/blob/develop/core/langs.json), vous pouvez trouver la liste des langues supportées avec plusieurs propriétés :
+Dans le fichier [core/langs.json](https://github.com/leon-ai/leon/blob/develop/core/langs.json), vous pouvez trouver la liste des langues supportées avec plusieurs propriétés :
 
 - `short`: le code court de la langue.
 - `min_confidence`: la confiance (précision) minimum de la compréhension de Léon. Si cette confiance est plus petite que celle définie, alors Léon vous répond qu'il n'est pas sûr de ce que vous lui dites. 
@@ -191,7 +191,7 @@ Il est possible d'utiliser de l'HTML dans vos réponses.
 
 > Ex. une partie des [réponses françaises du module *GitHub*](https://github.com/leon-ai/leon/blob/develop/packages/trend/data/answers/fr.json) appartenant au paquet *Trend*.
 
-### Créer un module
+## Créer un module
 
 ::: tip
 - La création d'un module est l'une des meilleures façons de contribuer à Léon ! Avant toute chose, assurez-vous de prendre connaissance de [ce document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
@@ -223,9 +223,9 @@ Récupère mes derniers tweets
 
 - Afin de requêter l'API de Twitter, j'ai besoin des identifiants API. Alors je renseigne les clés de l'API Twitter dans le fichier `packages/twitter/config/config.json` que j'ai précédemment créé à l'étape 1.
 - De plus, je crée le fichier `packages/twitter/tweetsgrabber.py`, définis la fonction de mon module puis j'écris mon code.
-- Pendant que j'écris le code, depuis le répertoire racine du projet, j'utilise cette commande :
+- Pendant que j'écris le code, j'[édite `server/src/query-object.sample.json`](#objet-de-demande-et-entites) depuis le répertoire racine du projet, j'utilise cette commande :
 ```bash
-PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py en twitter tweetsgrabber "Grab my latest tweets"
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
 # Exécute mon module à la volée
 ```
 
@@ -247,7 +247,7 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py e
 
 ### Fonction du module
 
-Dans le fichier du module, vous devez nommer la fonction par le nom du module. Cette fonction prend la chaîne de caractères d'entrée (query) en paramètre.
+Dans le fichier du module, vous devez nommer la fonction par le nom du module. Cette fonction prend la chaîne de caractères d'entrée (query) et les [entités](#objet-de-demande-et-entites) comme paramètres.
 
 ```
 Quel est le but de la vie ?
@@ -259,13 +259,35 @@ Quel est le but de la vie ?
 
 import utils
 
-def meaningoflife(string):
-	"""Leon says what's the meaning of life"""
-	
-	# string: Quel est le but de la vie ?
+def meaningoflife(string, entities):
+  """Leon says what's the meaning of life"""
+  
+  # string : Quel est le but de la vie ?
+  # entities : Aucune ici
 
-	return utils.output('end', 'meaning_of_life', utils.translate('meaning_of_life'))
+  return utils.output('end', 'meaning_of_life', utils.translate('meaning_of_life'))
 ```
+
+### Objet de demande et entités <Badge text="1.0.0-beta.2+"/>
+
+Chaque fois que vous communiquer avec Léon, il va créer un fichier d'objet de demande temporaire avec les propriétés suivantes :
+
+- `lang` : code (court) de la langue utilisée.
+- `package` : nom du paquet utilisé.
+- `module` : nom du module utilisé.
+- `query` : votre phrase.
+- `entities` : un tableau d'entités que Léon a extrait de votre phrase. Une entité peut être une durée dans le temps, un nombre, un nom de domaine, etc. La liste complète est disponible [ici](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md).
+
+Le fichier [server/src/query-object.sample.json](https://github.com/leon-ai/leon/blob/develop/server/src/query-object.sample.json) est présent pour que vous puissiez exécuter et tester le comportement du code de votre module [à la volée](#a-la-volee) pendant sa création. Modifiez le en fonction des propriétés de votre module.
+
+::: tip
+N'hésitez pas à consulter des exemples afin de comprendre comment ces entités sont utilisées. Ceux-ci sont des exemples parfaits :
+
+- [packages/checker/isitdown.py](https://github.com/leon-ai/leon/blob/develop/packages/checker/isitdown.py)
+- [packages/trend/github.py](https://github.com/leon-ai/leon/blob/develop/packages/trend/github.py)
+
+Comme vous voyez, vous pouvez itérer sur les entités pour récupérer les informations dont vous avez besoin (nom de domaines, dates, etc.).
+:::
 
 ### Données persistentes
 
@@ -299,6 +321,47 @@ Le noyau comprend deux types de sorties :
 Les sorties sont représentées par la fonction [utils.output()](#output-type-code-speech).
 
 ## Tester un module
+
+### À la volée
+
+Pour tester le comportement de votre module pendant que vous êtes en train de le créer, vous pouvez utiliser la commande suivante **depuis le dossier racine du projet** :
+
+```bash
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
+```
+
+Par exemple, pour le module Is It Down le fichier d'[objet de demande](#objet-de-demande-et-entites) pourrait ressembler à ceci :
+
+```json
+{
+  "lang": "fr",
+  "package": "checker",
+  "module": "isitdown",
+  "query": "Vérifies si github.com et mozilla.org sont en ligne",
+  "entities": [
+    {
+      "sourceText": "github.com",
+      "utteranceText": "github.com",
+      "entity": "url",
+      "resolution": {
+        "value": "github.com"
+      }
+    },
+    {
+      "sourceText": "mozilla.org",
+      "utteranceText": "mozilla.org",
+      "entity": "url",
+      "resolution": {
+        "value": "mozilla.org"
+      }
+    }
+  ]
+}
+```
+
+::: tip
+N'oubliez pas de jeter un œil à [cette liste](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md) pour voir comment les entités sont formatées.
+:::
 
 ### Bout en bout (fonctionnel)
 
@@ -341,7 +404,7 @@ describe('checker:isitdown', async () => {
   })
 })
 ```
-*Ces tests peuvent être trouvés dans [`packages/checker/test/isitdown.spec.js`](https://github.com/leon-ai/leon/blob/develop/packages/checker/test/isitdown.spec.js)*
+*Ces tests peuvent être trouvés dans [packages/checker/test/isitdown.spec.js](https://github.com/leon-ai/leon/blob/develop/packages/checker/test/isitdown.spec.js)*
 
 Une fois que vous avez terminé d'écrire vos tests, vous pouvez exécuter la commande suivante pour les exécuter :
 ```bash
@@ -349,17 +412,6 @@ npm run test:module {NOM DU PAQUET}:{NOM DU MODULE}
 
 # Ex.
 npm run test:module checker:isitdown
-```
-
-### À la volée
-
-Pour tester le comportement de votre module pendant que vous êtes en train de le créer, vous pouvez utiliser la commande suivante **depuis le dossier racine du projet** :
-
-```bash
-PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py {LANGUE} {NOM DU PAQUET} {NOM DU MODULE} "{QUERY}"
-
-# Ex.
-PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py fr checker isitdown "Vérifies si github.com est en ligne"
 ```
 
 ## Fonctions utiles

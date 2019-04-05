@@ -141,7 +141,7 @@ Note that each module expression has its own confidence.
 
 Despite the expressions you wrote, it might be possible Leon still does not understand some of them. This is where fallbacks jump in the game.
 
-In the [`core/langs.json`](https://github.com/leon-ai/leon/blob/develop/core/langs.json) file, you can find the list of the supported languages with several properties:
+In the [core/langs.json](https://github.com/leon-ai/leon/blob/develop/core/langs.json) file, you can find the list of the supported languages with several properties:
 
 - `short`: the short language code.
 - `min_confidence`: the minimum confidence of the Leon's comprehension. If the confidence is smaller than the given one, Leon replies you he is not sure about what you said. 
@@ -220,9 +220,9 @@ Grab my latest tweets
 
 - To request the Twitter API, I need API credentials. So I set the Twitter API key(s) in the `packages/twitter/config/config.json` file I previously created in the step 1.
 - In addition, I create the `packages/twitter/tweetsgrabber.py` file, define my module function and I write the code of my module.
-- While I'm writing the code, from the project root directory I use the following command:
+- While I'm writing the code, I [edit `server/src/query-object.sample.json`](#query-object-entities) and from the project root directory I use the following command:
 ```bash
-PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py en twitter tweetsgrabber "Grab my latest tweets"
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
 # It executes my module on the fly
 ```
 
@@ -244,7 +244,7 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py e
 
 ### Module Function
 
-In the module file, you must name the module function by the name of the module. This function takes the input string (query) as parameter.
+In the module file, you must name the module function by the name of the module. This function takes the input string (query) and the [entities](#query-object-entities) as parameters.
 
 ```
 What is the meaning of life?
@@ -256,13 +256,34 @@ What is the meaning of life?
 
 import utils
 
-def meaningoflife(string):
-	"""Leon says what's the meaning of life"""
+def meaningoflife(string, entities):
+  """Leon says what's the meaning of life"""
 	
-	# string: What is the meaning of life?
+  # string: What is the meaning of life?
+  # entities: There is none here
 
-	return utils.output('end', 'meaning_of_life', utils.translate('meaning_of_life'))
+  return utils.output('end', 'meaning_of_life', utils.translate('meaning_of_life'))
 ```
+
+### Query Object & Entities <Badge text="1.0.0-beta.2+"/>
+
+Every time you communicate to Leon, he will creates a temporary query object JSON file with the following properties:
+- `lang`: short code of the used language.
+- `package`: used package name.
+- `module`: used module name.
+- `query`: your sentence.
+- `entities`: an array of the entities Leon has extracted from your sentence. An entity can be a date duration, a number, a domain name, etc. The full list is available [here](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md).
+
+The [server/src/query-object.sample.json](https://github.com/leon-ai/leon/blob/develop/server/src/query-object.sample.json) file is here to let you execute and test the behavior of your module code [on the fly](#on-the-fly) during its creation. Edit it according to your module properties.
+
+::: tip
+Feel free to see some examples to understand how entities are used. Those are perfect examples:
+
+- [packages/checker/isitdown.py](https://github.com/leon-ai/leon/blob/develop/packages/checker/isitdown.py)
+- [packages/trend/github.py](https://github.com/leon-ai/leon/blob/develop/packages/trend/github.py)
+
+As you can see, you can iterate over the entities to grab the information you need (domain names, dates, etc.).
+:::
 
 ### Persistent Data
 
@@ -297,6 +318,47 @@ The core understands two types of outputs:
 Outputs are represented by the [utils.output()](#output-type-code-speech) function.
 
 ## Test a Module
+
+### On The Fly
+
+To test the behavior of your module while you are creating it, you can run this following command **from the project root**:
+
+```bash
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
+```
+
+For example, for the Is It Down module the [query object](#query-object-entities) file could look like that:
+
+```json
+{
+  "lang": "en",
+  "package": "checker",
+  "module": "isitdown",
+  "query": "Check if github.com and mozilla.org are up",
+  "entities": [
+    {
+      "sourceText": "github.com",
+      "utteranceText": "github.com",
+      "entity": "url",
+      "resolution": {
+        "value": "github.com"
+      }
+    },
+    {
+      "sourceText": "mozilla.org",
+      "utteranceText": "mozilla.org",
+      "entity": "url",
+      "resolution": {
+        "value": "mozilla.org"
+      }
+    }
+  ]
+}
+```
+
+::: tip
+Don't forget to take a look at [this list](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md) to see how entities are formatted.
+:::
 
 ### End-to-End
 
@@ -339,7 +401,7 @@ describe('checker:isitdown', async () => {
   })
 })
 ```
-*These tests can be found in [`packages/checker/test/isitdown.spec.js`](https://github.com/leon-ai/leon/blob/develop/packages/checker/test/isitdown.spec.js)*
+*These tests can be found in [packages/checker/test/isitdown.spec.js](https://github.com/leon-ai/leon/blob/develop/packages/checker/test/isitdown.spec.js)*
 
 Once you finished to write your tests, you can execute the following command to run them:
 
@@ -348,17 +410,6 @@ npm run test:module {PACKAGE NAME}:{MODULE NAME}
 
 # E.g.
 npm run test:module checker:isitdown
-```
-
-### On The Fly
-
-To test the behavior of your module while you are creating it, you can run this following command **from the project root**:
-
-```bash
-PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py {LANG} {PACKAGE NAME} {MODULE NAME} "{QUERY}"
-
-# E.g.
-PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py en checker isitdown "Check github.com is up"
 ```
 
 ## Utils Functions
