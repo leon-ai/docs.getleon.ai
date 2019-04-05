@@ -428,18 +428,6 @@ utils.output('end', 'done', utils.translate('done_answer'))
 # >> <object output>
 ```
 
-### finddomains(string)
-
-Trouve un ou plusieurs nom(s) de domaine à partir d'une chaîne de caractères.
-
-- `string`: chaîne de caractères d'entrée.
-
-```python
-utils.finddomains('Visite github.com et mozilla.org s\'il te plaît')
-
-# >> ['github.com', 'mozilla.org']
-```
-
 ### http(method, url)
 
 Envoie une requête HTTP avec l'agent utilisateur `Leon/{NUMÉRO DE VERSION}`. La librairie Python [Request](http://docs.python-requests.org) est utilisée.

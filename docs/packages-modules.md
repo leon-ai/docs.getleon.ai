@@ -219,7 +219,7 @@ Grab my latest tweets
 #### 3. Write the Code
 
 - To request the Twitter API, I need API credentials. So I set the Twitter API key(s) in the `packages/twitter/config/config.json` file I previously created in the step 1.
-- In addition, I create the `packages/twitter/tweetsgrabber.py` file, define my module function and I write the code for my module.
+- In addition, I create the `packages/twitter/tweetsgrabber.py` file, define my module function and I write the code of my module.
 - While I'm writing the code, from the project root directory I use the following command:
 ```bash
 PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py en twitter tweetsgrabber "Grab my latest tweets"
@@ -425,18 +425,6 @@ utils.output('inter', 'just_a_code', 'This is an intermediate answer.')
 utils.output('end', 'done', utils.translate('done_answer'))
 
 # >> <object output>
-```
-
-### finddomains(string)
-
-Find one or multiple domain name(s) substring from a string.
-
-- `string`: input string.
-
-```python
-utils.finddomains('Go on github.com and mozilla.org please')
-
-# >> ['github.com', 'mozilla.org']
 ```
 
 ### http(method, url)
