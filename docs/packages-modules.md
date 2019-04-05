@@ -172,6 +172,22 @@ Answers are the data used by Leon to provide you results binded with the modules
 
 > E.g. part of the [*Greeting* module English answers](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/answers/en.json) belonging to the *Leon* package.
 
+##### HTML <Badge text="1.0.0-beta.2+"/>
+
+It is possible to use HTML in your answers.
+
+> ```json
+> {
+>   "github": {
+>     "list_element": [
+>       "<li>#%rank%. <a href=\"%repository_url%\" target=\"_blank\">%repository_name%</a> created by <a href=\"%author_url%\" target=\"_blank\">%author_username%</a> with %stars_nb% new stars.</li>"
+>     ]
+>   }
+> }
+> ```
+
+> E.g. part of the [*GitHub* module English answers](https://github.com/leon-ai/leon/blob/develop/packages/trend/data/answers/en.json) belonging to the *Trend* package.
+
 ## Create a Module
 
 ::: tip

@@ -175,6 +175,22 @@ Les réponses sont les données utilisées par Léon qui permettent de vous four
 
 > Ex. une partie des [réponses françaises du module *Greeting*](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/answers/fr.json) appartenant au paquet *Leon*.
 
+##### HTML <Badge text="1.0.0-beta.2+"/>
+
+Il est possible d'utiliser de l'HTML dans vos réponses.
+
+> ```json
+> {
+>   "github": {
+>     "list_element": [
+>       "<li>#%rank%. <a href=\"%repository_url%\" target=\"_blank\">%repository_name%</a> créé par <a href=\"%author_url%\" target=\"_blank\">%author_username%</a> avec %stars_nb% nouvelles étoiles.</li>"
+>     ]
+>   }
+> }
+> ```
+
+> Ex. une partie des [réponses françaises du module *GitHub*](https://github.com/leon-ai/leon/blob/develop/packages/trend/data/answers/fr.json) appartenant au paquet *Trend*.
+
 ### Créer un module
 
 ::: tip
