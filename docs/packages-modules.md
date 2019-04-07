@@ -481,15 +481,21 @@ utils.output('end', 'done', utils.translate('done_answer'))
 # >> <object output>
 ```
 
-### http(method, url)
+### http(method, url, headers = None)
 
 Send HTTP request with the user-agent `Leon/{VERSION NUMBER}`. It uses the [Request](http://docs.python-requests.org) Python library.
 
 - `method`: HTTP method.
 - `url`: URL to request.
+- `headers`: HTTP headers.
 
 ```python
 utils.http('GET', 'https://getleon.ai')
+
+# >> cf. http://docs.python-requests.org/en/master/user/advanced/#request-and-response-objects
+
+# Request with custom headers
+utils.http('POST', 'https://an-awesome-api.com', { 'Authorization': 'Bearer xxx' })
 
 # >> cf. http://docs.python-requests.org/en/master/user/advanced/#request-and-response-objects
 ```

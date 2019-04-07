@@ -483,15 +483,21 @@ utils.output('end', 'done', utils.translate('done_answer'))
 # >> <object output>
 ```
 
-### http(method, url)
+### http(method, url, headers = None)
 
 Envoie une requête HTTP avec l'agent utilisateur `Leon/{NUMÉRO DE VERSION}`. La librairie Python [Request](http://docs.python-requests.org) est utilisée.
 
 - `method`: méthode HTTP.
 - `url`: URL à requêter.
+- `headers`: en-têtes HTTP.
 
 ```python
 utils.http('GET', 'https://getleon.ai')
+
+# >> cf. http://docs.python-requests.org/en/master/user/advanced/#request-and-response-objects
+
+# Requête avec des en-têtes personnalisés
+utils.http('POST', 'https://an-awesome-api.com', { 'Authorization': 'Bearer xxx' })
 
 # >> cf. http://docs.python-requests.org/en/master/user/advanced/#request-and-response-objects
 ```
