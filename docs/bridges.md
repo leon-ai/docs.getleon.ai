@@ -15,5 +15,7 @@ The Python bridge is the reason why Leon needs Python to work today. Because the
 
 If you wish to execute a Python module standalone, without a child process, run the following command from the project root directory:
 ```bash
-PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py {LANG} {PACKAGE} {MODULE} "{STRING}"
+PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
 ```
+
+To understand what is the `query-object.sample.json` file for, take a look at [this section](packages-modules.html#query-object-entities).
