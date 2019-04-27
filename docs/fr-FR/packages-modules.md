@@ -234,7 +234,12 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py s
 - Maintenant que je suis satisfait avec mon module, je crée le fichier `packages/twitter/test/tweetsgrabber.spec.js`.
 - J'écris les [tests de mon module](#tester-un-module) dans ce fichier.
 
-#### 5. Partager
+#### 5. Expliquer comment utiliser
+
+- Dans le fichier `packages/twitter/README.md`, j'ajoute une courte description expliquant l'objectif de mon module.
+- J'explique brièvement comment mon module s'utilise (quelle phrases nous pouvons utiliser, si on doit / peut configurer certaines choses, etc..
+
+#### 6. Partager
 
 - Je partage mon module au monde entier en [contribuant](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
 
