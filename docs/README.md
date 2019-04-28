@@ -30,7 +30,7 @@ A video is available [here](http://www.youtube.com/watch?v=p7GRGiicO1c).
 
 ## Prerequisites
 
-- **[Node.js](https://nodejs.org/) >= 10**
+- **[Node.js](https://nodejs.org/) 10 or 11**
 > Leon's core is developed on the top of the Node.js JavaScript runtime.
 - **npm >= 5**
 > npm is the packages manager of Node.js, Leon needs it for his core's dependencies tree.
