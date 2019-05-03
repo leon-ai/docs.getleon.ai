@@ -124,8 +124,11 @@ Vous pouvez aussi utiliser Docker pour installer et exécuter Léon.
 # Construire
 npm run docker:build
 
-# Lancer 
+# Lancer sous Linux ou macOS
 npm run docker:run
+
+# Lancer sous Windows (vous pouvez remplacer "UTC" par votre fuseau horaire)
+docker run -e TZ=UTC -d -p 1337:1337 -it leonai/leon
 
 # Allez sur http://localhost:1337
 # Hourra ! Léon fonctionne
