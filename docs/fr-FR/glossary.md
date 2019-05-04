@@ -2,6 +2,12 @@
 
 Certains termes de la documentation peuvent vous parraître inconnus. Cette section vous aide à avoir une meilleure compréhension de ces mots et de comprendre comment ils sont en liens avec Léon.
 
+## Actions
+
+Les actions représentent les points d'entrée des [modules](/fr-FR/glossary.md#modules).
+        
+> Pièce jointe : [packages/calendar/todolist.py](https://github.com/leon-ai/leon/tree/develop/packages/calendar/todolist.py) *exemple du module `To-Do List` incluant des actions comme `create_list`, `complete_todo`, etc.*.
+
 ## API
 
 API pour (*Application Programming Interface* ou *Interface de programmation d'applications*) est une interface permettant la communication entre différents nœuds d'un projet. Ces nœuds peuvent être un serveur, une librairie, etc.
@@ -43,7 +49,7 @@ Chaque [paquet](/fr-FR/glossary.md#paquets) a son propre ensemble de données av
 
 ## Modules
 
-Les modules sont les compétences de Léon. C'est grâce à eux que Léon peut faire des choses.
+Les modules sont les compétences de Léon. C'est grâce à eux que Léon peut faire des choses. Les modules contiennent une ou plusieurs [actions](/fr-FR/glossary.md#actions).
 
 ::: tip
 Plus Léon a de modules, plus il devient compétent.
