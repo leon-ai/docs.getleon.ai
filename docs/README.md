@@ -26,7 +26,7 @@ A video is available [here](http://www.youtube.com/watch?v=p7GRGiicO1c).
 2. With this generic structure, **everyone** can **create** their own **modules** and **share them**. Therefore there is only one core (to rule them all).
 3. Leon uses **AI concepts**, which is cool.
 4. **Privacy matters**, you can configure Leon to talk with him **offline**. You can already **text** with him **without** any **third party** services.
-5. Last but not least: **open-source** is great.
+5. Last but not least: **open source** is great.
 
 ## Prerequisites
 
