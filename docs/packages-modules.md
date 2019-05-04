@@ -64,12 +64,12 @@ Each package:
 
 ## Modules
 
-**Modules are the skills of Leon**.
+**Modules are the skills of Leon**. They contain one or several [action(s)](#actions-module-functions) to be able to accomplish specific job(s).
 
 When Leon understands what you told him, he:
-1. Triggers a module.
-2. Do the module job.
-3. Returns you the output of that module.
+1. Triggers a module action.
+2. Do the job.
+3. Returns you the output of that execution.
 
 Each module has its own purpose and its own configuration. Do not hesitate to browse the [packages list](https://github.com/leon-ai/leon/tree/develop/packages) to understand their goals.
 
@@ -121,21 +121,24 @@ Indeed, his dataset are divided into two parts: [expressions](/glossary.md#expre
 
 Expressions are the data used to train the Leon's understanding. When you execute the [training script](/scripts.md), all of the expressions of each module are browsed to generate the [classifier](/glossary.md#classifier).
 
-Note that each module expression has its own confidence.
+Expressions are wrapped inside a module [action](#actions-module-functions). This is how Leon understands which action he needs to do.
+
+Note that each expression of each module action has its own confidence.
 
 > ```json
 > {
->   "whoami": [
->     "Who are you?",
->     "How they call you?",
->     "What's your name?",
->     "Tell me who you are",
->     "Introduce yourself"
->   ]
+>   "meaningoflife": {
+>     "run": {
+>       "expressions": [
+>         "What is the meaning of life?",
+>         "Tell me what is the meaning of life"
+>       ]
+>     }
+>   }
 > }
 > ```
 
-> E.g. [*Who Am I* module English expressions](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/expressions/en.json) belonging to the *Leon* package.
+> E.g. [*Who Am I* module English expressions](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/expressions/en.json) belonging to the *Leon* package. These expressions are wrapped inside the `run` action.
 
 ##### Fallbacks
 
@@ -145,7 +148,7 @@ In the [core/langs.json](https://github.com/leon-ai/leon/blob/develop/core/langs
 
 - `short`: the short language code.
 - `min_confidence`: the minimum confidence of the Leon's comprehension. If the confidence is smaller than the given one, Leon replies you he is not sure about what you said. 
-- `fallbacks`: force the module selection. Use the `words` key to determine on which words you want Leon pick up a module. And use the `package` and `module` keys to define which module should be executed on the given words.
+- `fallbacks`: force the module selection. Use the `words` key to determine on which words you want Leon pick up a module. And use the `package`, `module` and `action` keys to define which module action should be executed on the given words.
 
 #### Answers
 
@@ -192,7 +195,7 @@ It is possible to use HTML in your answers.
 
 ::: tip
 - Creating a module is one of the best way to contribute in Leon! Before doing that, please make sure you review [this document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
-- For example, you could think about creating a todo list module *(for such module, the Leon's NLP should be improved)*. Check out the [roadmap](https://roadmap.getleon.ai) to see what is in the pipeline.
+- For example, you could think about creating a to-do list module *(for such module, the Leon's NLP should be improved)*. Check out the [roadmap](https://roadmap.getleon.ai) to see what is in the pipeline.
 - Don't hesitate to [open an issue](https://github.com/leon-ai/leon/issues/new/choose) if you have any questions.
 :::
 
@@ -202,7 +205,7 @@ Each module is included in a package *(e.g. `packages/{PACKAGE NAME}/{MODULE NAM
 
 Here are the basics steps to create a module. For those steps, we will take a tweets grabber module as example.
 
-#### 1. Define the Purpose
+#### 1. Define the Purpose(s)
 
 - I want to create a tweets grabber module. When I say or write:
 ```
@@ -212,6 +215,10 @@ Grab my latest tweets
 - It seems this module does not correspond to any existing package (category). So I create the *Twitter* package by creating the `packages/twitter` folder.
 - To do so, I make sure it follows the [package directory structure](#directory-structure) and contains the required files mentioned in that structure.
 
+::: tip
+If your module is more advanced and must contain multiple purposes, do not hesitate to create several [actions](#actions-module-functions).
+:::
+
 #### 2. Name Your Module
 
 - I choose to name my module `Tweets Grabber`.
@@ -219,7 +226,7 @@ Grab my latest tweets
 #### 3. Write the Code
 
 - To request the Twitter API, I need API credentials. So I set the Twitter API key(s) in the `packages/twitter/config/config.json` file I previously created in the step 1.
-- In addition, I create the `packages/twitter/tweetsgrabber.py` file, define my module function and I write the code of my module.
+- In addition, I create the `packages/twitter/tweetsgrabber.py` file, define my [action(s)](#actions-module-functions) and I write the code of my module.
 - While I'm writing the code, I [edit `server/src/query-object.sample.json`](#query-object-entities) and from the project root directory I use the following command:
 ```bash
 PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
@@ -240,18 +247,14 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py s
 
 - I share my module to the world by [contributing](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
 
-### Naming Convention
+### Actions (Module Functions) <Badge text="1.0.0-beta.3+"/>
 
-- The module filename must contains only lowercase alphabetic characters and must use the English language.
-> E.g. *Meaning of Life* module filename: `meaningoflife.py`
-- The module function name must be the same as the filename.
-> E.g. *Meaning of Life* function: `def meaningoflife(string):`
+In the module file, you must add an action (function) that will be the entry point of the execution. An action takes the input string (query) and the [entities](#query-object-entities) as parameters.
 
-### Module Function
+When you have only one action in your module, the usual action name is `run`:
 
-In the module file, you must name the module function by the name of the module. This function takes the input string (query) and the [entities](#query-object-entities) as parameters.
-
-```
+```bash
+# Query the "run" action
 What is the meaning of life?
 ```
 
@@ -261,7 +264,7 @@ What is the meaning of life?
 
 import utils
 
-def meaningoflife(string, entities):
+def run(string, entities):
   """Leon says what's the meaning of life"""
 	
   # string: What is the meaning of life?
@@ -270,12 +273,55 @@ def meaningoflife(string, entities):
   return utils.output('end', 'meaning_of_life', utils.translate('meaning_of_life'))
 ```
 
+When you have several actions in your modules:
+
+```bash
+# Query the "create_list" action
+Create the shopping list
+
+# Query the "add_todo" action
+Add potatoes to my shopping list
+```
+
+```python
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+
+import utils
+
+def create_list(string, entities):
+  """Leon creates a to-do list"""
+	
+  # Your awesome code here...
+  
+  return utils.output('end', 'list_created', utils.translate('list_created'))
+  
+def add_todo(string, entities):
+  """Leon add todos to a list"""
+	
+  # Your awesome code here...
+  
+  return utils.output('end', 'todo_added', utils.translate('todo_added'))
+```
+
+::: tip
+Don't forget that Leon knows which action he must execute thanks to the [expressions](#expressions) you define.
+:::
+
+### Naming Convention
+
+- The module filename must contain only lowercase alphabetic characters and must use the English language.
+> E.g. *Meaning of Life* module filename: `meaningoflife.py`
+- Actions names must use snake_case (lowercase alphabetic characters and `_` only) and must use the English language.
+> E.g. *To-Do List* module actions: `create_list`, `add_todo`, `complete_todo`, etc.
+
 ### Query Object & Entities <Badge text="1.0.0-beta.2+"/>
 
 Every time you communicate to Leon, he will creates a temporary query object JSON file with the following properties:
 - `lang`: short code of the used language.
 - `package`: used package name.
 - `module`: used module name.
+- `action`: used action name.
 - `query`: your sentence.
 - `entities`: an array of the entities Leon has extracted from your sentence. An entity can be a date duration, a number, a domain name, etc. The full list is available [here](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md).
 
@@ -339,6 +385,7 @@ For example, for the Is It Down module the [query object](#query-object-entities
   "lang": "en",
   "package": "checker",
   "module": "isitdown",
+  "action": "run",
   "query": "Check if github.com and mozilla.org are up",
   "entities": [
     {

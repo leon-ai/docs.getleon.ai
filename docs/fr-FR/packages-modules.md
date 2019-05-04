@@ -64,12 +64,12 @@ Chaque paquet :
 
 ## Modules
 
-**Les modules sont les compétences de Léon**.
+**Les modules sont les compétences de Léon**. Ils contiennent une ou plusieurs [action(s)](#actions-fonctions-de-module) afin d'accomplir une tâche spécifique.
 
 Quand Léon comprend ce que vous lui dites, il :
-1. Appel un module.
-2. Fait le job du module.
-3. Vous retourne le résultat du module.
+1. Appel une action de module.
+2. Fait le job.
+3. Vous retourne le résultat de l'éxécution.
 
 Chaque module à son propre objectif et sa propre configuration. N'hésitez pas à parcourir la [liste des paquets](https://github.com/leon-ai/leon/tree/develop/packages) afin de comprendre leur buts.
 
@@ -124,21 +124,24 @@ En effet, ses jeux de données sont divisés en deux parties : les [expressions]
 
 Les expressions sont les données utilisées afin d'entraîner la compréhension de Léon. Lorsque vous exécutez le [script d'entraînement](/fr-FR/scripts.md), toutes les expressions de chaque module sont parcourues et génèrent le [classifieur](/fr-FR/glossary.md#classifieur).
 
-Notez que chaque expression de module a sa propre confiance (précision).
+Les expressions sont contenues dans une [action](#actions-fonctions-de-module) de module. C'est comme ça que Léon comprend quelle action il doit faire.
+
+Notez que chaque expression de chaque action de module a sa propre confiance (précision).
 
 > ```json
 > {
->   "whoami": [
->     "Qui es-tu ?",
->     "Comment t'appelles-tu ?",
->     "Comment tu t'appelles ?",
->     "Dis-moi qui tu es",
->     "Présente-toi"
->   ]
+>   "meaningoflife": {
+>     "run": {
+>       "expressions": [
+>         "Quel est le but de la vie ?",
+>         "Quel est l'objectif de la vie ?"
+>       ]
+>     }
+>   }
 > }
 > ```
 
-> Ex. [les expressions françaises du module *Who Am I*](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/expressions/fr.json) appartiennent au paquet *Leon*.
+> Ex. [les expressions françaises du module *Who Am I*](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/expressions/fr.json) appartiennent au paquet *Leon*. Ces expressions sont contenues dans l'action `run`.
 
 ##### Fallbacks
 
@@ -148,7 +151,7 @@ Dans le fichier [core/langs.json](https://github.com/leon-ai/leon/blob/develop/c
 
 - `short`: le code court de la langue.
 - `min_confidence`: la confiance (précision) minimum de la compréhension de Léon. Si cette confiance est plus petite que celle définie, alors Léon vous répond qu'il n'est pas sûr de ce que vous lui dites. 
-- `fallbacks`: force la sélection d'un module. Utilisez la clé `words` afin de déterminer avec quels mots vous souhaitez que Léon sélectionne un module en particulier. Et utilisez les clés `package` et `module` pour définir quel module devrait être exécuté en fonction des mots donnés.
+- `fallbacks`: force la sélection d'un module. Utilisez la clé `words` afin de déterminer avec quels mots vous souhaitez que Léon sélectionne un module en particulier. Et utilisez les clés `package`, `module` et `action` pour définir quel action de module devrait être exécuté en fonction des mots donnés.
 
 #### Réponses
 
@@ -195,7 +198,7 @@ Il est possible d'utiliser de l'HTML dans vos réponses.
 
 ::: tip
 - La création d'un module est l'une des meilleures façons de contribuer à Léon ! Avant toute chose, assurez-vous de prendre connaissance de [ce document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
-- Par exemple, vous pouvez imaginer créer un module todo liste *(pour un tel module, le NLP de Léon doit être amélioré)*. Faites un tour sur la [roadmap](https://roadmap.getleon.ai) pour voir ce qu'il y a de prévu..
+- Par exemple, vous pouvez imaginer créer un module to-do liste *(pour un tel module, le NLP de Léon doit être amélioré)*. Faites un tour sur la [roadmap](https://roadmap.getleon.ai) pour voir ce qu'il y a de prévu..
 - N'hésitez pas à [ouvrir une issue](https://github.com/leon-ai/leon/issues/new/choose) si vous avez la moindre question.
 :::
 
@@ -205,7 +208,7 @@ Chaque module est inclus dans un paquet *(ex. `packages/{NOM DU PAQUET}/{NOM DU 
 
 Voici les étapes basiques pour créer un module. Pour ces étapes, nous prendrons un module tweets grabber en tant qu'exemple.
 
-#### 1. Définir l'objectif
+#### 1. Définir le ou les objectif(s)
 
 - Je veux créer un module tweets grabber. Quand je dis ou lorsque j'écris :
 ```
@@ -215,6 +218,10 @@ Récupère mes derniers tweets
 - Il semblerait que ce module ne correspond pas à un paquet (catégorie) existant. Alors je crée le paquet *Twitter* en créant le dossier `packages/twitter`.
 - Pour ce faire, je m'assure de suivre la [structure des dossiers d'un paquet](#structure-des-dossiers) et que cette structure contienne les fichiers requis.
 
+::: tip
+Si votre module est plus avancé et doit comprendre plusieurs objectifs, alors n'hésitez pas à créer plusieurs [actions](#actions-fonctions-de-module).
+:::
+
 #### 2. Nommer votre module
 
 - Je choisis de nommer mon module `Tweets Grabber`.
@@ -222,7 +229,7 @@ Récupère mes derniers tweets
 #### 3. Écrire le code
 
 - Afin de requêter l'API de Twitter, j'ai besoin des identifiants API. Alors je renseigne les clés de l'API Twitter dans le fichier `packages/twitter/config/config.json` que j'ai précédemment créé à l'étape 1.
-- De plus, je crée le fichier `packages/twitter/tweetsgrabber.py`, définis la fonction de mon module puis j'écris mon code.
+- De plus, je crée le fichier `packages/twitter/tweetsgrabber.py`, définis la ou les [action(s)](#actions-fonctions-de-module) de mon module puis j'écris mon code.
 - Pendant que j'écris le code, j'[édite `server/src/query-object.sample.json`](#objet-de-demande-et-entites) depuis le répertoire racine du projet, j'utilise cette commande :
 ```bash
 PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
@@ -243,18 +250,14 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py s
 
 - Je partage mon module au monde entier en [contribuant](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
 
-### Convention de nommage
+### Actions (fonctions de module) <Badge text="1.0.0-beta.3+"/>
 
-- Le nom de fichier d'un module doit uniquement contenir des lettres minuscules et doit être nommé en anglais.
-> Ex. le nom de fichier du module *Meaning of Life* : `meaningoflife.py`
-- Le nom de fonction d'un module doit être le même que le nom du fichier.
-> Ex. le nom de fonction du module *Meaning of Life* : `def meaningoflife(string):`
+Dans le fichier du module, vous devez ajouter une action (fonction) qui sera le point d'entrée de l'exécution. Une action prend la chaîne de caractères d'entrée (query) et les [entités](#objet-de-demande-et-entites) comme paramètres.
 
-### Fonction du module
+Quand vous avez seulement une action dans votre module, le nom d'action utilisé est généralement `run` :
 
-Dans le fichier du module, vous devez nommer la fonction par le nom du module. Cette fonction prend la chaîne de caractères d'entrée (query) et les [entités](#objet-de-demande-et-entites) comme paramètres.
-
-```
+```bash
+# Exécute l'action "run"
 Quel est le but de la vie ?
 ```
 
@@ -273,6 +276,49 @@ def meaningoflife(string, entities):
   return utils.output('end', 'meaning_of_life', utils.translate('meaning_of_life'))
 ```
 
+Quand vous avez plusieurs actions dans votre module :
+
+```bash
+# Exécute l'action "create_list"
+Créé la liste courses
+
+# Exécute l'action "add_todo"
+Ajoute patates à ma liste de courses
+```
+
+```python
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+
+import utils
+
+def create_list(string, entities):
+  """Leon creates a to-do list"""
+	
+  # Votre super code ici...
+  
+  return utils.output('end', 'list_created', utils.translate('list_created'))
+  
+def add_todo(string, entities):
+  """Leon add todos to a list"""
+	
+  # Votre super code ici...
+  
+  return utils.output('end', 'todo_added', utils.translate('todo_added'))
+```
+
+::: tip
+N'oubliez pas que Léon sait quelle action il doit exécuter grâce aux [expressions](#expressions) que vous définissez.
+:::
+
+### Convention de nommage
+
+- Le nom de fichier d'un module doit uniquement contenir des lettres minuscules et doit être nommé en anglais.
+> Ex. le nom de fichier du module *Meaning of Life* : `meaningoflife.py`
+
+- Les noms d'actions doivent utiliser le snake_case (lettres minuscules et `_` seulement) et doit être nommés en anglais.
+> Ex. les actions du module *To-Do List* : `create_list`, `add_todo`, `complete_todo`, etc.
+
 ### Objet de demande et entités <Badge text="1.0.0-beta.2+"/>
 
 Chaque fois que vous communiquer avec Léon, il va créer un fichier d'objet de demande temporaire avec les propriétés suivantes :
@@ -280,6 +326,7 @@ Chaque fois que vous communiquer avec Léon, il va créer un fichier d'objet de 
 - `lang` : code (court) de la langue utilisée.
 - `package` : nom du paquet utilisé.
 - `module` : nom du module utilisé.
+- `action` : nom de l'action utilisée.
 - `query` : votre phrase.
 - `entities` : un tableau d'entités que Léon a extrait de votre phrase. Une entité peut être une durée dans le temps, un nombre, un nom de domaine, etc. La liste complète est disponible [ici](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md).
 
@@ -342,6 +389,7 @@ Par exemple, pour le module Is It Down le fichier d'[objet de demande](#objet-de
   "lang": "fr",
   "package": "checker",
   "module": "isitdown",
+  "action": "run",
   "query": "Vérifies si github.com et mozilla.org sont en ligne",
   "entities": [
     {
