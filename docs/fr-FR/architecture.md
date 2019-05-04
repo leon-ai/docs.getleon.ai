@@ -4,7 +4,7 @@ Assurez-vous d'avoir consulté le [glossaire](/fr-FR/glossary.md) afin d'avoir u
 
 ## Schéma d'architecture de haut niveau
 
-![Schéma d'architecture de haut niveau de Léon](/assets/img/high-level_architecture_schema.svg "Schéma d'architecture de haut niveau de Léon")
+![Schéma d'architecture de haut niveau de Léon](/assets/img/high-level_architecture_schema.svg?v2 "Schéma d'architecture de haut niveau de Léon")
 
 ## Scénario
 
