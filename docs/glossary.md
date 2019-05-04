@@ -2,7 +2,7 @@
 
 Some terms in the docs might be unknown to you; this section should help you achieve a better understanding of these words and how they relate to Leon.
 
-## Actions
+## Actions <Badge text="1.0.0-beta.3+"/>
 
 Actions represent the [modules](/glossary.md#modules) entry points.
         

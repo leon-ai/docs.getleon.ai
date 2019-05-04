@@ -2,7 +2,7 @@
 
 Certains termes de la documentation peuvent vous parraître inconnus. Cette section vous aide à avoir une meilleure compréhension de ces mots et de comprendre comment ils sont en liens avec Léon.
 
-## Actions
+## Actions <Badge text="1.0.0-beta.3+"/>
 
 Les actions représentent les points d'entrée des [modules](/fr-FR/glossary.md#modules).
         
