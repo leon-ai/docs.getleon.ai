@@ -9,6 +9,7 @@ Here are the data that Leon store:
 - Language.
 - Package that Leon picked up.
 - Module that Leon picked up.
+- Action that Leon picked up.
 - His confidence about his understanding.
 - Current timestamp.
 

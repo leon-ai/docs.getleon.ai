@@ -9,6 +9,7 @@ Voici les données que Léon stocke :
 - Langue.
 - Paquet choisi par Léon.
 - Module choisi par Léon.
+- Action choisi par Léon.
 - Sa confiance à propos de sa compréhension (précision).
 - Timestamp actuel.
 
