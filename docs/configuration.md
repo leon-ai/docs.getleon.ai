@@ -8,6 +8,8 @@ These files should stay on your machine, never push them to a remote repository.
 
 ## Environment Variables
 
+The environment variables included in the following table can be found in the `.env` file located at the project root directory.
+
 | Variable                    | Description | Values |
 | ----------------------------|-------------|---------|
 | `LEON_LANG`                 | Leon's language and his understanding. **If you change the language**, run: `npm run train expressions`. | `en-US` (default); `fr-FR` |

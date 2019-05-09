@@ -8,6 +8,8 @@ Ces fichiers doivent rester sur votre machine, ne les pousser pas sur un répert
 
 ## Variables d'environnement
 
+Les variables d'environnement inclues dans le tableau suivant peuvent être trouvées dans le fichier `.env` situé dans le répertoire racine du projet.
+
 | Variable                    | Description | Valeurs |
 | ----------------------------|-------------|---------|
 | `LEON_LANG`                 | Langue de Léon et de sa compréhension. **Si vous changez de langue**, exéctuez: `npm run train expressions`. | `en-US` (par défaut); `fr-FR` |
