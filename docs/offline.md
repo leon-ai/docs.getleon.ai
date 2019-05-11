@@ -16,7 +16,7 @@ npm run setup:offline
 
 ## DeepSpeech (STT)
 
-For the offline STT, Leon uses [DeepSpeech](https://github.com/mozilla/DeepSpeech) which is a TensforFlow implementation of Baidu's DeepSpeech architecture.
+For the offline STT, Leon uses [DeepSpeech](https://github.com/mozilla/DeepSpeech) which is a TensorFlow implementation of Baidu's DeepSpeech architecture.
 
 Everything is already ready, you just need to run a command to download and setup the pre-trained model (~ 2 GB).
 If you wish to only install the offline STT, run the following command:
