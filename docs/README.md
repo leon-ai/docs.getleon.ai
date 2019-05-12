@@ -118,7 +118,7 @@ To see what he can do, please refer to the [packages list](https://github.com/le
 
 ## Docker Installation <Badge text="1.0.0-beta.1+"/>
 
-You can also use Docker to install and run Leon.
+You can also use Docker to install and run Leon:
 
 ```bash
 # Build

@@ -8,6 +8,10 @@ Les clients sont ce que l'utilisateur final voit et utilise explicitement. C'est
 
 L'app web est le seul client aujourd'hui. Elle permet d'intéragir avec Léon à travers le navigateur.
 
+::: tip
+Éditez les variables d'environnement `LEON_SERVER_HOST` et `LEON_WEBAPP_HOST` par l'adresse IP de votre machine afin d'accéder à Léon depuis l'extérieur.
+:::
+
 Une fois Léon installé, vous pouvez accèder à ce client en suivant une des sections suivantes.
 
 ### Développement

@@ -118,7 +118,7 @@ Pour voir ce qu'il peut faire, merci de vous référer à la [liste des paquets]
 
 ## Installer avec Docker <Badge text="1.0.0-beta.1+"/>
 
-Vous pouvez aussi utiliser Docker pour installer et exécuter Léon.
+Vous pouvez aussi utiliser Docker pour installer et exécuter Léon :
 
 ```bash
 # Construire

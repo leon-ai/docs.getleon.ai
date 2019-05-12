@@ -14,9 +14,9 @@ Les variables d'environnement inclues dans le tableau suivant peuvent être trou
 | ----------------------------|-------------|---------|
 | `LEON_LANG`                 | Langue de Léon et de sa compréhension. **Si vous changez de langue**, exéctuez: `npm run train expressions`. | `en-US` (par défaut); `fr-FR` |
 | `LEON_NODE_ENV`             | Environnement. | `development` (par défaut); `production`; `testing` |
-| `LEON_SERVER_HOST`          | Hôte du serveur. | `localhost` (par défaut) |
+| `LEON_SERVER_HOST`          | Hôte du serveur. Utilisez l'adresse IP de votre machine afin d'accéder à Léon depuis l'extérieur. | `localhost` (par défaut) |
 | `LEON_SERVER_PORT`          | Port du serveur. | `1337` (par défaut) |
-| `LEON_WEBAPP_HOST`          | Hôte de l'app web. | `localhost` (par défaut) |
+| `LEON_WEBAPP_HOST`          | Hôte de l'app web. Utilisez l'adresse IP de votre machine afin d'accéder à Léon depuis l'extérieur. | `localhost` (par défaut) |
 | `LEON_WEBAPP_PORT`          | Port de l'app web. | `4242` (par défaut) |
 | `LEON_TIME_ZONE`            | Time zone de Léon. | Votre time zone actuelle (par défaut); [Moment Timezone](https://momentjs.com/timezone/) |
 | `LEON_AFTER_SPEECH`         | Activer / désactiver l'écoute automatique après avoir parlé. Pas besoin de prononçer `Léon` quand vous avez parlé une première fois. | `true`; `false` (par défaut) |
