@@ -9,7 +9,7 @@ Clients are what the end users see and explicitly use. This is thanks to the cli
 The web app is the only client today. It allows you to interact with Leon via your browser.
 
 ::: tip
-Edit the `LEON_SERVER_HOST` and `LEON_WEBAPP_HOST` environment variables with your machine IP address to access to Leon from the outside.
+Edit the `LEON_SERVER_HOST` and `LEON_WEBAPP_HOST` environment variables with your machine IP address to access Leon from the outside.
 :::
 
 Once Leon is installed, you can access to this client by following one of the next sections.
