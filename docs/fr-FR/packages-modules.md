@@ -198,7 +198,7 @@ Il est possible d'utiliser de l'HTML dans vos réponses.
 
 ::: tip
 - La création d'un module est l'une des meilleures façons de contribuer à Léon ! Avant toute chose, assurez-vous de prendre connaissance de [ce document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
-- Par exemple, vous pouvez imaginer créer un module to-do liste *(pour un tel module, le NLP de Léon doit être amélioré)*. Faites un tour sur la [roadmap](https://roadmap.getleon.ai) pour voir ce qu'il y a de prévu..
+- Par exemple, vous pouvez imaginer créer un module to-do liste *(bien que [celui-ci existe déjà](https://github.com/leon-ai/leon/tree/develop/packages/calendar#to-do-list))*. Faites un tour sur la [roadmap](https://roadmap.getleon.ai) pour voir ce qu'il y a de prévu..
 - N'hésitez pas à [ouvrir une issue](https://github.com/leon-ai/leon/issues/new/choose) si vous avez la moindre question.
 :::
 
@@ -230,7 +230,7 @@ Si votre module est plus avancé et doit comprendre plusieurs objectifs, alors n
 
 - Afin de requêter l'API de Twitter, j'ai besoin des identifiants API. Alors je renseigne les clés de l'API Twitter dans le fichier `packages/twitter/config/config.json` que j'ai précédemment créé à l'étape 1.
 - De plus, je crée le fichier `packages/twitter/tweetsgrabber.py`, définis la ou les [action(s)](#actions-fonctions-de-module) de mon module puis j'écris mon code.
-- Pendant que j'écris le code, j'[édite `server/src/query-object.sample.json`](#objet-de-demande-et-entites) depuis le répertoire racine du projet, j'utilise cette commande :
+- Pendant que j'écris le code, j'[édite `server/src/query-object.sample.json`](#objet-de-demande) depuis le répertoire racine du projet, j'utilise cette commande :
 ```bash
 PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
 # Exécute mon module à la volée
@@ -252,7 +252,7 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py s
 
 ### Actions (fonctions de module) <Badge text="1.0.0-beta.3+"/>
 
-Dans le fichier du module, vous devez ajouter une action (fonction) qui sera le point d'entrée de l'exécution. Une action prend la chaîne de caractères d'entrée (query) et les [entités](#objet-de-demande-et-entites) comme paramètres.
+Dans le fichier du module, vous devez ajouter une action (fonction) qui sera le point d'entrée de l'exécution. Une action prend la chaîne de caractères d'entrée (query) et les [entités](#entites) comme paramètres.
 
 Quand vous avez seulement une action dans votre module, le nom d'action utilisé est généralement `run` :
 
@@ -319,7 +319,7 @@ N'oubliez pas que Léon sait quelle action il doit exécuter grâce aux [express
 - Les noms d'actions doivent utiliser le snake_case (lettres minuscules et `_` seulement) et doit être nommés en anglais.
 > Ex. les actions du module *To-Do List* : `create_list`, `add_todo`, `complete_todo`, etc.
 
-### Objet de demande et entités <Badge text="1.0.0-beta.2+"/>
+### Objet de demande <Badge text="1.0.0-beta.2+"/>
 
 Chaque fois que vous communiquer avec Léon, il va créer un fichier d'objet de demande temporaire avec les propriétés suivantes :
 
@@ -328,9 +328,21 @@ Chaque fois que vous communiquer avec Léon, il va créer un fichier d'objet de 
 - `module` : nom du module utilisé.
 - `action` : nom de l'action utilisée.
 - `query` : votre phrase.
-- `entities` : un tableau d'entités que Léon a extrait de votre phrase. Une entité peut être une durée dans le temps, un nombre, un nom de domaine, etc. La liste complète est disponible [ici](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md).
+- `entities` : un tableau d'entités que Léon a extrait de votre phrase. Une entité peut être ce que vous voulez en fonction de ce que vous définissez (entité personnalisée) ou elle peut être une entité intégrée comme une durée dans le temps, un nombre, un nom de domaine, etc.
 
 Le fichier [server/src/query-object.sample.json](https://github.com/leon-ai/leon/blob/develop/server/src/query-object.sample.json) est présent pour que vous puissiez exécuter et tester le comportement du code de votre module [à la volée](#a-la-volee) pendant sa création. Modifiez le en fonction des propriétés de votre module.
+
+### Entités <Badge text="1.0.0-beta.2+"/>
+
+Les entités sont des morceaux que Léon extrait des phrases. Ces entités sont partagées à vos actions afin que vous puissiez les manipuler pour donner plus de sens à vos modules.
+
+Il y a différents types d'entités, ceux-ci sont listés ci-dessous :
+
+#### Entités intégrées <Badge text="1.0.0-beta.2+"/>
+
+Les entités intégrées sont celles déjà inclues dans Léon. Léon extrait automatiquement ces entités depuis vos phrases.
+
+La liste complète est disponible [ici](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md).
 
 ::: tip
 N'hésitez pas à consulter des exemples afin de comprendre comment ces entités sont utilisées. Ceux-ci sont des exemples parfaits :
@@ -338,8 +350,118 @@ N'hésitez pas à consulter des exemples afin de comprendre comment ces entités
 - [packages/checker/isitdown.py](https://github.com/leon-ai/leon/blob/develop/packages/checker/isitdown.py)
 - [packages/trend/github.py](https://github.com/leon-ai/leon/blob/develop/packages/trend/github.py)
 
-Comme vous voyez, vous pouvez itérer sur les entités pour récupérer les informations dont vous avez besoin (nom de domaines, dates, etc.).
+Comme vous voyez, vous pouvez itérer sur les entités pour récupérer les informations dont vous avez besoin (nom de domaines, dates, vos propres entités, etc.).
 :::
+
+#### Entités personnalisées <Badge text="1.0.0-beta.3+"/>
+
+Les entités personnalisées sont celles que vous définissez vous-même en fonction de vos cas d'utilisations. Vous pouvez créer vos propres entités dans les fichiers de langues situés dans : `packages/{NOM DU PAQUET}/data/expressions/{FICHIER DE LANGUE}.json`. Dans ce fichier, les entités personnalisées sont inclues dans les propriétés d'actions au même niveau que les expressions.
+
+Elles sont représentées par un tableau d'objets :
+```json
+"entities": [
+  {
+    "type": "",
+    "name": "",
+    ...
+  }
+]
+```
+
+Comme vous pouvez le voir, une entité personnalisée comprend un `type`, un `name` et plus en fonction de son type.
+
+> Ex. consultez les [entités de l'action *create_list*](https://github.com/leon-ai/leon/blob/develop/packages/calendar/data/expressions/fr.json) du module *To-Do List*.
+
+Les entités personnalisées ont deux types listés ci-dessous :
+
+##### Entités réduites
+
+Les entités réduites vous permettent de tronquer des parties de la phrase pour extraire le texte qui vous intéresse. Ceci se fait à l'aide des conditions :
+
+- `{ "type": "between", "from": "", "to": "" }`
+- `{ "type": "after", "from": "" }`
+- `{ "type": "after_first", "from": "" }`
+- `{ "type": "after_last", "from": "" }`
+- `{ "type": "before", "to": "" }`
+- `{ "type": "before_first", "to": "" }`
+- `{ "type": "before_last", "to": "" }`
+
+Afin d'illustrer tout ça, admettons que nous créons un module *To-Do List*. Pour ce faire, nous allons définir une entité personnalisée `list`.
+
+Lorsque nous avons les phrases suivantes :
+```
+Crée ma liste de courses
+Crée une liste nommée courses
+```
+Nous voulons extraire le texte `courses` afin de l'associer à notre entité `list`. Nous utilisons la condition `after` pour récupérer ce qu'il y a après `de` ou `nommée` :
+
+```json
+"entities": [
+	{
+    "type": "trim",
+    "name": "list",
+    "conditions": [
+      {
+        "type": "after",
+        "from": "de"
+      },
+      {
+        "type": "after",
+        "from": "nommée"
+      }
+    ]
+  }
+]
+```
+
+Dans le fichier module `packages/{PACKAGE NAME}/todolist.py` :
+```python
+def create_list(string, entities):    
+  # string: "Crée ma liste de courses"
+  # entities: [{'type': 'after', 'start': 18, 'end': 25, 'len': 8, 'accuracy': 0.99, 'sourceText': 'courses', 'utteranceText': 'courses', 'entity': 'list'}]
+    
+  print('nom de l\'entité :', entities[0]['entity']) # nom de l'entité : list
+  print('valeur de l\'entité :', entities[0]['sourceText']) # valeur de l'entité : courses
+```
+
+::: tip
+Vous pouvez jeter un œil au réel [module *To-Do List*](https://github.com/leon-ai/leon/blob/develop/packages/calendar/todolist.py) du paquet *Calendar*.
+:::
+
+##### Entités expressions régulières
+
+Les entités expressions régulières vous permettent de récupérer les parties d'une phrase via des expressions régulières.
+
+
+Disons que nous créons un module *Color Picker*. Pour ce faire, nous allons définir une entité expression régulière `color`.
+
+Lorsque nous avons la phrase suivante :
+```
+J'aime les couleurs rouge et bleu
+```
+Nous voulons extraire les chaînes de caractères `rouge` et `bleu` afin de les associer à des entités `color`. Nous utilisons une expression régulière pour récupérer ces couleurs :
+
+```json
+"entities": [
+  {
+    "type": "regex",
+    "name": "color",
+    "regex": "bleu|jaune|rouge|rose|vert"
+  }
+]
+```
+
+Dans le fichier module (`packages/{PACKAGE NAME}/colorpicker.py`):
+```python
+def run(string, entities):    
+  # string: "J'aime les couleurs rouge et bleu"
+  # entities: [{'start': 20, 'end': 25, 'accuracy': 1, 'sourceText': 'rouge', 'utteranceText': 'rouge', 'entity': 'color'}, {'start': 29, 'end': 33, 'accuracy': 1, 'sourceText': 'bleu', 'utteranceText': 'bleu', 'entity': 'color'}]
+  
+  print('nom de l\'entité :', entities[0]['entity']) # nom de l'entité : color
+  print('valeur de l\'entité :', entities[0]['sourceText']) # valeur de l'entité : rouge
+  print('nom de l\'entité :', entities[1]['entity']) # nom de l'entité : color
+  print('valeur de l\'entité :', entities[1]['sourceText']) # valeur de l'entité : bleu
+```
 
 ### Données persistentes
 
@@ -382,7 +504,7 @@ Pour tester le comportement de votre module pendant que vous êtes en train de l
 PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
 ```
 
-Par exemple, pour le module Is It Down le fichier d'[objet de demande](#objet-de-demande-et-entites) pourrait ressembler à ceci :
+Par exemple, pour le module Is It Down le fichier d'[objet de demande](#objet-de-demande) pourrait ressembler à ceci :
 
 ```json
 {

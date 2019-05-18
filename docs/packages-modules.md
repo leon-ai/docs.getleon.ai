@@ -195,7 +195,7 @@ It is possible to use HTML in your answers.
 
 ::: tip
 - Creating a module is one of the best way to contribute in Leon! Before doing that, please make sure you review [this document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) <3
-- For example, you could think about creating a to-do list module *(for such module, the Leon's NLP should be improved)*. Check out the [roadmap](https://roadmap.getleon.ai) to see what is in the pipeline.
+- For example, you could think of creating a To-Do List module *(although [this one already exists](https://github.com/leon-ai/leon/tree/develop/packages/calendar#to-do-list))*. Check out the [roadmap](https://roadmap.getleon.ai) to see what is in the pipeline.
 - Don't hesitate to [open an issue](https://github.com/leon-ai/leon/issues/new/choose) if you have any questions.
 :::
 
@@ -227,7 +227,7 @@ If your module is more advanced and must contain multiple purposes, do not hesit
 
 - To request the Twitter API, I need API credentials. So I set the Twitter API key(s) in the `packages/twitter/config/config.json` file I previously created in the step 1.
 - In addition, I create the `packages/twitter/tweetsgrabber.py` file, define my [action(s)](#actions-module-functions) and I write the code of my module.
-- While I'm writing the code, I [edit `server/src/query-object.sample.json`](#query-object-entities) and from the project root directory I use the following command:
+- While I'm writing the code, I [edit `server/src/query-object.sample.json`](#query-object) and from the project root directory I use the following command:
 ```bash
 PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
 # It executes my module on the fly
@@ -249,7 +249,7 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py s
 
 ### Actions (Module Functions) <Badge text="1.0.0-beta.3+"/>
 
-In the module file, you must add an action (function) that will be the entry point of the execution. An action takes the input string (query) and the [entities](#query-object-entities) as parameters.
+In the module file, you must add an action (function) that will be the entry point of the execution. An action takes the input string (query) and the [entities](#entities) as parameters.
 
 When you have only one action in your module, the usual action name is `run`:
 
@@ -315,7 +315,7 @@ Don't forget that Leon knows which action he must execute thanks to the [express
 - Actions names must use snake_case (lowercase alphabetic characters and `_` only) and must use the English language.
 > E.g. *To-Do List* module actions: `create_list`, `add_todo`, `complete_todo`, etc.
 
-### Query Object & Entities <Badge text="1.0.0-beta.2+"/>
+### Query Object <Badge text="1.0.0-beta.2+"/>
 
 Every time you communicate to Leon, he will creates a temporary query object JSON file with the following properties:
 - `lang`: short code of the used language.
@@ -323,18 +323,141 @@ Every time you communicate to Leon, he will creates a temporary query object JSO
 - `module`: used module name.
 - `action`: used action name.
 - `query`: your sentence.
-- `entities`: an array of the entities Leon has extracted from your sentence. An entity can be a date duration, a number, a domain name, etc. The full list is available [here](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md).
+- `entities`: an array of the entities Leon has extracted from your sentence. An entity can be whatever you define as an entity (custom entity) or it can be a built-in entity such as a date duration, a number, a domain name, etc.
 
 The [server/src/query-object.sample.json](https://github.com/leon-ai/leon/blob/develop/server/src/query-object.sample.json) file is here to let you execute and test the behavior of your module code [on the fly](#on-the-fly) during its creation. Edit it according to your module properties.
 
+### Entities <Badge text="1.0.0-beta.2+"/>
+
+Entities are chunks that Leon extracts from your sentences. These entities are shared to your actions so you can manipulate them to give more sense to your modules.
+
+There are different types of entities that are listed below:
+
+#### Built-In Entities <Badge text="1.0.0-beta.2+"/>
+
+Built-in entities are the ones already included in Leon. Leon extracts entities from queries automatically.
+
+The full list is available [here](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md).
+
 ::: tip
-Feel free to see some examples to understand how entities are used. Those are perfect examples:
+Feel free to see some examples to understand how built-in entities are used. Those are perfect examples:
 
 - [packages/checker/isitdown.py](https://github.com/leon-ai/leon/blob/develop/packages/checker/isitdown.py)
 - [packages/trend/github.py](https://github.com/leon-ai/leon/blob/develop/packages/trend/github.py)
 
 As you can see, you can iterate over the entities to grab the information you need (domain names, dates, etc.).
 :::
+
+#### Custom Entities <Badge text="1.0.0-beta.3+"/>
+
+Custom entities are the ones you define yourself according to specific use cases. You can create your own entities in the translations files located in: `packages/{PACKAGE NAME}/data/expressions/{LANG FILE}.json`. In that file, custom entities are included in the actions properties at the same level as the expressions.
+
+They are represented by an array of objects:
+```json
+"entities": [
+  {
+    "type": "",
+    "name": "",
+    ...
+  }
+]
+```
+
+As you can see, a custom entity is made of a `type`, a `name` and more depending of its type.
+
+> E.g. see the [*create_list* action entities](https://github.com/leon-ai/leon/blob/develop/packages/calendar/data/expressions/en.json) of the *To-Do List* module.
+
+Custom entities have two types listed below:
+
+##### Trim Entities
+
+Trim entities allow you to cut/trim parts of the query to extract only the text you want. This is done thanks to these conditions:
+
+- `{ "type": "between", "from": "", "to": "" }`
+- `{ "type": "after", "from": "" }`
+- `{ "type": "after_first", "from": "" }`
+- `{ "type": "after_last", "from": "" }`
+- `{ "type": "before", "to": "" }`
+- `{ "type": "before_first", "to": "" }`
+- `{ "type": "before_last", "to": "" }`
+
+To illustrate that, let's say we are creating a *To-Do List* module. To do so, we will define a custom entity `list`.
+
+When we have the following queries:
+```
+Create a shopping list
+Create my shopping list
+```
+We want to extract the text `shopping` to associate it as a `list` entity. We use the `between` condition to catch what is between `a` or `my` and `list`:
+
+```json
+"entities": [
+	{
+    "type": "trim",
+    "name": "list",
+    "conditions": [
+      {
+        "type": "between",
+        "from": "a",
+        "to": "list"
+      },
+      {
+        "type": "between",
+        "from": "my",
+        "to": "list"
+      }
+    ]
+  }
+]
+```
+
+In the module file `packages/{PACKAGE NAME}/todolist.py`:
+```python
+def create_list(string, entities):    
+  # string: "Create a shopping list"
+  # entities: [{'type': 'between', 'start': 9, 'end': 16, 'len': 8, 'accuracy': 1, 'sourceText': 'shopping', 'utteranceText': 'shopping', 'entity': 'list'}]
+    
+  print('entity name:', entities[0]['entity']) # entity name: list
+  print('entity value:', entities[0]['sourceText']) # entity value: shopping
+```
+
+::: tip
+You can take a look at the real [*To-Do List* module](https://github.com/leon-ai/leon/blob/develop/packages/calendar/todolist.py) of the *Calendar* package.
+:::
+
+##### Regex Entities
+
+Regex entities allow you to grab parts of the query via a regular expression.
+
+Let's say we create a *Color Picker* module. To do so, we will define a regex entity `color`.
+
+When we have the following query:
+```
+I like red and blue colors
+```
+We want to extract the strings `red` and `blue` to associate it as `color` entities. We use a regex to catch these colors:
+
+```json
+"entities": [
+  {
+    "type": "regex",
+    "name": "color",
+    "regex": "blue|yellow|red|pink|green"
+  }
+]
+```
+
+In the module file (`packages/{PACKAGE NAME}/colorpicker.py`):
+```python
+def run(string, entities):    
+  # string: "I like red and blue colors"
+  # entities: [{'start': 7, 'end': 10, 'accuracy': 1, 'sourceText': 'red', 'utteranceText': 'red', 'entity': 'color'}, {'start': 15, 'end': 19, 'accuracy': 1, 'sourceText': 'blue', 'utteranceText': 'blue', 'entity': 'color'}]
+  
+  print('entity name:', entities[0]['entity']) # entity name: color
+  print('entity value:', entities[0]['sourceText']) # entity value: red
+  print('entity name:', entities[1]['entity']) # entity name: color
+  print('entity value:', entities[1]['sourceText']) # entity value: blue
+```
 
 ### Persistent Data
 
@@ -378,7 +501,7 @@ To test the behavior of your module while you are creating it, you can run this 
 PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
 ```
 
-For example, for the Is It Down module the [query object](#query-object-entities) file could look like that:
+For example, for the Is It Down module the [query object](#query-object) file could look like that:
 
 ```json
 {
