@@ -432,7 +432,6 @@ Vous pouvez jeter un œil au réel [module *To-Do List*](https://github.com/leon
 
 Les entités expressions régulières vous permettent de récupérer les parties d'une phrase via des expressions régulières.
 
-
 Disons que nous créons un module *Color Picker*. Pour ce faire, nous allons définir une entité expression régulière `color`.
 
 Lorsque nous avons la phrase suivante :

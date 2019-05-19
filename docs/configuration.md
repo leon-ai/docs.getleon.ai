@@ -93,9 +93,9 @@ If a module has this option, once the module has been processed, you can synchro
 > E.g. the *YouTube* module of the *[Video Downloader Package](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader)* allows you to synchronize your downloaded videos on your Google Drive account or on your current device.
 
 ::: tip
-Pour déterminer si un module comprend cette option, vérifiez simplement la configuration de celui-ci via ce fichier : `packages/{PACKAGE NAME}/config/config.json`.
+To see if a module has this option, simply check the settings via this file: `packages/{PACKAGE NAME}/config/config.json`.
 
-**Dans ce fichier, initialisez la clé `enabled` à `true`** afin d'activer le synchroniseur pour un module spécifique.
+**In that file, set the `enabled` key to `true`** to enable the synchronizer for this specific module.
 :::
 
 | Method              | Description              |
