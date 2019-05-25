@@ -14,10 +14,8 @@ The environment variables included in the following table can be found in the `.
 | ----------------------------|-------------|---------|
 | `LEON_LANG`                 | Leon's language and his understanding. **If you change the language**, run: `npm run train expressions`. | `en-US` (default); `fr-FR` |
 | `LEON_NODE_ENV`             | Environment. | `development` (default); `production`; `testing` |
-| `LEON_SERVER_HOST`          | Server host. Use your machine IP address to access Leon from the outside. | `localhost` (default) |
-| `LEON_SERVER_PORT`          | Server port. | `1337` (default) |
-| `LEON_WEBAPP_HOST`          | Web app host. Use your machine IP address to access Leon from the outside. | `localhost` (default) |
-| `LEON_WEBAPP_PORT`          | Web app port. | `4242` (default) |
+| `LEON_HOST`                 | Leon's host. Use your machine IP address to access Leon from the outside. | `http://localhost` (default) |
+| `LEON_PORT`                 | Leon's port. | `1337` (default) |
 | `LEON_TIME_ZONE`            | Leon's time zone. | Your current time zone (default); [Moment Timezone](https://momentjs.com/timezone/) |
 | `LEON_AFTER_SPEECH`         | Enable/disable auto listening after talking. No need to say `Leon` when you have talked once. | `true`; `false` (default) |
 | `LEON_STT`          	      | Enable/disable STT. | `true`; `false` (default) |
