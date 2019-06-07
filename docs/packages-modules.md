@@ -475,7 +475,7 @@ Leon runs in a virtual environment to ensure that the project's packages/depende
 To install third party packages, kindly follow these steps;
 
 1. Open a terminal window at the `bridges/python` directory.
-2. Perform `pipenv install {PACKAGE NAME}={PACKAGE VERSION}`. Note that it must use a specific package version.
+2. Perform `pipenv install {PACKAGE NAME}=={PACKAGE VERSION}`. Note that it must use a specific package version.
 3. Import the newly installed package in the required module file with `import {PACKAGE NAME}`.
 
 Kindly note that `{PACKAGE NAME}` and `{PACKAGE VERSION}` are placeholders. They should be replaced with the name and version of the actual package you wish to install.

@@ -478,7 +478,7 @@ Léon tourne dans un environnement virtuel afin d'assurer que les paquets / dép
 Afin d'installer les paquets tiers, veuillez suivre les étapes suivantes :
 
 1. Ouvrez votre terminal au dossier `bridges/python`.
-2. Exécutez `pipenv install {NOM DU PAQUET}={VERSION DU PAQUET}`. Notez qu'il doit y avoir une version spécifique du paquet.
+2. Exécutez `pipenv install {NOM DU PAQUET}=={VERSION DU PAQUET}`. Notez qu'il doit y avoir une version spécifique du paquet.
 3. Importez le nouveau paquet installé dans le fichier du module requis via `import {NOM DU PAQUET}`.  
 
 `{NOM DU PAQUET}` et `{VERSION DU PAQUET}` sont des placeholders. N'oubliez pas de les remplacer par le nom et la version du paquet que vous souhaitez installer.
