@@ -34,7 +34,7 @@ A video is available [here](http://www.youtube.com/watch?v=p7GRGiicO1c).
 > Leon's core is developed on the top of the Node.js JavaScript runtime.
 - **npm >= 5**
 > npm is the packages manager of Node.js, Leon needs it for his core's dependencies tree.
-- **[Python](https://www.python.org/downloads/) 3.6.x**
+- **[Python](https://www.python.org/downloads/) >= 3**
 > Today, Leon's modules are only written in Python.
 - **[Pipenv](https://docs.pipenv.org)**
 > Pipenv allows Leon's modules to be executed in a dedicated environment. It also embeds a Python packages manager for the dependencies tree of his modules.

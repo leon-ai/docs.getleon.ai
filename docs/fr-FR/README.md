@@ -34,7 +34,7 @@ Une vidéo est disponible [ici](http://www.youtube.com/watch?v=kXiOD6J0WIk).
 > Le noyau de Léon est développé avec le runtime JavaScript Node.js.
 - **npm >= 5**
 > npm est le gestionnaire de paquets de Node.js. Léon en a besoin pour l'arbre de dépendances de son noyau.
-- **[Python](https://www.python.org/downloads/) 3.6.x**
+- **[Python](https://www.python.org/downloads/) >= 3**
 > Aujourd'hui, les modules de Léon sont écrits en Python.
 - **[Pipenv](https://docs.pipenv.org)**
 > Pipenv permet aux modules de Léon d'être exécutés dans un environnement dédié. Pipenv embarque également un gestionnaire de paquets Python pour l'arbre de dépendances des modules de Léon.
