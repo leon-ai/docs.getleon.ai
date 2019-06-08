@@ -3,6 +3,11 @@
 Dans cette section, vous allez voir comment installer les différents nœuds hors ligne de Léon.
 
 Avec ces fournisseurs STT / TTS et le nœud hotword, tout tourne sur votre machine, rien ne sort pour requêter un service tiers.
+Pour tous les installer en même temps, exécutez simplement la commande suivante :	
+
+ ```bash	
+npm run setup:offline	
+```
 
 ::: warning
 - Ces nœuds hors ligne ne sont pas disponible sous Windows.

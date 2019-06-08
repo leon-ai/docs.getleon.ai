@@ -3,6 +3,11 @@
 In this section, you will see how to setup the Leon's offline nodes.
 
 With these STT/TTS providers and this hotword node, everything is running on your machine, nothing get out to request a third-party.
+To setup them all at the same time, simply run the following command:	
+
+ ```bash	
+npm run setup:offline	
+```
 
 ::: warning
 - These offline nodes are not available on Windows.

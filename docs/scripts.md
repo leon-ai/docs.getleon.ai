@@ -17,6 +17,7 @@ Those scripts **must be executed from the project root directory**.
 
 | Script                                 | Purpose             |
 | ----------------------------------------|--------------------|
+| `npm run setup:offline`            | Setup all the offline nodes.       |
 | `npm run setup:offline-stt`            | Setup the offline STT.       |
 | `npm run setup:offline-tts`            | Setup the offline TTS.       |
 | `npm run setup:offline-hotword`            | Setup the hotword node.       |

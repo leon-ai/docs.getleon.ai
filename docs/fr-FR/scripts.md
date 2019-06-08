@@ -17,6 +17,7 @@ Ces scripts **doivent être exécutés à partir du répertoire racine du projet
 
 | Script                                 | Objectif             |
 | ----------------------------------------|--------------------|
+| `npm run setup:offline`            | Installe tous les nœuds hors ligne.       |
 | `npm run setup:offline-stt`            | Installe l'STT hors ligne.       |
 | `npm run setup:offline-tts`            | Installe le TTS hors ligne.       |
 | `npm run setup:offline-hotword`            | Installe le nœud hotword.       |
