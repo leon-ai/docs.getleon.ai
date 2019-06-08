@@ -603,6 +603,16 @@ import utils
 You can also [contribute](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) by improving these functions or by adding new ones to make the modules creation even better.
 :::
 
+### getqueryobj()
+
+Returns the query object.
+
+```python
+utils.getqueryobj()
+
+# >> { 'id': '1560037280351-8cbc', 'lang': 'en', 'package': 'leon', 'module': 'whoami', 'action': 'run', 'query': 'Who are you?', 'entities': [] }
+```
+
 ### translate(key, d = { })
 
 Randomly pick up a module answer from the `packages/{PACKAGE NAME}/data/answers/{LANG}.json` file via the given key, do string interpolation via the given data object and return the plain string answer.
@@ -694,16 +704,6 @@ Get a module configuration from the `packages/{PACKAGE NAME}/config/config.json`
 utils.config('api_key')
 
 # >> my-super-api-key
-```
-
-### info()
-
-Returns information from the current query.
-
-```python
-utils.info()
-
-# >> { 'lang': 'en', 'package': 'checker', 'module': 'isitdown' }
 ```
 
 ### createdldir()

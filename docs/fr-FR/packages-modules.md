@@ -604,6 +604,16 @@ import utils
 Vous pouvez également [contribuer](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) en améliorant ces fonctions ou en ajoutant de nouvelles afin de rendre la création de modules encore meilleure.
 :::
 
+### getqueryobj()
+
+Retourne l'objet de demande.
+
+```python
+utils.getqueryobj()
+
+# >> { 'id': '1560037280351-8cbc', 'lang': 'fr', 'package': 'leon', 'module': 'whoami', 'action': 'run', 'query': 'Qui es-tu ?', 'entities': [] }
+```
+
 ### translate(key, d = { })
 
 Sélectionne aléatoirement une réponse du module depuis le fichier `packages/{PACKAGE NAME}/data/answers/{LANG}.json` grâce à la clé donnée. Aussi, cette fonction permet l'interpolation via l'objet de données donné et retourne la réponse sous forme de chaîne de caractères.
@@ -695,16 +705,6 @@ Récupére la configuration du module depuis le fichier `packages/{PACKAGE NAME}
 utils.config('api_key')
 
 # >> ma-super-clé-api
-```
-
-### info()
-
-Retourne les informations de la query actuelle.
-
-```python
-utils.info()
-
-# >> { 'lang': 'fr', 'package': 'checker', 'module': 'isitdown' }
 ```
 
 ### createdldir()
