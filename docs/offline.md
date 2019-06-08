@@ -57,10 +57,6 @@ The hotword node is an independent Node.js process which allows you to listen fo
 
 ### Setup
 
-::: danger
-The hotword process needs **Node.js 8** to be installed and to run.
-:::
-
 ::: tip
 Use [nvm](/how-to/#using-nvm-recommended) to easily switch between your Node.js versions.
 :::

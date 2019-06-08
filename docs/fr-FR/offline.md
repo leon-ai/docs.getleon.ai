@@ -58,10 +58,6 @@ Le nœud hotword est un processus Node.js indépendant qui vous permet d'écoute
 
 ### Installation
 
-::: danger
-Pour son installation et son exécution, le processus hotword a besoin de **Node.js 8**.
-:::
-
 ::: tip
 Utilisez [nvm](/fr-FR/how-to/#en-utilisant-nvm-recommande) pour changer vos versions Node.js facilement.
 :::
