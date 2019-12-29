@@ -6,7 +6,7 @@
 
 [nvm](https://github.com/creationix/nvm) (Node Version Manager) allows you to download, install and manage your Node.js versions. With nvm you can easily switch between different versions installed on your system. You can download it with the following links:
 
-- For [Linux/macOS](https://github.com/creationix/nvm#install-script)
+- For [Linux/macOS](https://github.com/nvm-sh/nvm#installation-and-update)
 - For [Windows](https://github.com/coreybutler/nvm-windows#installation--upgrades)
 
 ### Using the Traditional Way
