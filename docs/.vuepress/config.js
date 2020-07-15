@@ -22,6 +22,11 @@ module.exports = {
       lang: 'fr-FR',
       title: 'Léon Docs',
       description: 'Documentation de Léon - Documentation principale de votre assistant personnel open source Léon.'
+    },
+    '/pt-BR/': {
+      lang: 'pt-BR',
+      title: 'Leon Docs',
+      description: 'Documentação do Leon - Documentação principal do seu assistente pessoal open-source Leon.'
     }
   },
   themeConfig: {
@@ -32,7 +37,8 @@ module.exports = {
     editLinks: true,
     locales: {
       '/': require('./config.en-US'),
-      '/fr-FR/': require('./config.fr-FR')
+      '/fr-FR/': require('./config.fr-FR'),
+      '/pt-BR/': require('./config.pt-BR')
     }
   },
   plugins: {
