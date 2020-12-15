@@ -30,6 +30,7 @@ module.exports = {
           'collaborative-logger',
           'scripts',
           'tests'
+          'reverse-proxy'
         ]
       }
     ]
