@@ -72,17 +72,23 @@ IBM Watson has credentials for each STT service and each TTS service.
 
 #### Watson STT
 
-1. [Click here](https://console.bluemix.net/catalog/services/speech-to-text) to get your credentials.
+There were major changes for IBM Watson. We adapted these changes from the version `1.0.0-beta.4` <Badge text="1.0.0-beta.4+"/>
+
+1. [Click here](https://console.bluemix.net/catalog/services/speech-to-text) to create a Speech to Text service.
 2. Click on `Create` (or `Sign up to Create` if you do not have an account yet).
-3. Click on `Manage` in the left menu, then on `Show Credentials`.
-4. Copy `API Key` and `URL`, then paste them to the following Leon's file: `server/src/config/voice/watson-stt.json`.
+3. Click on `Service credentials` in the left menu, then expand the generated service credential or create a new one.
+4. Copy `apikey` and `url`, then paste them to the following Leon's file: `server/src/config/voice/watson-stt.json`.
 
 #### Watson TTS
 
-1. [Click here](https://console.bluemix.net/catalog/services/text-to-speech) to get your credentials.
+1. [Click here](https://console.bluemix.net/catalog/services/text-to-speech) to create a Text to Speech service.
 2. Click on `Create` (or `Sign up to Create` if you do not have an account yet).
-3. Click on `Manage` in the left menu, then on `Show Credentials`.
+3. Click on `Service credentials` in the left menu, then expand the generated service credential or create a new one.
 4. Copy `API Key` and `URL`, then paste them to the following Leon's file: `server/src/config/voice/watson-tts.json`.
+
+::: tip
+If you are using a version **below** `1.0.0-beta.4`, from the step 3. do: Click on `Manage` in the left menu, then on `Show Credentials`; copy `API Key` and `URL`, then paste them to the respected Leon's files: `server/src/config/voice/watson-stt.json` and `server/src/config/voice/watson-tts.json`.
+:::
 
 ## Synchronizer
 
@@ -97,7 +103,7 @@ To see if a module has this option, simply check the settings via this file: `pa
 :::
 
 | Method              | Description              |
-| --------------------|---------------------------
+| --------------------|---------------------------|
 | `direct`            | Synchronize content on your current device. |
 | `google-drive`      | Synchronize content on Google Drive. |
 
