@@ -16,12 +16,12 @@ Packages are listed in the `packages` directory. Let's take the [*Video Download
 
 Note the **package name must be lowercase and in English**.
 
-::: vue
+```
 videodownloader
-├── `config`
+├── config
 │   ├── config.json
 │   └── config.sample.json
-├── `data`
+├── data
 │   ├── answers
 │   │   ├── en.json
 │   │   └── fr.json
@@ -29,13 +29,13 @@ videodownloader
 │   └── expressions
 │       ├── en.json
 │       └── fr.json
-├── `test`
+├── test
 │   └── youtube.spec.js
 ├── README.md
-├── \_\_init\_\_.py
+├── __init__.py
 ├── version.txt
 └── youtube.py
-:::
+```
 
 - [`packages/videodownloader`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader): package name.
 - `packages/videodownloader/config/config.json`: package configuration. It contains the configuration of each of its module.

@@ -20,12 +20,12 @@
     "build": "vuepress build docs"
   },
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.32",
-    "@vuepress/plugin-google-analytics": "^1.0.0-alpha.32",
-    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.32",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "vuepress": "^1.0.0-alpha.32"
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-google-analytics": "^1.8.2",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.1.1",
+    "vuepress": "^1.8.2"
   },
   "dependencies": {}
 }

@@ -16,12 +16,12 @@ Les paquets sont listés dans le répertoire `packages`. Prenons le paquet [*Vid
 
 Notez que le **nom du paquet doit être en minuscule et en anglais**.
 
-::: vue
+```
 videodownloader
-├── `config`
+├── config
 │   ├── config.json
 │   └── config.sample.json
-├── `data`
+├── data
 │   ├── answers
 │   │   ├── en.json
 │   │   └── fr.json
@@ -29,13 +29,13 @@ videodownloader
 │   └── expressions
 │       ├── en.json
 │       └── fr.json
-├── `test`
+├── test
 │   └── youtube.spec.js
 ├── README.md
-├── \_\_init\_\_.py
+├── __init__.py
 ├── version.txt
 └── youtube.py
-:::
+```
 
 - [`packages/videodownloader`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) : nom du paquet.
 - `packages/videodownloader/config/config.json` : configuration du paquet. Il contient la configuration de tous ses modules.
