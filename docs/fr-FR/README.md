@@ -30,7 +30,7 @@ Une vidéo est disponible [ici](http://www.youtube.com/watch?v=kXiOD6J0WIk).
 
 ## Prérequis
 
-- **[Node.js](https://nodejs.org/) >= 10**
+- **[Node.js](https://nodejs.org/) >= 14**
 > Le noyau de Léon est développé avec le runtime JavaScript Node.js.
 - **npm >= 5**
 > npm est le gestionnaire de paquets de Node.js. Léon en a besoin pour l'arbre de dépendances de son noyau.
