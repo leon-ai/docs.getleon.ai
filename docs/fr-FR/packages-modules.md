@@ -534,7 +534,7 @@ Par exemple, pour le module Is It Down le fichier d'[objet de demande](#objet-de
 ```
 
 ::: tip
-N'oubliez pas de jeter un œil à [cette liste](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md) pour voir comment les entités sont formatées.
+N'oubliez pas de jeter un œil à [cette liste](https://github.com/axa-group/nlp.js/blob/master/docs/v3/builtin-entity-extraction.md) pour voir comment les entités sont formatées.
 :::
 
 ### Bout en bout (fonctionnel)

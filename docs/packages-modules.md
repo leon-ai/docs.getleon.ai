@@ -532,7 +532,7 @@ For example, for the Is It Down module the [query object](#query-object) file co
 ```
 
 ::: tip
-Don't forget to take a look at [this list](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md) to see how entities are formatted.
+Don't forget to take a look at [this list](https://github.com/axa-group/nlp.js/blob/master/docs/v3/builtin-entity-extraction.md) to see how entities are formatted.
 :::
 
 ### End-to-End
