@@ -342,7 +342,7 @@ Il y a différents types d'entités, ceux-ci sont listés ci-dessous :
 
 Les entités intégrées sont celles déjà inclues dans Léon. Léon extrait automatiquement ces entités depuis vos phrases.
 
-La liste complète est disponible [ici](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md).
+La liste complète est disponible [ici](https://github.com/axa-group/nlp.js/blob/master/docs/v3/builtin-entity-extraction.md).
 
 ::: tip
 N'hésitez pas à consulter des exemples afin de comprendre comment ces entités sont utilisées. Ceux-ci sont des exemples parfaits :

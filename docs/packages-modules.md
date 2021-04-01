@@ -337,7 +337,7 @@ There are different types of entities that are listed below:
 
 Built-in entities are the ones already included in Leon. Leon extracts entities from queries automatically.
 
-The full list is available [here](https://github.com/axa-group/nlp.js/blob/master/docs/builtin-entity-extraction.md).
+The full list is available [here](https://github.com/axa-group/nlp.js/blob/master/docs/v3/builtin-entity-extraction.md).
 
 ::: tip
 Feel free to see some examples to understand how built-in entities are used. Those are perfect examples:
