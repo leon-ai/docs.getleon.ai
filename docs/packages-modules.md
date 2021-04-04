@@ -677,12 +677,12 @@ Send HTTP request with the user-agent `Leon/{VERSION NUMBER}`. It uses the [Requ
 ```python
 utils.http('GET', 'https://getleon.ai')
 
-# >> cf. http://docs.python-requests.org/en/master/user/advanced/#request-and-response-objects
+# >> cf. https://docs.python-requests.org/en/master/user/advanced/#request-and-response-objects
 
 # Request with custom headers
 utils.http('POST', 'https://an-awesome-api.com', { 'Authorization': 'Bearer xxx' })
 
-# >> cf. http://docs.python-requests.org/en/master/user/advanced/#request-and-response-objects
+# >> cf. https://docs.python-requests.org/en/master/user/advanced/#request-and-response-objects
 ```
 
 ### config(key)

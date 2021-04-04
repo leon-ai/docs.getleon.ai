@@ -24,7 +24,7 @@ ASR pour (*Automatic Speech Recognition* ou *Reconnaissance automatique de la pa
 Léon l'utilise pour rendre votre voix compréhensible pour lui.
 
 > Pièce jointes :
-> - [app/js/main.es6.js](https://github.com/leon-ai/leon/blob/develop/app/js/main.es6.js) *partie app web ASR*.
+> - [app/src/js/main.js](https://github.com/leon-ai/leon/blob/develop/app/src/js/main.js) *partie app web ASR*.
 > - [server/src/core/asr.js](https://github.com/leon-ai/leon/blob/develop/server/src/core/asr.js) *partie serveur ASR*.
 
 ## Cerveau

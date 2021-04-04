@@ -18,7 +18,7 @@ Léon est encore très jeune aujourd'hui. Si vous le souhaitez, vous pouvez aide
 
 ## Démo
 
-Une vidéo est disponible [ici](http://www.youtube.com/watch?v=kXiOD6J0WIk).
+Une vidéo est disponible [ici](https://www.youtube.com/watch?v=kXiOD6J0WIk).
 
 ## Motivations
 
@@ -32,7 +32,7 @@ Une vidéo est disponible [ici](http://www.youtube.com/watch?v=kXiOD6J0WIk).
 
 - **[Node.js](https://nodejs.org/) >= 14**
 > Le noyau de Léon est développé avec le runtime JavaScript Node.js.
-- **npm >= 5**
+- **[npm](https://npmjs.com/) >= 5**
 > npm est le gestionnaire de paquets de Node.js. Léon en a besoin pour l'arbre de dépendances de son noyau.
 - **[Python](https://www.python.org/downloads/) >= 3**
 > Aujourd'hui, les modules de Léon sont écrits en Python.

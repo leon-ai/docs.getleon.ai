@@ -24,7 +24,7 @@ ASR or *Automatic Speech Recognition* is the use of computer hardware and softwa
 Leon uses it to make your voice understandable for him.
 
 > Attachments:
-> - [app/js/main.es6.js](https://github.com/leon-ai/leon/blob/develop/app/js/main.es6.js) *ASR web app*.
+> - [app/src/js/main.js](https://github.com/leon-ai/leon/blob/develop/app/src/js/main.js) *ASR web app*.
 > - [server/src/core/asr.js](https://github.com/leon-ai/leon/blob/develop/server/src/core/asr.js) *ASR server*.
 
 ## Answers

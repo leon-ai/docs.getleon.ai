@@ -18,7 +18,7 @@ Leon is still pretty young today. If you wish, you can help by [contributing](ht
 
 ## Demo
 
-A video is available [here](http://www.youtube.com/watch?v=p7GRGiicO1c).
+A video is available [here](https://www.youtube.com/watch?v=p7GRGiicO1c).
 
 ## Motivations
 
@@ -32,7 +32,7 @@ A video is available [here](http://www.youtube.com/watch?v=p7GRGiicO1c).
 
 - **[Node.js](https://nodejs.org/) >= 14**
 > Leon's core is developed on the top of the Node.js JavaScript runtime.
-- **npm >= 5**
+- **[npm](https://npmjs.com/) >= 5**
 > npm is the packages manager of Node.js, Leon needs it for his core's dependencies tree.
 - **[Python](https://www.python.org/downloads/) >= 3**
 > Today, Leon's modules are only written in Python.
