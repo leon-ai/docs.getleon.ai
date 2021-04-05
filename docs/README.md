@@ -36,7 +36,7 @@ A video is available [here](https://www.youtube.com/watch?v=p7GRGiicO1c).
 > npm is the packages manager of Node.js, Leon needs it for his core's dependencies tree.
 - **[Python](https://www.python.org/downloads/) >= 3**
 > Today, Leon's modules are only written in Python.
-- **[Pipenv](https://docs.pipenv.org)**
+- **[Pipenv](https://docs.pipenv.org) >= 2020.11.15**
 > Pipenv allows Leon's modules to be executed in a dedicated environment. It also embeds a Python packages manager for the dependencies tree of his modules.
 - **Supported OSes: Linux, macOS and Windows**
 > Should we explain that one? :)
