@@ -4,7 +4,7 @@
 
 Leon is an **open-source personal assistant** who can live on your server.
 
-He does stuff when you ask him for.
+He does stuff when you ask him to.
 
 You can talk to him and he can talk to you.
 You can also text him and he can also text you.
@@ -25,7 +25,7 @@ A video is available [here](https://www.youtube.com/watch?v=p7GRGiicO1c).
 1. As developers (or not), we **love creating** things, even more when those things can **help** in our **daily life**. So instead of building a dedicated project for each of those things, Leon can help us with his **packages/modules** (skills) structure. We believe it's better than keeping your awesome ideas in backlog forever, right?
 2. With this generic structure, **everyone** can **create** their own **modules** and **share them**. Therefore there is only one core (to rule them all).
 3. Leon uses **AI concepts**, which is cool.
-4. **Privacy matters**, you can configure Leon to talk with him **offline**. You can already **text** with him **without** any **third party** services.
+4. **Privacy matters**, you can configure Leon to talk with him **offline**. You can already **interact** with him **without** any **third party** services.
 5. Last but not least: **open source** is great.
 
 ## Prerequisites
