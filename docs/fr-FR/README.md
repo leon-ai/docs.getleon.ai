@@ -28,6 +28,12 @@ Une vidéo est disponible [ici](https://www.youtube.com/watch?v=kXiOD6J0WIk).
 4. La **vie privée** est **importante**, vous pouvez configurer Léon pour discuter avec lui **hors ligne**. Vous pouvez déjà **intéragir** avec lui sans **aucun service tiers**.
 5. Et enfin parce que l'**open source** c'est génial.
 
+## Essayer en un simple clic
+
+Gitpod va automatiquement vous installer un environnement et lancer une instance.
+
+[![Ouvrir avec Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/leon-ai/leon)
+
 ## Prérequis
 
 - **[Node.js](https://nodejs.org/) >= 14**

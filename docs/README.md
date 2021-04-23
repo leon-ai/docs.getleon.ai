@@ -28,6 +28,12 @@ A video is available [here](https://www.youtube.com/watch?v=p7GRGiicO1c).
 4. **Privacy matters**, you can configure Leon to talk with him **offline**. You can already **interact** with him **without** any **third party** services.
 5. Last but not least: **open source** is great.
 
+## Try with a Single-Click
+
+Gitpod will automatically setup an environment and run an instance for you.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/leon-ai/leon)
+
 ## Prerequisites
 
 - **[Node.js](https://nodejs.org/) >= 14**
