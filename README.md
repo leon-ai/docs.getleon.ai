@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the main documentation of Leon. It is available on [docs.getleon.ai](https://docs.getleon.ai), built on the top of [VuePress](https://vuepress.vuejs.org) and hosted by [Netlify](https://www.netlify.com).
+This repository contains the main documentation of Leon. It is available on [docs.getleon.ai](https://docs.getleon.ai), built on the top of [Docusaurus](https://docusaurus.io) and hosted by [Netlify](https://www.netlify.com).
 
 ## Development
 
@@ -10,8 +10,8 @@ This repository contains the main documentation of Leon. It is available on [doc
 # Install dependencies
 npm install
 
-# Run in development
-npm run dev
+# Run
+npm start
 
 # Build
 npm run build 
