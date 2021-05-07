@@ -1,8 +1,13 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+
+const title = 'Leon Docs'
+const description = 'Leon Documentation - Main documentation of your open-source personal assistant Leon.'
+const url = process.env.NODE_ENV !== 'development' ? 'https://docs.getleon.ai' : 'http://localhost:3000'
+
 module.exports = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title,
+  url,
+  tagline: '',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -10,11 +15,35 @@ module.exports = {
   organizationName: 'leon-ai', // Usually your GitHub org/user name.
   projectName: 'docs.getleon.ai', // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      disableSwitch: false,
+      respectPrefersColorScheme: true
+    },
+    image: 'img/docusaurus.png',
+    metadatas: [
+      { name: 'description', content: description },
+      { name: 'og:title', content: title },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:description', content: description },
+      { name: 'og:image', content: `${url}/img/og_social_card.png` },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: `${url}/img/twitter_social_card.png` }
+    ],
+    /*announcementBar: {
+      id: 'support_us', // Any value that will identify this message.
+      content:
+        'We are looking to revamp our docs, please fill <a target="_blank" rel="noopener noreferrer" href="#">this survey</a>',
+      backgroundColor: '#1C75DB', // Defaults to `#fff`.
+      textColor: '#FFF', // Defaults to `#000`.
+      isCloseable: false
+    },*/
     navbar: {
       title: 'Leon Docs',
       logo: {
         alt: 'Leon logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.svg'
       },
       items: [
         {
@@ -25,17 +54,27 @@ module.exports = {
         },
         {
           to: '/how-to/',
-          label: 'How To',
+          position: 'left',
+          label: 'How To'
+        },
+        {
+          href: 'https://blog.getleon.ai',
+          label: 'Blog',
+          position: 'left'
+        },
+        {
+          href: 'https://roadmap.getleon.ai',
+          label: 'Roadmap',
+          position: 'left'
+        },
+        {
+          href: 'https://discord.gg/MNQqqKg',
+          label: 'Discord',
           position: 'left'
         },
         {
           href: 'https://github.com/leon-ai/leon',
           label: 'GitHub',
-          position: 'right'
-        },
-        {
-          href: 'https://discord.gg/MNQqqKg',
-          label: 'Discord',
           position: 'right'
         },
         {
@@ -117,6 +156,14 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        'how-to': {
+          id: 'how-to',
+          path: 'how-to',
+          routeBasePath: 'how-to',
+          sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: false
         }
       }
     ]

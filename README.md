@@ -10,9 +10,12 @@ This repository contains the main documentation of Leon. It is available on [doc
 # Install dependencies
 npm install
 
-# Run
+# Run (dev)
 npm start
 
 # Build
-npm run build 
+npm run build
+
+# Serve locally
+npm run serve
 ```
