@@ -48,12 +48,13 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'guide/intro',
           position: 'left',
           label: 'Guide',
         },
         {
-          to: '/how-to/',
+          type: 'doc',
+          docId: 'how-to/how-to',
           position: 'left',
           label: 'How To'
         },
@@ -156,14 +157,6 @@ module.exports = {
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
-        },
-        'how-to': {
-          id: 'how-to',
-          path: 'how-to',
-          routeBasePath: 'how-to',
-          sidebarPath: require.resolve('./sidebars.js'),
-          showLastUpdateAuthor: false,
-          showLastUpdateTime: false
         }
       }
     ]
