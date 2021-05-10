@@ -1,0 +1,54 @@
+{
+  "link.title.Stay Tuned": {
+    "message": "Rester à l'écoute",
+    "description": "The title of the footer links column with title=Stay Tuned in the footer"
+  },
+  "link.title.Community": {
+    "message": "Communauté",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "Plus",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Newsletter": {
+    "message": "Newsletter",
+    "description": "The label of footer link with label=Newsletter linking to https://getleon.ai/"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to https://blog.getleon.ai/"
+  },
+  "link.item.label.Roadmap": {
+    "message": "Roadmap",
+    "description": "The label of footer link with label=Roadmap linking to https://roadmap.getleon.ai/"
+  },
+  "link.item.label.Changelog": {
+    "message": "Changelog",
+    "description": "The label of footer link with label=Changelog linking to https://changelog.getleon.ai/"
+  },
+  "link.item.label.#LeonAI": {
+    "message": "#LeonAI",
+    "description": "The label of footer link with label=#LeonAI linking to https://twitter.com/hashtag/LeonAI"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/MNQqqKg"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/leon-ai/leon"
+  },
+  "link.item.label.Contribute": {
+    "message": "Contribuer",
+    "description": "The label of footer link with label=Contribute linking to https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md"
+  },
+  "link.item.label.Help": {
+    "message": "Aide",
+    "description": "The label of footer link with label=Help linking to https://github.com/leon-ai/leon/issues"
+  },
+  "link.item.label.Donate": {
+    "message": "Faire un don",
+    "description": "The label of footer link with label=Donate linking to https://donate.getleon.ai"
+  }
+}

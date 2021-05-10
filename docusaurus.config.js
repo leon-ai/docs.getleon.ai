@@ -14,12 +14,25 @@ module.exports = {
   favicon: 'img/favicon.png',
   organizationName: 'leon-ai', // Usually your GitHub org/user name.
   projectName: 'docs.getleon.ai', // Usually your repo name.
+  i18n: {
+    defaultLocale: 'en-US',
+    locales: ['en-US', 'fr-FR'],
+    localeConfigs: {
+      'en-US': {
+        label: 'English',
+        direction: 'ltr'
+      },
+      'fr-FR': {
+        label: 'Français',
+        direction: 'ltr'
+      }
+    }
+  },
   themeConfig: {
     colorMode: {
       disableSwitch: false,
       respectPrefersColorScheme: true
     },
-    image: 'img/docusaurus.png',
     metadatas: [
       { name: 'description', content: description },
       { name: 'og:title', content: title },
@@ -72,6 +85,10 @@ module.exports = {
           href: 'https://discord.gg/MNQqqKg',
           label: 'Discord',
           position: 'left'
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
         {
           href: 'https://github.com/leon-ai/leon',
