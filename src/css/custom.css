@@ -10,6 +10,10 @@
   --color-primary: #1C75DB;
   --color-secondary: #ED297A;
   --color-black: #000;
+  --color-green: #31D76C;
+  --color-red: #FA4045;
+  --color-blue: #00C1FF;
+  --color-orange: #FAAD00;
   --border-color: #D1DCE5;
   --ifm-code-font-size: 95%;
   --ifm-color-primary: var(--color-primary);
@@ -20,6 +24,10 @@
   --ifm-color-primary-lighter: var(--color-primary);
   --ifm-color-primary-lightest: var(--color-primary);
   --ifm-toc-border-color: var(--border-color);
+  --ifm-color-success: var(--color-green);
+  --ifm-color-danger: var(--color-red);
+  --ifm-color-info: var(--color-blue);
+  --ifm-color-warning: var(--color-orange);
 }
 html[data-theme='dark'] {
   --ifm-background-color: var(--color-black);
