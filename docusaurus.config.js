@@ -28,9 +28,11 @@ module.exports = {
       }
     }
   },
+  scripts: [{ src: '//cdn.carbonads.com/carbon.js?serve=CK7DC27N&placement=docsgetleonai', id: '_carbonads_js' }],
   themeConfig: {
     colorMode: {
       disableSwitch: false,
+      defaultMode: 'dark',
       respectPrefersColorScheme: true
     },
     metadatas: [
@@ -160,7 +162,11 @@ module.exports = {
             }
           ]
         }
-      ]
+      ],
+    },
+    googleAnalytics: {
+      trackingID: 'UA-131760989-1',
+      anonymizeIP: true
     }
   },
   presets: [

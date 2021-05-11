@@ -1,0 +1,37 @@
+.carbon-ads {
+  padding: 1em;
+  font-size: .75rem;
+  border-radius: 4px;
+  line-height: 16px;
+  min-height: 102px;
+  margin: 10px;
+  margin-bottom: -.5rem;
+}
+
+.carbon-ads a {
+  color: #444;
+  font-weight: normal;
+  display: inline;
+}
+
+.carbon-ads .carbon-img {
+  float: left;
+  margin-right: 1rem;
+}
+
+.carbon-ads img {
+  display: block;
+}
+
+.carbon-ads .carbon-poweredby {
+  color: #999;
+  display: block;
+  margin-top: 0.5em;
+}
+
+@media (max-width: 720px) {
+  .carbon-ads .carbon-img img {
+    width: 100px;
+    height: 77px;
+  }
+}
