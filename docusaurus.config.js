@@ -28,7 +28,6 @@ module.exports = {
       }
     }
   },
-  scripts: [{ src: '//cdn.carbonads.com/carbon.js?serve=CK7DC27N&placement=docsgetleonai', id: '_carbonads_js' }],
   themeConfig: {
     colorMode: {
       disableSwitch: false,

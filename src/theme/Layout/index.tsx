@@ -28,13 +28,13 @@ function Layout(props: Props): JSX.Element {
     <LayoutProviders>
       <LayoutHead {...props} />
 
-      <CarbonAds />
-
       <SkipToContent />
 
       <AnnouncementBar />
 
       <Navbar />
+
+      <CarbonAds />
 
       <div
         className={clsx(
