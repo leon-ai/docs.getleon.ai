@@ -59,3 +59,12 @@ Those scripts **must be executed from the project root directory**.
 | `npm run test:e2e:nlp-modules`            | Run tests to ensure every expression is understandable.       |
 | `npm run test:json`            | Run tests to verify every JSON file are conform.      |
 | `npm run test:module {PACKAGE NAME}:{MODULE NAME}`            | Run tests of a given module.       |
+
+## Docker
+
+| Script                                 | Purpose             |
+| ----------------------------------------|--------------------|
+| `npm run docker:build`            | Build Leon in Docker.       |
+| `npm run docker:run`            | Start Leon in Docker.       |
+| `npm run docker:dev`            | Start Leon in development mode within Docker.       |
+| `npm run docker:check`            | Verify Leon setup inside Docker.       |

@@ -60,3 +60,12 @@ Ces scripts **doivent être exécutés à partir du répertoire racine du projet
 | `npm run test:e2e:nlp-modules`            | Exécute les tests assurant que chaque expression soit compréhensible.       |
 | `npm run test:json`            | Exécute les tests vérifiant que chaque fichier JSON soit conforme.      |
 | `npm run test:module {PACKAGE NAME}:{MODULE NAME}`            | Exécute les tests d'un module donné.       |
+
+## Docker
+
+| Script                                 | Purpose             |
+| ----------------------------------------|--------------------|
+| `npm run docker:build`            | Construit Léon dans Docker.       |
+| `npm run docker:run`            | Lance Léon dans Docker.       |
+| `npm run docker:dev`            | Lance Léon en mode développement dans Docker.       |
+| `npm run docker:check`            | Vérifie l'installation de Léon dans Docker.       |
