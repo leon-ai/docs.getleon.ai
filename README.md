@@ -12,6 +12,8 @@ npm install
 
 # Run (dev)
 npm start
+# Specific language
+npm run start -- --locale fr-FR
 
 # Build
 npm run build
