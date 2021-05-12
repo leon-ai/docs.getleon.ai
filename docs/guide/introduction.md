@@ -110,7 +110,7 @@ Please ensure the whole setup went well with the following command:
 npm run check
 ```
 
-This command gives you a report about how much Leon is installed/configured. Do not worry if you have some warnings in the report, this is because you probably did not [configure Leon](/configuration.md) yet.
+This command gives you a report about how much Leon is installed/configured. Do not worry if you have some warnings in the report, this is because you probably did not [configure Leon](/configuration.html) yet.
 
 If the report mentions that *Leon can run correctly*, then you can build and start Leon:
 
