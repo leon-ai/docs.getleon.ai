@@ -175,7 +175,14 @@ module.exports = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/leon-ai/docs.getleon.ai/edit/master/'
+          editUrl: ({ locale, versionDocsDirPath, docPath }) => {
+            const urls = {
+              'en-US': `https://github.com/leon-ai/docs.getleon.ai/edit/master/${versionDocsDirPath}/${docPath}`,
+              'fr-FR': `https://github.com/leon-ai/docs.getleon.ai/edit/master/i18n/${locale}/docusaurus-plugin-content-docs/current/${docPath}`
+            }
+
+            return urls[locale]
+          }
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
