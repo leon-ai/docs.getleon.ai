@@ -9,6 +9,7 @@
 :root {
   --color-primary: #1C75DB;
   --color-secondary: #ED297A;
+  --color-white: #F5F6F7;
   --color-black: #000;
   --color-green: #31D76C;
   --color-red: #FA4045;
@@ -16,6 +17,10 @@
   --color-orange: #FAAD00;
   --border-color: #D1DCE5;
   --ifm-code-font-size: 95%;
+  --ifm-font-color-base: var(--color-black);
+  --ifm-menu-color: var(--color-black);
+  --ifm-toc-link-color: var(--color-black);
+  --ifm-alert-color: var(--color-black);
   --ifm-color-primary: var(--color-primary);
   --ifm-color-primary-dark: var(--color-primary);
   --ifm-color-primary-darker: var(--color-primary);
@@ -33,6 +38,10 @@ html[data-theme='dark'] {
   --ifm-background-color: var(--color-black);
   --ifm-background-surface-color: var(--color-black);
   --border-color: #3F4554;
+  --ifm-font-color-base: var(--color-white);
+  --ifm-alert-color: var(--color-white);
+  --ifm-menu-color: var(--color-white);
+  --ifm-toc-link-color: var(--color-white);
 }
 
 .navbar {
@@ -75,4 +84,26 @@ a:hover {
 .pagination-nav__link:hover {
   color: var(--color-secondary);
   border-color: var(--color-secondary);
+}
+
+.alert {
+  border-radius: initial;
+  border: none;
+  border-left: 8px solid;
+}
+.alert--success {
+  background-color: rgba(49, 215, 108, .15);
+  border-color: var(--ifm-color-success)
+}
+.alert--warning {
+  background-color: rgba(250, 173, 0, .15);
+  border-color: var(--ifm-color-warning);
+}
+.alert--danger {
+  background-color: rgba(250, 64, 69, .15);
+  border-color: var(--ifm-color-danger);
+}
+.alert--info {
+  background-color: rgba(0, 193, 255, .15);
+  border-color: var(--ifm-color-info);
 }
