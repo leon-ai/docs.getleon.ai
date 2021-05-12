@@ -180,7 +180,7 @@ Answers are the data used by Leon to provide you results binded with the modules
 
 > E.g. part of the [*Greeting* module English answers](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/answers/en.json) belonging to the *Leon* package.
 
-##### HTML <Badge text="1.0.0-beta.2+"/>
+##### HTML
 
 It is possible to use HTML in your answers.
 
@@ -252,7 +252,7 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py s
 
 - I share my module to the world by [contributing](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
 
-### Actions (Module Functions) <Badge text="1.0.0-beta.3+"/>
+### Actions (Module Functions)
 
 In the module file, you must add an action (function) that will be the entry point of the execution. An action takes the input string (query) and the [entities](#entities) as parameters.
 
@@ -320,7 +320,7 @@ Don't forget that Leon knows which action he must execute thanks to the [express
 - Actions names must use snake_case (lowercase alphabetic characters and `_` only) and must use the English language.
 > E.g. *To-Do List* module actions: `create_list`, `add_todo`, `complete_todo`, etc.
 
-### Query Object <Badge text="1.0.0-beta.2+"/>
+### Query Object
 
 Every time you communicate to Leon, he will creates a temporary query object JSON file with the following properties:
 - `lang`: short code of the used language.
@@ -332,13 +332,13 @@ Every time you communicate to Leon, he will creates a temporary query object JSO
 
 The [server/src/query-object.sample.json](https://github.com/leon-ai/leon/blob/develop/server/src/query-object.sample.json) file is here to let you execute and test the behavior of your module code [on the fly](#on-the-fly) during its creation. Edit it according to your module properties.
 
-### Entities <Badge text="1.0.0-beta.2+"/>
+### Entities
 
 Entities are chunks that Leon extracts from your sentences. These entities are shared to your actions so you can manipulate them to give more sense to your modules.
 
 There are different types of entities that are listed below:
 
-#### Built-In Entities <Badge text="1.0.0-beta.2+"/>
+#### Built-In Entities
 
 Built-in entities are the ones already included in Leon. Leon extracts entities from queries automatically.
 
@@ -353,7 +353,7 @@ Feel free to see some examples to understand how built-in entities are used. Tho
 As you can see, you can iterate over the entities to grab the information you need (domain names, dates, etc.).
 :::
 
-#### Custom Entities <Badge text="1.0.0-beta.3+"/>
+#### Custom Entities
 
 Custom entities are the ones you define yourself according to specific use cases. You can create your own entities in the translations files located in: `packages/{PACKAGE NAME}/data/expressions/{LANG FILE}.json`. In that file, custom entities are included in the actions properties at the same level as the expressions.
 
