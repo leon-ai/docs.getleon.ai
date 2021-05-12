@@ -45,8 +45,6 @@ Ces scripts **doivent être exécutés à partir du répertoire racine du projet
 | `npm run dev:app`            | Exécute l'app web en mode développement.       |
 | `npm run dev:server`            | Exécute le serveur en mode développement.       |
 | `npm run prepare-release {VERSION NUMBER}`            | Met à jour la version de Léon et génère le changelog à l'aide des messages de commit.       |
-| `npm run commitmsg`            | Appelé sur un commit.       |
-
 
 ## Test
 

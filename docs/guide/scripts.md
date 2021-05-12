@@ -45,7 +45,6 @@ Those scripts **must be executed from the project root directory**.
 | `npm run dev:app`            | Run the web app in development.       |
 | `npm run dev:server`            | Run the server in development.       |
 | `npm run prepare-release {VERSION NUMBER}`            | Bump Leon's version and generate changelog according to commit messages.       |
-| `npm run commitmsg`            | Triggered on commit.       |
 
 ## Testing
 
