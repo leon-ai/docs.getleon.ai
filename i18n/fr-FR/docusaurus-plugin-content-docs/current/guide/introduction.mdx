@@ -40,7 +40,20 @@ Gitpod va automatiquement vous installer un environnement et lancer une instance
 
 [![Ouvrir avec Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/leon-ai/leon)
 
-## Prérequis
+## Installation
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+<Tabs
+  defaultValue="default"
+  values={[
+    { label: 'Par défaut', value: 'default' },
+    { label: 'Docker', value: 'docker' }
+  ]}>
+  <TabItem value="default">
+
+### Prérequis
 
 - **[Node.js](https://nodejs.org/) >= 14**
 > Le noyau de Léon est développé avec le runtime JavaScript Node.js.
@@ -54,20 +67,21 @@ Gitpod va automatiquement vous installer un environnement et lancer une instance
 > Devons-nous expliquer celui-ci ? :)
 
 :::tip Astuce
-Vous pouvez suivre le [manuel](/fr-FR/how-to/) pour installer ces prérequis.
-:::
 
-## Installation
+Vous pouvez suivre le [manuel](/fr-FR/how-to/) pour installer ces prérequis.
+
+:::
 
 ### Télécharger
 
-Deux possibilités s'offrent à vous pour télécharger Léon :
-
-#### 1. Git
-
-Vous pouvez cloner le [répertoire GitHub](https://github.com/leon-ai/leon) depuis différentes branches.
-
-##### Branche master
+<Tabs
+  defaultValue="master"
+  values={[
+    { label: 'Git (stable)', value: 'master' },
+    { label: 'Git (dev)', value: 'dev' },
+    { label: 'Archive', value: 'archive' }
+  ]}>
+  <TabItem value="master">
 
 La branche `master` est une copie de la dernière mise à jour :
 
@@ -75,7 +89,8 @@ La branche `master` est une copie de la dernière mise à jour :
 git clone -b master https://github.com/leon-ai/leon.git leon
 ```
 
-##### Branche develop
+  </TabItem>
+  <TabItem value="dev">
 
 La branche `develop` est la branche par défaut, c'est sur celle-ci que les derniers changements sont fusionnés. Via cette branche vous obtienderai les toutes dernières mises à jour, en revanche elle ne sera pas aussi stable que la `master` :
 
@@ -83,13 +98,17 @@ La branche `develop` est la branche par défaut, c'est sur celle-ci que les dern
 git clone https://github.com/leon-ai/leon.git leon
 ```
 
-#### 2. Archives
+  </TabItem>
+  <TabItem value="archive">
 
-Ou vous pouvez télécharger la dernière mise à jour en suivant [ce lien](https://github.com/leon-ai/leon/releases/latest).
+Vous pouvez télécharger la dernière archive en date en suivant [ce lien](https://github.com/leon-ai/leon/releases/latest).
+
+  </TabItem>
+</Tabs>
 
 ### Installer
 
-Une fois que les prérequis sont installés et que Léon est téléchargé, vous pouvez installer :
+Maintenant vous pouvez installer :
 
 ```bash
 # Aller à la racine du projet
@@ -99,7 +118,7 @@ cd leon
 npm install
 ```
 
-## Utilisation
+### Utilisation
 
 Veuillez vous assurer que l'installation s'est correctement déroulée à l'aide de cette commande :
 
@@ -122,13 +141,8 @@ npm start
 # Hourra ! Léon fonctionne
 ```
 
-À ce stade vous pouvez déjà correspondre avec Léon par écrit et lui demander des choses.
-
-:::tip Astuce
-Pour voir ce qu'il peut faire, merci de vous référer à la [liste des paquets](https://github.com/leon-ai/leon/tree/develop/packages).
-:::
-
-## Installer avec Docker
+  </TabItem>
+  <TabItem value="docker">
 
 Vous pouvez aussi utiliser Docker pour installer et exécuter Léon :
 
@@ -142,3 +156,15 @@ npm run docker:run
 # Allez sur http://localhost:1337
 # Hourra ! Léon fonctionne
 ```
+
+  </TabItem>
+</Tabs>
+
+À ce stade vous pouvez déjà correspondre avec Léon par écrit et lui demander des choses.
+
+:::tip Astuce
+
+Pour voir ce qu'il peut faire, merci de vous référer à la [liste des paquets](https://github.com/leon-ai/leon/tree/develop/packages).
+
+:::
+
