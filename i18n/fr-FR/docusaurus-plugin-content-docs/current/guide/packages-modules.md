@@ -1,5 +1,5 @@
 ---
-slug: /packages-modules.html
+slug: /packages-modules
 sidebar_position: 8
 ---
 
@@ -78,7 +78,7 @@ Quand Léon comprend ce que vous lui dites, il :
 
 Chaque module à son propre objectif et sa propre configuration. N'hésitez pas à parcourir la [liste des paquets](https://github.com/leon-ai/leon/tree/develop/packages) afin de comprendre leur buts.
 
-Aujourd'hui, les modules sont écrits en Python mais à l'avenir ils pourraient supportés d'autres langages grâce aux [connecteurs](/fr-FR/bridges.html).
+Aujourd'hui, les modules sont écrits en Python mais à l'avenir ils pourraient supportés d'autres langages grâce aux [connecteurs](/fr-FR/bridges).
 
 ### Configuration
 
@@ -109,7 +109,7 @@ Pour accèder à ces propriétés, vous pouvez utiliser la fonction [utils.confi
 
 Les options sont utilisées lorsqu'il y a besoin d'une intéraction entre un module et le noyau.
 
-Options are used when it needs interaction between a module and the core. Elles peuvent par exemple être utilisées pour le [synchroniseur](/fr-FR/configuration.html#synchroniseur).
+Options are used when it needs interaction between a module and the core. Elles peuvent par exemple être utilisées pour le [synchroniseur](/fr-FR/configuration#synchroniseur).
 
 :::tip Astuce
 N'hésitez pas à jeter un œil aux autres modules afin d'avoir une meilleure compréhension.
@@ -119,7 +119,7 @@ N'hésitez pas à jeter un œil aux autres modules afin d'avoir une meilleure co
 
 Pour vous répondre et vous comprendre, Léon a besoin de ses jeux de données et traductions.
 
-En effet, ses jeux de données sont divisés en deux parties : les [expressions](/fr-FR/glossary.html#expressions) et les [réponses](/fr-FR/glossary.html#reponses).
+En effet, ses jeux de données sont divisés en deux parties : les [expressions](/fr-FR/glossary#expressions) et les [réponses](/fr-FR/glossary#reponses).
 
 - Chaque module a ses propres expressions et réponses.
 - Chacun de ces jeux de données a ses propres traductions.
@@ -127,7 +127,7 @@ En effet, ses jeux de données sont divisés en deux parties : les [expressions]
 
 #### Expressions
 
-Les expressions sont les données utilisées afin d'entraîner la compréhension de Léon. Lorsque vous exécutez le [script d'entraînement](/fr-FR/scripts.html), toutes les expressions de chaque module sont parcourues et génèrent le [classifieur](/fr-FR/glossary.html#classifieur).
+Les expressions sont les données utilisées afin d'entraîner la compréhension de Léon. Lorsque vous exécutez le [script d'entraînement](/fr-FR/scripts), toutes les expressions de chaque module sont parcourues et génèrent le [classifieur](/fr-FR/glossary#classifieur).
 
 Les expressions sont contenues dans une [action](#actions-fonctions-de-module) de module. C'est comme ça que Léon comprend quelle action il doit faire.
 

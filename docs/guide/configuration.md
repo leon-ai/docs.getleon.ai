@@ -1,5 +1,5 @@
 ---
-slug: /configuration.html
+slug: /configuration
 sidebar_position: 4
 ---
 
@@ -39,12 +39,12 @@ Leon has multiple providers for his STT and TTS. You can configure one (or sever
 To enable the Leon's STT and/or Leon's TTS, in your `.env` file, **you need to set `LEON_STT=true` and/or `LEON_TTS=true`**.
 
 Also, **you need to inquire the provider by setting `LEON_STT_PROVIDER={YOUR STT CHOSEN PROVIDER}` and/or `LEON_TTS_PROVIDER={YOUR TTS CHOSEN PROVIDER}`**.
-Please see the [environment variables section](/configuration.html#environment-variables) to know the providers values.
+Please see the [environment variables section](/configuration#environment-variables) to know the providers values.
 :::
 
 ### Offline
 
-Please follow [this section](/offline.html).
+Please follow [this section](/offline).
 
 ### Amazon
 

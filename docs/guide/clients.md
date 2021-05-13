@@ -1,5 +1,5 @@
 ---
-slug: /clients.html
+slug: /clients
 sidebar_position: 7
 ---
 

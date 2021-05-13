@@ -1,5 +1,5 @@
 ---
-slug: /configuration.html
+slug: /configuration
 sidebar_position: 4
 ---
 
@@ -41,12 +41,12 @@ Pour activer le STT de Léon et / ou le TTS de Léon, dans votre fichier `.env`,
 
 Aussi, **vous devez renseigner le fournisseur en paramétrant `LEON_STT_PROVIDER={VOTRE FOURNISSEUR STT}` et / ou `LEON_TTS_PROVIDER={VOTRE FOURNISSEUR TTS}`**.
 
-Merci de consulter la [section variables d'environnement](/fr-FR/configuration.html#variables-denvironnement) pour connaître les valeurs des fournisseurs.
+Merci de consulter la [section variables d'environnement](/fr-FR/configuration#variables-denvironnement) pour connaître les valeurs des fournisseurs.
 :::
 
 ### Hors ligne
 
-Merci de suivre [cette section](/fr-FR/offline.html).
+Merci de suivre [cette section](/fr-FR/offline).
 
 ### Amazon
 

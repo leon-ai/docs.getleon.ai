@@ -1,5 +1,5 @@
 ---
-slug: /offline.html
+slug: /offline
 sidebar_position: 5
 ---
 
@@ -90,4 +90,4 @@ Le nœud hotword supporte les langues suivantes :
 - `en-US`
 - `fr-FR`
 
-Pour changer de langue, modifiez la langue du projet via la [variable d'environnement `LEON_LANG`](/fr-FR/configuration.html#variables-denvironnement) et réexécutez le serveur principal ainsi que le processus hotword.
+Pour changer de langue, modifiez la langue du projet via la [variable d'environnement `LEON_LANG`](/fr-FR/configuration#variables-denvironnement) et réexécutez le serveur principal ainsi que le processus hotword.

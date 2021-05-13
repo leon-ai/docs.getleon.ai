@@ -1,5 +1,5 @@
 ---
-slug: /collaborative-logger.html
+slug: /collaborative-logger
 sidebar_position: 9
 ---
 

@@ -1,5 +1,5 @@
 ---
-slug: /scripts.html
+slug: /scripts
 sidebar_position: 10
 ---
 

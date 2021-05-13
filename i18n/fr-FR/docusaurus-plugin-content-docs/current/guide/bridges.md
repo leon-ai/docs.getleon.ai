@@ -1,5 +1,5 @@
 ---
-slug: /bridges.html
+slug: /bridges
 sidebar_position: 6
 ---
 
@@ -22,4 +22,4 @@ Si vous souhaitez exécuter un module Python seul, sans l'aide du processus enfa
 PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
 ```
 
-Pour comprendre ce qu'est le fichier `query-object.sample.json`, veuillez consulter [cette section](/fr-FR/packages-modules.html#objet-de-demande).
+Pour comprendre ce qu'est le fichier `query-object.sample.json`, veuillez consulter [cette section](/fr-FR/packages-modules#objet-de-demande).

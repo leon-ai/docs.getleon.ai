@@ -168,6 +168,18 @@ module.exports = {
       anonymizeIP: true
     }
   },
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        /**
+         * Legacy docs was using .html ext,
+         * this will redirect/trim .html tentative to the new correct path
+         */
+        toExtensions: ['html']
+      }
+    ]
+  ],
   presets: [
     [
       '@docusaurus/preset-classic',

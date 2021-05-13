@@ -107,7 +107,7 @@ Veuillez vous assurer que l'installation s'est correctement déroulée à l'aide
 npm run check
 ```
 
-Cette commande vous donne un rapport qui vous permet de voir à quel point Léon est installé / configuré. Ne vous inquiétez pas si vous voyez des avertissements dans le rapport, c'est simplement parce que vous n'avez probablement pas encore [configuré Léon](/fr-FR/configuration.html).
+Cette commande vous donne un rapport qui vous permet de voir à quel point Léon est installé / configuré. Ne vous inquiétez pas si vous voyez des avertissements dans le rapport, c'est simplement parce que vous n'avez probablement pas encore [configuré Léon](/fr-FR/configuration).
 
 Si le rapport mentionne que *Leon peut fonctionner correctement*, alors vous pouvez construire et lancer Léon :
 

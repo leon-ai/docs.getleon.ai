@@ -1,5 +1,5 @@
 ---
-slug: /glossary.html
+slug: /glossary
 sidebar_position: 2
 ---
 
@@ -9,13 +9,13 @@ Some terms in the docs might be unknown to you; this section should help you ach
 
 ## Actions
 
-Actions represent the [modules](/glossary.html#modules) entry points.
+Actions represent the [modules](/glossary#modules) entry points.
 > Attachment: [packages/calendar/todolist.py](https://github.com/leon-ai/leon/tree/develop/packages/calendar/todolist.py) *example of the `To-Do List` module including actions such as `create_list`, `complete_todo`, etc*.
 
 ## Answers
 
 Answers are Leon's responses.
-Each [package](/glossary.html#packages) has its own set of answers with different translations.
+Each [package](/glossary#packages) has its own set of answers with different translations.
 
 > Attachment: [packages/checker/data/answers/en.json](https://github.com/leon-ai/leon/blob/develop/packages/checker/data/answers/en.json) *example of the `Checker` package English answers*.
 
@@ -40,7 +40,7 @@ Leon uses it to make your voice understandable for him.
 
 ## Brain
 
-Leon's brain is a major part of his core. This is where he executes his [modules](/glossary.html#modules), talks, picks up sentences, etc.
+Leon's brain is a major part of his core. This is where he executes his [modules](/glossary#modules), talks, picks up sentences, etc.
 
 > Attachment: [server/src/core/brain.js](https://github.com/leon-ai/leon/blob/develop/server/src/core/brain.js) *Leon's brain*.
 
@@ -49,18 +49,18 @@ Leon's brain is a major part of his core. This is where he executes his [modules
 A classifier is a type of model. Once trained, it outputs a result via an algorithm.
 This result is used to make decisions.
 
-Leon uses it to store the outcomes of his [expressions](/glossary.html#expressions) training phase.
+Leon uses it to store the outcomes of his [expressions](/glossary#expressions) training phase.
 
 ## Expressions
 
 Expressions are the dataset that Leon uses to train his understanding.
-Each [package](/glossary.html#packages) has its own dataset with different translations.
+Each [package](/glossary#packages) has its own dataset with different translations.
 
 > Attachment: [packages/checker/data/expressions/en.json](https://github.com/leon-ai/leon/blob/develop/packages/checker/data/expressions/en.json) *example of the `Checker` package English expressions*.
 
 ## Modules
 
-Modules are Leon's skills; thanks to them Leon can work his magic. Modules contain one or an infinity of [actions](/glossary.html#actions).
+Modules are Leon's skills; thanks to them Leon can work his magic. Modules contain one or an infinity of [actions](/glossary#actions).
 
 :::tip Tip
 
@@ -73,12 +73,12 @@ Do not hesitate to [contribute](https://github.com/leon-ai/leon/blob/develop/.gi
 
 NLU (*Natural Language Understanding*) helps computers understand human language.
 
-Leon employs it to load the most appropriate [classifier](/glossary.html#classifier).
+Leon employs it to load the most appropriate [classifier](/glossary#classifier).
 > Attachment: [server/src/core/nlu.js](https://github.com/leon-ai/leon/blob/develop/server/src/core/nlu.js) *Leon's NLU*.
 
 ## Packages
 
-Leon's packages contain one or an infinity of [modules](/glossary.html#modules). You can consider packages as a category of modules. This is where the [answers](/glossary.html#answers) and [expressions](/glossary.html#expressions) are stored.
+Leon's packages contain one or an infinity of [modules](/glossary#modules). You can consider packages as a category of modules. This is where the [answers](/glossary#answers) and [expressions](/glossary#expressions) are stored.
 
 > Attachment: [packages/leon](https://github.com/leon-ai/leon/tree/develop/packages/leon) *example of the `Leon` package including modules related to Leon himself*.
 
@@ -92,16 +92,16 @@ The full package list is available [here](https://github.com/leon-ai/leon/tree/d
 
 STT, or *Speech-To-Text*, transforms an audio stream (speech) to a string (text).
 
-Leon has multiple STT parsers; you can choose one (or several) to [configure](/configuration.html#voice).
+Leon has multiple STT parsers; you can choose one (or several) to [configure](/configuration#voice).
 
 > Attachment: [server/src/stt/stt.js](https://github.com/leon-ai/leon/blob/develop/server/src/stt/stt.js) *Leon's STT*.
 
 ## Synchronizer
 
 The synchronizer allows you to synchronize your content via different methods (Google Drive, on your current device, etc.)
-restricted by the requested [module](/glossary.html#modules)'s offerings.
+restricted by the requested [module](/glossary#modules)'s offerings.
 
-You can [configure](/configuration.html#synchronizer) your favorite method for each module that supports this feature.
+You can [configure](/configuration#synchronizer) your favorite method for each module that supports this feature.
 
 > Attachment: [server/src/core/synchronizer.js](https://github.com/leon-ai/leon/blob/develop/server/src/core/synchronizer.js) *Leon's synchronizer*.
 
@@ -109,6 +109,6 @@ You can [configure](/configuration.html#synchronizer) your favorite method for e
 
 TTS or (*Text-To-Speech*) transforms a string (text) to an audio stream (speech).
 
-Leon has multiple TTS synthesizers; you can choose one (or several) to [configure](/configuration.html#voice).
+Leon has multiple TTS synthesizers; you can choose one (or several) to [configure](/configuration#voice).
 
 > Attachment: [server/src/tts/tts.js](https://github.com/leon-ai/leon/blob/develop/server/src/tts/tts.js) *Leon's TTS*.

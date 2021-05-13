@@ -1,5 +1,5 @@
 ---
-slug: /offline.html
+slug: /offline
 sidebar_position: 5
 ---
 
@@ -89,4 +89,4 @@ The hotword node supports the following languages:
 - `en-US`
 - `fr-FR`
 
-To change the language, simply switch the project language via the [`LEON_LANG` variable environment](/configuration.html#environment-variables) and re-run the main server and the hotword process.
+To change the language, simply switch the project language via the [`LEON_LANG` variable environment](/configuration#environment-variables) and re-run the main server and the hotword process.

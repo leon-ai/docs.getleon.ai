@@ -1,5 +1,5 @@
 ---
-slug: /packages-modules.html
+slug: /packages-modules
 sidebar_position: 8
 ---
 
@@ -78,7 +78,7 @@ When Leon understands what you told him, he:
 
 Each module has its own purpose and its own configuration. Do not hesitate to browse the [packages list](https://github.com/leon-ai/leon/tree/develop/packages) to understand their goals.
 
-Today, modules are written in Python but in the future they could also support other languages thanks to the [bridges](/bridges.html).
+Today, modules are written in Python but in the future they could also support other languages thanks to the [bridges](/bridges).
 
 ### Configuration
 
@@ -107,7 +107,7 @@ It allows the module to pick the values to request the YouTube API.
 
 To have access to these properties, you can use the [utils.config(key)](#config-key) function.
 
-Options are used when it needs interaction between a module and the core. They can be used for the [synchronizer](/configuration.html#synchronizer) for example.
+Options are used when it needs interaction between a module and the core. They can be used for the [synchronizer](/configuration#synchronizer) for example.
 
 :::tip Tip
 Do not hesitate to take a look at the other modules to have a better understanding.
@@ -116,7 +116,7 @@ Do not hesitate to take a look at the other modules to have a better understandi
 ### Dataset & Translations
 
 To reply and understand you, Leon needs his dataset and translations.
-Indeed, his dataset are divided into two parts: [expressions](/glossary.html#expressions) and [answers](/glossary.html#answers).
+Indeed, his dataset are divided into two parts: [expressions](/glossary#expressions) and [answers](/glossary#answers).
 
 - Every module has their own expressions and answers.
 - Each of these dataset has their own translations.
@@ -124,7 +124,7 @@ Indeed, his dataset are divided into two parts: [expressions](/glossary.html#exp
 
 #### Expressions
 
-Expressions are the data used to train the Leon's understanding. When you execute the [training script](/scripts.html), all of the expressions of each module are browsed to generate the [classifier](/glossary.html#classifier).
+Expressions are the data used to train the Leon's understanding. When you execute the [training script](/scripts), all of the expressions of each module are browsed to generate the [classifier](/glossary#classifier).
 
 Expressions are wrapped inside a module [action](#actions-module-functions). This is how Leon understands which action he needs to do.
 

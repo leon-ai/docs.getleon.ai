@@ -1,5 +1,5 @@
 ---
-slug: /tests.html
+slug: /tests
 sidebar_position: 11
 ---
 

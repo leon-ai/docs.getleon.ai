@@ -1,5 +1,5 @@
 ---
-slug: /bridges.html
+slug: /bridges
 sidebar_position: 6
 ---
 
@@ -23,4 +23,4 @@ If you wish to execute a Python module standalone, without a child process, run 
 PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py server/src/query-object.sample.json
 ```
 
-To understand what is the `query-object.sample.json` file for, take a look at [this section](packages-modules.html#query-object).
+To understand what is the `query-object.sample.json` file for, take a look at [this section](packages-modules#query-object).
