@@ -88,6 +88,10 @@ module.exports = {
           position: 'left'
         },
         {
+          type: 'docsVersionDropdown',
+          position: 'right'
+        },
+        {
           type: 'localeDropdown',
           position: 'right',
         },
@@ -187,10 +191,19 @@ module.exports = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: ({ locale, versionDocsDirPath, docPath }) => {
+          disableVersioning: false,
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: '1.0.0-beta.5+dev'
+            }
+          },
+          editUrl: ({ locale, version, versionDocsDirPath, docPath }) => {
+            version = version === 'current' ? version : `version-${version}`
+
             const urls = {
               'en-US': `https://github.com/leon-ai/docs.getleon.ai/edit/master/${versionDocsDirPath}/${docPath}`,
-              'fr-FR': `https://github.com/leon-ai/docs.getleon.ai/edit/master/i18n/${locale}/docusaurus-plugin-content-docs/current/${docPath}`
+              'fr-FR': `https://github.com/leon-ai/docs.getleon.ai/edit/master/i18n/${locale}/docusaurus-plugin-content-docs/${version}/${docPath}`
             }
 
             return urls[locale]
