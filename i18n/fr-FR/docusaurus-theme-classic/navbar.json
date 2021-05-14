@@ -1,0 +1,34 @@
+{
+  "title": {
+    "message": "Leon Docs",
+    "description": "The title in the navbar"
+  },
+  "item.label.Guide": {
+    "message": "Guide",
+    "description": "Navbar item with label Guide"
+  },
+  "item.label.How To": {
+    "message": "Manuel",
+    "description": "Navbar item with label How To"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Roadmap": {
+    "message": "Roadmap",
+    "description": "Navbar item with label Roadmap"
+  },
+  "item.label.Discord": {
+    "message": "Discord",
+    "description": "Navbar item with label Discord"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.Donate": {
+    "message": "Faire un don",
+    "description": "Navbar item with label Donate"
+  }
+}

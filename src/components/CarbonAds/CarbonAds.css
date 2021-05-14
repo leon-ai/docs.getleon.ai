@@ -1,0 +1,50 @@
+.carbon-ads {
+  position: fixed;
+  right: 0;
+  bottom: 16px;
+  padding: 1em;
+  font-size: .75rem;
+  border-radius: 4px;
+  line-height: 16px;
+  min-height: 102px;
+  max-width: 284px;
+  margin: 10px;
+  margin-bottom: -.5rem;
+}
+
+.carbon-ads .carbon-wrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 130px;
+}
+
+.carbon-ads a {
+  color: #444;
+  font-weight: normal;
+  display: inline;
+}
+
+.carbon-ads .carbon-img {
+  float: left;
+  margin-right: 1rem;
+}
+
+.carbon-ads .carbon-poweredby {
+  color: #999;
+  margin-top: 0.5em;
+}
+
+@media (max-width: 720px) {
+  .carbon-ads {
+    position: relative;
+    top: 0;
+  }
+  .carbon-ads .carbon-wrap {
+    flex-direction: row;
+    max-width: initial;
+  }
+  .carbon-ads .carbon-img img {
+    width: 100px;
+    height: 77px;
+  }
+}
