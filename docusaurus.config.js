@@ -104,6 +104,10 @@ module.exports = {
           href: 'https://donate.getleon.ai',
           label: 'Donate',
           position: 'right'
+        },
+        {
+          type: 'search',
+          position: 'right'
         }
       ]
     },
@@ -142,7 +146,7 @@ module.exports = {
               label: 'Discord',
               href: 'https://discord.gg/MNQqqKg'
             }
-          ],
+          ]
         },
         {
           title: 'More',
@@ -165,7 +169,13 @@ module.exports = {
             }
           ]
         }
-      ],
+      ]
+    },
+    algolia: {
+      apiKey: '1313888018beb9acf36621a5eac661dc',
+      indexName: 'getleon',
+      contextualSearch: true,
+      searchParameters: { }
     },
     googleAnalytics: {
       trackingID: 'UA-131760989-1',
