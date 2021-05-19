@@ -172,7 +172,7 @@ module.exports = {
       ]
     },
     algolia: {
-      apiKey: '1313888018beb9acf36621a5eac661dc',
+      apiKey: '79bbb0639d3e63e39d32ef387cc540f3',
       indexName: 'getleon',
       contextualSearch: true,
       searchParameters: { }
