@@ -174,7 +174,7 @@ module.exports = {
     algolia: {
       apiKey: '79bbb0639d3e63e39d32ef387cc540f3',
       indexName: 'getleon',
-      contextualSearch: false,
+      contextualSearch: true,
       debug: false
     },
     googleAnalytics: {
