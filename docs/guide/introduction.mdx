@@ -50,7 +50,8 @@ import TabItem from '@theme/TabItem'
   defaultValue="default"
   values={[
     { label: 'Default', value: 'default' },
-    { label: 'Docker', value: 'docker' }
+    { label: 'Docker', value: 'docker' },
+    { label: 'Command Line Interface (CLI)', value: 'cli' }
 ]}>
   <TabItem value="default">
 
@@ -153,6 +154,26 @@ npm run docker:build
 
 # Run
 npm run docker:run
+
+# Go to http://localhost:1337
+# Hooray! Leon is running
+```
+
+  </TabItem>
+
+  <TabItem value="cli">
+
+You can also use the **<abbr title="Command Line Interface">CLI</abbr>** to install and run Leon:
+
+```bash
+# Install Leon CLI
+npm install --global https://github.com/leon-ai/leon-cli/releases/latest/download/leon-cli.tar.gz
+
+# Give birth to Leon
+leon create birth
+
+# Start
+leon start
 
 # Go to http://localhost:1337
 # Hooray! Leon is running
