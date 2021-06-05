@@ -27,8 +27,8 @@
     "message": "GitHub",
     "description": "Navbar item with label GitHub"
   },
-  "item.label.Donate": {
-    "message": "Faire un don",
-    "description": "Navbar item with label Donate"
+  "item.label.Sponsor": {
+    "message": "Sponsoriser",
+    "description": "Navbar item with label Sponsor"
   }
 }

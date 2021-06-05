@@ -101,8 +101,8 @@ module.exports = {
           position: 'right'
         },
         {
-          href: 'https://donate.getleon.ai',
-          label: 'Donate',
+          href: 'https://sponsor.getleon.ai',
+          label: 'Sponsor',
           position: 'right'
         },
         {
@@ -164,8 +164,8 @@ module.exports = {
               href: 'https://github.com/leon-ai/leon/issues'
             },
             {
-              label: 'Donate',
-              href: 'https://donate.getleon.ai'
+              label: 'Sponsor',
+              href: 'https://sponsor.getleon.ai'
             }
           ]
         }

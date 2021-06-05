@@ -47,8 +47,8 @@
     "message": "Aide",
     "description": "The label of footer link with label=Help linking to https://github.com/leon-ai/leon/issues"
   },
-  "link.item.label.Donate": {
-    "message": "Faire un don",
-    "description": "The label of footer link with label=Donate linking to https://donate.getleon.ai"
+  "link.item.label.Sponsor": {
+    "message": "Sponsoriser",
+    "description": "The label of footer link with label=Sponsor linking to https://sponsor.getleon.ai"
   }
 }
