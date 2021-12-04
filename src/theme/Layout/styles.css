@@ -25,10 +25,11 @@ body {
   flex: 1 0 auto;
 }
 
-.footerLogoLink_node_modules-\@docusaurus-theme-classic-lib-next-theme-Footer- {
+.footerLogoLink_MyFc, .footerLogoLink_node_modules-\@docusaurus-theme-classic-lib-next-theme-Footer- {
   opacity: 1;
 }
 
 .footer__logo {
+  opacity: 1;
   max-width: 172px;
 }
