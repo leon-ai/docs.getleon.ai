@@ -24,3 +24,11 @@ body {
 .main-wrapper {
   flex: 1 0 auto;
 }
+
+.footerLogoLink_node_modules-\@docusaurus-theme-classic-lib-next-theme-Footer- {
+  opacity: 1;
+}
+
+.footer__logo {
+  max-width: 172px;
+}
