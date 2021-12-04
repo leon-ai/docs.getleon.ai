@@ -113,6 +113,11 @@ module.exports = {
     },
     footer: {
       style: 'dark',
+      logo: {
+        alt: 'Powered by Vercel',
+        src: 'img/powered-by-vercel.svg',
+        href: 'https://vercel.com?utm_source=leon-ai&utm_campaign=oss'
+      },
       links: [
         {
           title: 'Stay Tuned',
