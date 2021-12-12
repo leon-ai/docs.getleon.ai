@@ -49,6 +49,6 @@
   },
   "link.item.label.Sponsor": {
     "message": "Sponsoriser",
-    "description": "The label of footer link with label=Sponsor linking to https://sponsor.getleon.ai"
+    "description": "The label of footer link with label=Sponsor linking to http://sponsor.getleon.ai"
   }
 }

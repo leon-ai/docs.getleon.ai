@@ -101,7 +101,7 @@ module.exports = {
           position: 'right'
         },
         {
-          href: 'https://sponsor.getleon.ai',
+          href: 'http://sponsor.getleon.ai',
           label: 'Sponsor',
           position: 'right'
         },
@@ -170,7 +170,7 @@ module.exports = {
             },
             {
               label: 'Sponsor',
-              href: 'https://sponsor.getleon.ai'
+              href: 'http://sponsor.getleon.ai'
             }
           ]
         }
