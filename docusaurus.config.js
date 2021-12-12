@@ -78,7 +78,7 @@ module.exports = {
           position: 'left'
         },
         {
-          href: 'https://roadmap.getleon.ai',
+          href: 'http://roadmap.getleon.ai',
           label: 'Roadmap',
           position: 'left'
         },
@@ -101,7 +101,7 @@ module.exports = {
           position: 'right'
         },
         {
-          href: 'https://sponsor.getleon.ai',
+          href: 'http://sponsor.getleon.ai',
           label: 'Sponsor',
           position: 'right'
         },
@@ -132,11 +132,11 @@ module.exports = {
             },
             {
               label: 'Roadmap',
-              href: 'https://roadmap.getleon.ai/'
+              href: 'http://roadmap.getleon.ai/'
             },
             {
               label: 'Changelog',
-              href: 'https://changelog.getleon.ai/'
+              href: 'http://changelog.getleon.ai/'
             },
             {
               label: '#LeonAI',
@@ -170,7 +170,7 @@ module.exports = {
             },
             {
               label: 'Sponsor',
-              href: 'https://sponsor.getleon.ai'
+              href: 'http://sponsor.getleon.ai'
             }
           ]
         }
