@@ -84,6 +84,13 @@ Maintenant que la CLI est installée, vous pouvez donner naissance à Léon :
 leon create birth
 ```
 
+Par défaut, la CLI télécharge le code source depuis la branche Git stable (`master`). Mais vous pouvez aussi télécharger le code source depuis la branche Git `develop` qui est la branche par défaut contenant les derniers changements.
+Sur cette branche vous bénéficierez des derniers changements en avance mais soyez conscient qu'elle peut ne pas être aussi stable que la master :
+
+```bash
+leon create birth --develop
+```
+
 ### Run Leon
 
 À ce niveau, Léon est né et peu déjà être lancé via cette commande :
