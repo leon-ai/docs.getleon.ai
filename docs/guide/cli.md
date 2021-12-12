@@ -13,10 +13,9 @@ For the moment, the CLI helps you for the setup of Leon. In the future more comm
 
 The table below lists all the available commands:
 
-| Script                                 | Purpose             |
-| ----------------------------------------|--------------------|
-| `leon`            | Launch the hotword process.       |
-| `npm start`            | Run Leon in production after build.       |
-| `npm run train expressions (en;fr)`          | Train Leon's understanding.       |
-| `npm run check`            | Verify how much Leon is installed/configured.  
-
+| Command                                 | Description             | Option |
+| ----------------------------------------|--------------------|---|
+| `leon check`            | Check how the setup went.       | <ul><li>`--name`: name of the Leon instance.</li></ul> |
+| `leon create birth`            | Brings Leon to life by checking all the requirements and install them with your approval. | <ul><li>`--develop`: install Leon from the `develop` Git branch.</li><li>`--docker`: install Leon with Docker.</li><li>`--path {path}`: location of your Leon instance.</li><li>`--version {version}`: install a [specific version](https://github.com/leon-ai/leon/releases) of Leon.</li><li>`--name {name}`: give a name to your Leon instance.</li><li>`--yes`: skip all questions with a "yes" answer.</li></ul> |
+| `leon help`          | List all commands available in the CLI.       | |
+| `leon start`          | Start a Leon instance.       | <ul><li>`--port {port}`: run a Leon instance with a specific port.</li><li>`--name {name}`: run a Leon instance with a specific name.</li></ul> |
