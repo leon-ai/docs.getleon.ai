@@ -46,12 +46,54 @@ import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
 <Tabs
-  defaultValue="default"
+  defaultValue="cli"
   values={[
-    { label: 'Par défaut', value: 'default' },
-    { label: 'Docker', value: 'docker' }
+    { label: 'CLI', value: 'cli' },
+    { label: 'Docker', value: 'docker' },
+    { label: 'Manuelle', value: 'manual' }
   ]}>
-  <TabItem value="default">
+  <TabItem value="cli">
+
+### Prérequis
+
+- **[Node.js](https://nodejs.org/) >= 16**
+> Le noyau de Léon est développé avec le runtime JavaScript Node.js.
+- **[npm](https://npmjs.com/) >= 8**
+> npm est le gestionnaire de paquets de Node.js. Léon en a besoin pour l'arbre de dépendances de son noyau.
+
+:::tip Tip
+
+Vous pouvez suivre le [manuel](/fr-FR/how-to/) pour installer ces prérequis.
+
+:::
+
+### Installer la CLI de Léon
+
+La CLI de Léon vous accompagnera tout au long de votre aventure afin de vous faciliter la tâche sur l'installation et bien plus encore.
+Pour installer la CLI de Léon il suffit d'exécuter cette commande :
+
+```bash
+npm install -g leon-ai/leon-cli#master
+```
+
+### Installer Léon
+
+Maintenant que la CLI est installée, vous pouvez donner naissance à Léon :
+
+```bash
+leon create birth
+```
+
+### Run Leon
+
+À ce niveau, Léon est né et peu déjà être lancé via cette commande :
+
+```bash
+leon start
+```
+
+  </TabItem>
+  <TabItem value="manual">
 
 ### Prérequis
 
