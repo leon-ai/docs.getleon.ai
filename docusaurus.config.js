@@ -78,7 +78,7 @@ module.exports = {
           position: 'left'
         },
         {
-          href: 'https://roadmap.getleon.ai',
+          href: 'http://roadmap.getleon.ai',
           label: 'Roadmap',
           position: 'left'
         },
@@ -132,7 +132,7 @@ module.exports = {
             },
             {
               label: 'Roadmap',
-              href: 'https://roadmap.getleon.ai/'
+              href: 'http://roadmap.getleon.ai/'
             },
             {
               label: 'Changelog',

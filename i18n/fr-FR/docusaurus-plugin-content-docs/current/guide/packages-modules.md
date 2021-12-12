@@ -203,7 +203,7 @@ Il est possible d'utiliser de l'HTML dans vos réponses.
 
 :::tip Astuce
 - La création d'un module est l'une des meilleures façons de contribuer à Léon ! Avant toute chose, assurez-vous de prendre connaissance de [ce document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) ❤️
-- Par exemple, vous pouvez imaginer créer un module to-do liste *(bien que [celui-ci existe déjà](https://github.com/leon-ai/leon/tree/develop/packages/calendar#to-do-list))*. Faites un tour sur la [roadmap](https://roadmap.getleon.ai) pour voir ce qu'il y a de prévu.
+- Par exemple, vous pouvez imaginer créer un module to-do liste *(bien que [celui-ci existe déjà](https://github.com/leon-ai/leon/tree/develop/packages/calendar#to-do-list))*. Faites un tour sur la [roadmap](http://roadmap.getleon.ai) pour voir ce qu'il y a de prévu.
 - N'hésitez pas à [ouvrir une issue](https://github.com/leon-ai/leon/issues/new/choose) si vous avez la moindre question.
 :::
 

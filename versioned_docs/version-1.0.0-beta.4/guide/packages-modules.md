@@ -200,7 +200,7 @@ It is possible to use HTML in your answers.
 
 :::tip Tip
 - Creating a module is one of the best way to contribute in Leon! Before doing that, please make sure you review [this document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) ❤️
-- For example, you could think of creating a To-Do List module *(although [this one already exists](https://github.com/leon-ai/leon/tree/develop/packages/calendar#to-do-list))*. Check out the [roadmap](https://roadmap.getleon.ai) to see what is in the pipeline.
+- For example, you could think of creating a To-Do List module *(although [this one already exists](https://github.com/leon-ai/leon/tree/develop/packages/calendar#to-do-list))*. Check out the [roadmap](http://roadmap.getleon.ai) to see what is in the pipeline.
 - Don't hesitate to [open an issue](https://github.com/leon-ai/leon/issues/new/choose) if you have any questions.
 :::
 
