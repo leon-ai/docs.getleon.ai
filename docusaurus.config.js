@@ -124,7 +124,7 @@ module.exports = {
           items: [
             {
               label: 'Newsletter',
-              href: 'https://getleon.ai/'
+              href: 'http://newsletter.getleon.ai'
             },
             {
               label: 'Blog',
@@ -159,6 +159,10 @@ module.exports = {
             {
               label: 'GitHub',
               href: 'https://github.com/leon-ai/leon'
+            },
+            {
+              label: 'Website',
+              href: 'https://getleon.ai'
             },
             {
               label: 'Contribute',
