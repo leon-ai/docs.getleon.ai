@@ -383,7 +383,7 @@ Les entités personnalisées ont deux types listés ci-dessous :
 
 Les entités réduites vous permettent de tronquer des parties de la phrase pour extraire le texte qui vous intéresse. Ceci se fait à l'aide des conditions :
 
-- `{ "type": "between", "from": "", "to": "" }`
+- `{ "type": "between", "from": [], "to": [] }`
 - `{ "type": "after", "from": "" }`
 - `{ "type": "after_first", "from": "" }`
 - `{ "type": "after_last", "from": "" }`

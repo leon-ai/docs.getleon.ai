@@ -378,7 +378,7 @@ Custom entities have two types listed below:
 
 Trim entities allow you to cut/trim parts of the query to extract only the text you want. This is done thanks to these conditions:
 
-- `{ "type": "between", "from": "", "to": "" }`
+- `{ "type": "between", "from": [], "to": [] }`
 - `{ "type": "after", "from": "" }`
 - `{ "type": "after_first", "from": "" }`
 - `{ "type": "after_last", "from": "" }`
@@ -403,13 +403,8 @@ We want to extract the text `shopping` to associate it as a `list` entity. We us
     "conditions": [
       {
         "type": "between",
-        "from": "a",
-        "to": "list"
-      },
-      {
-        "type": "between",
-        "from": "my",
-        "to": "list"
+        "from": ["a", "my"],
+        "to": ["list", "list"]
       }
     ]
   }
