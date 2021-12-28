@@ -73,6 +73,8 @@ Léon l'utilise pour charger le [classifieur](/fr-FR/glossary#classifieur), clas
 
 Les paquets de Léon contiennent un ou une infinité de [modules](/fr-FR/glossary#modules). Vous pouvez considérer les paquets comme étant une catégorie de modules. C'est dans ces paquets que les [réponses](/fr-FR/glossary#reponses) et [expressions](/fr-FR/glossary#expressions) sont stockées.
 
+Aussi, les paquets sont en fait ce que l'on appelle des "domaines" dans le milieu de l'NLP (*Natural Language Processing* ou *Traitement du langage naturel*). La méthode de classification de domaines permet de structurer / labeller des données pour une meilleure scalabilité. Ça aide Léon à prendre des décisions sur ce qu'il doit comprendre et améliore sa précision.
+
 > Pièce jointe : [packages/leon](https://github.com/leon-ai/leon/tree/develop/packages/leon) *exemple du paquet `Leon` incluant les modules propres à lui-même*.
 
 :::tip Astuce
