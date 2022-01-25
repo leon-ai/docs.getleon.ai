@@ -51,11 +51,6 @@ This result is used to make decisions.
 
 Leon uses it to store the outcomes of his [expressions](/glossary#expressions) training phase.
 
-## CLI
-
-CLI stands for *Command-Line Interface*. You can see it as a tool to help you with your Leon journey.
-All the commands list are described in the [CLI section](/cli).
-
 ## Expressions
 
 Expressions are the dataset that Leon uses to train his understanding.

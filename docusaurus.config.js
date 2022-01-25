@@ -124,7 +124,7 @@ module.exports = {
           items: [
             {
               label: 'Newsletter',
-              href: 'https://getleon.ai/'
+              href: 'http://newsletter.getleon.ai'
             },
             {
               label: 'Blog',
@@ -136,7 +136,7 @@ module.exports = {
             },
             {
               label: 'Changelog',
-              href: 'https://changelog.getleon.ai/'
+              href: 'http://changelog.getleon.ai/'
             },
             {
               label: '#LeonAI',
@@ -159,6 +159,10 @@ module.exports = {
             {
               label: 'GitHub',
               href: 'https://github.com/leon-ai/leon'
+            },
+            {
+              label: 'Website',
+              href: 'https://getleon.ai'
             },
             {
               label: 'Contribute',
@@ -210,7 +214,7 @@ module.exports = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: '1.0.0-beta.5+dev'
+              label: '1.0.0-beta.6+dev'
             }
           },
           editUrl: ({ locale, version, versionDocsDirPath, docPath }) => {
