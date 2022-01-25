@@ -5,7 +5,7 @@ sidebar_position: 5
 
 # CLI
 
-CLI stands for *Command-Line Interface*. You can see it as a tool to help you with your Leon journey.
+CLI stands for *Command-Line Interface*. You can see it as your companion to help you with your Leon journey.
 
 For the moment, the CLI helps you for the setup of Leon. In the future more commands will be released to improve your comfort and make the use of Leon even smoother.
 

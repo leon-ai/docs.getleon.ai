@@ -5,7 +5,7 @@ sidebar_position: 5
 
 # CLI
 
-CLI signifie *Command-Line Interface* ou *interface en ligne de commande* en français. Vous pouvez la voir comme un outil qui vous aidera dans votre aventure avec Léon.
+CLI signifie *Command-Line Interface* ou *interface en ligne de commande* en français. Vous pouvez la voir comme votre compagnon qui vous aidera dans votre aventure avec Léon.
 
 Pour le moment, la CLI vous aide à installer Léon. À l'avenir plus de commandes seront disponibles afin d'améliorer votre confort et rendre l'utilisation de Léon encore plus fluide.
 
