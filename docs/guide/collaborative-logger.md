@@ -1,6 +1,6 @@
 ---
 slug: /collaborative-logger
-sidebar_position: 9
+sidebar_position: 10
 ---
 
 # Collaborative Logger

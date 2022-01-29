@@ -45,6 +45,11 @@ Ce résultat va ensuite être utilisé pour prendre des décisions.
 
 Léon l'utilise pour avoir une sauvegarde de la phase d'entraînement de ses [expressions](/fr-FR/glossary#expressions).
 
+## CLI
+
+CLI signifie *Command-Line Interface* ou *interface en ligne de commande* en français. Vous pouvez la voir comme un outil qui va vous aider dans votre aventure avec Léon.
+La liste des commandes est disponible dans la [section CLI](/fr-FR/cli).
+
 ## Expressions
 
 Les expressions sont les ensembles de données que Léon utilise pour entraîner sa compréhension.
