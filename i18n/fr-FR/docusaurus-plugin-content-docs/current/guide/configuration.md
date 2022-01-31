@@ -24,7 +24,7 @@ Les variables d'environnement inclues dans le tableau suivant peuvent être trou
 | `LEON_TIME_ZONE`            | Time zone de Léon. | Votre time zone actuelle (par défaut); [Moment Timezone](https://momentjs.com/timezone/) |
 | `LEON_AFTER_SPEECH`         | Activer / désactiver l'écoute automatique après avoir parlé. Pas besoin de prononçer `Léon` quand vous avez parlé une première fois. | `true`; `false` (par défaut) |
 | `LEON_STT`          	      | Activer / désactiver le STT. | `true`; `false` (par défaut) |
-| `LEON_STT_PROVIDER`         | Fournisseur STT. | `deepspeech` (par défaut); `google-cloud-stt`; `watson-stt` |
+| `LEON_STT_PROVIDER`         | Fournisseur STT. | `coqui-stt` (par défaut); `google-cloud-stt`; `watson-stt` |
 | `LEON_TTS`                  | Activer / désactiver le TTS. | `true`; `false` (par défaut) |
 | `LEON_TTS_PROVIDER`         | Fournisseur TTS. | `flite` (par défaut); `google-cloud-tts`; `amazon-polly`; `watson-tts` |
 | `LEON_LOGGER`               | Activer / désactiver le journal collaboratif. | `true` (par défaut); `false` |

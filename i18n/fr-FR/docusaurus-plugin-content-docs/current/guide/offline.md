@@ -15,29 +15,21 @@ npm run setup:offline
 ```
 
 :::caution Attention
-- Ces nœuds hors ligne ne sont pas disponible sous Windows.
-- Le STT hors ligne et le TTS hors ligne fonctionnent seulement avec la langue `en-US`.
+- Le STT hors ligne et le TTS hors ligne fonctionnent seulement avec la langue `en-US`. Plus de langues seront supportées à l'avenir.
 :::
 
-## DeepSpeech (STT)
+## Coqui (STT)
 
-Pour le STT hors ligne, Léon utilise [DeepSpeech](https://github.com/mozilla/DeepSpeech) qui est une implémentation de TensorFlow de l'architecture DeepSpeech de Baidu.
+Pour le STT hors ligne, Léon utilise [Coqui STT](https://github.com/coqui-ai/STT) qui est une implémentation de TensorFlow de l'architecture DeepSpeech de Baidu.
 
-Tout est déjà prêt, vous avez juste à lancer une commande pour télécharger et installer le modèle pré-entrainé (~ 2 GB).
+Tout est déjà prêt, vous avez juste à lancer une commande pour télécharger et installer le modèle pré-entrainé (~ 1 GB).
 Si vous voulez seulement installer le STT hors ligne, exécutez la commande suivante :
 
 ```bash
 npm run setup:offline-stt
 ```
 
-Puis dans votre fichier `.env`, initialisez `LEON_STT=true` et `LEON_STT_PROVIDER=deepspeech`.
-
-:::tip Astuce
-Léon utilise la version CPU par défaut.
-Vous pouvez télécharger la version GPU pour rendre la reconnaissance plus rapide avec : `npm install deepspeech-gpu`.
-Pour l'installer sur votre machine, vous pouvez suivre [ce lien](https://medium.com/@taylordenouden/installing-tensorflow-gpu-on-ubuntu-18-04-89a142325138).
-Une fois installée, Léon utilise la version GPU par défaut.
-:::
+Puis dans votre fichier `.env`, initialisez `LEON_STT=true` et `LEON_STT_PROVIDER=coqui-stt`.
 
 ## Flite (TTS)
 
