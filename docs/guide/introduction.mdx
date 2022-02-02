@@ -47,12 +47,61 @@ import Tabs from '@theme/Tabs'
 import TabItem from '@theme/TabItem'
 
 <Tabs
-  defaultValue="default"
+  defaultValue="cli"
   values={[
-    { label: 'Default', value: 'default' },
-    { label: 'Docker', value: 'docker' }
+    { label: 'CLI', value: 'cli' },
+    { label: 'Docker', value: 'docker' },
+    { label: 'Manual', value: 'manual' }
 ]}>
-  <TabItem value="default">
+  <TabItem value="cli">
+
+### Prerequisites
+
+- **[Node.js](https://nodejs.org/) >= 16**
+> Leon's core is developed on the top of the Node.js JavaScript runtime.
+- **[npm](https://npmjs.com/) >= 8**
+> npm is the packages manager of Node.js, Leon needs it for his core's dependencies tree.
+
+:::tip Tip
+
+You can read the [How To](/how-to/) section to install these prerequisites.
+
+:::
+
+### Install the Leon CLI
+
+The Leon CLI is the companion that will help with your journey by making the setup very smooth and more!
+Let's install the Leon CLI by running the following command:
+
+```bash
+npm install --global @leon-ai/cli
+```
+
+### Install Leon
+
+Now that the CLI is installed, you can give birth to Leon:
+
+```bash
+leon create birth
+```
+
+By default, the CLI grabs the source code from the stable Git branch (`master`). Instead, you can also pull the source code from the `develop` Git branch which is the default branch and this is where the latest changes are merged.
+On this branch you will get the latest changes in advance but be aware that it will not be as stable as the master one:
+
+```bash
+leon create birth --develop
+```
+
+### Run Leon
+
+At this stage, Leon is born and can already start to run via this command:
+
+```bash
+leon start
+```
+
+  </TabItem>
+  <TabItem value="manual">
 
 ### Prerequisites
 

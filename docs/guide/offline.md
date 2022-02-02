@@ -1,6 +1,6 @@
 ---
 slug: /offline
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Offline
@@ -15,29 +15,21 @@ npm run setup:offline
 ```
 
 :::caution Warning
-- These offline nodes are not available on Windows.
-- The offline STT and offline TTS only work for the `en-US` language.
+- The offline STT and offline TTS only work for the `en-US` language. More languages will come later.
 :::
 
-## DeepSpeech (STT)
+## Coqui (STT)
 
-For the offline STT, Leon uses [DeepSpeech](https://github.com/mozilla/DeepSpeech) which is a TensorFlow implementation of Baidu's DeepSpeech architecture.
+For the offline STT, Leon uses [Coqui STT](https://github.com/coqui-ai/STT) which is a TensorFlow implementation of Baidu's DeepSpeech architecture.
 
-Everything is already ready, you just need to run a command to download and setup the pre-trained model (~ 2 GB).
+Everything is already ready, you just need to run a command to download and setup the pre-trained model (~ 1 GB).
 If you wish to only install the offline STT, run the following command:
 
 ```bash
 npm run setup:offline-stt
 ```
 
-Then in your `.env` file, set `LEON_STT=true` and `LEON_STT_PROVIDER=deepspeech`.
-
-:::tip Tip
-Leon uses the CPU version by default.
-You can download the GPU version to make the recognition faster with: `npm install deepspeech-gpu`.
-To install it correctly on your machine, you can follow [this link](https://medium.com/@taylordenouden/installing-tensorflow-gpu-on-ubuntu-18-04-89a142325138).
-Once it has been installed, Leon automatically detects it and run with the GPU version.
-:::
+Then in your `.env` file, set `LEON_STT=true` and `LEON_STT_PROVIDER=coqui-stt`.
 
 ## Flite (TTS)
 

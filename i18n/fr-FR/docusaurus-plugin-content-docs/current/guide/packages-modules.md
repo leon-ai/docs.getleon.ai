@@ -1,6 +1,6 @@
 ---
 slug: /packages-modules
-sidebar_position: 8
+sidebar_position: 9
 ---
 
 # Paquets & Modules

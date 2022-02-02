@@ -24,7 +24,7 @@ The environment variables included in the following table can be found in the `.
 | `LEON_TIME_ZONE`            | Leon's time zone. | Your current time zone (default); [Moment Timezone](https://momentjs.com/timezone/) |
 | `LEON_AFTER_SPEECH`         | Enable/disable auto listening after talking. No need to say `Leon` when you have talked once. | `true`; `false` (default) |
 | `LEON_STT`          	      | Enable/disable STT. | `true`; `false` (default) |
-| `LEON_STT_PROVIDER`         | STT provider. | `deepspeech` (default); `google-cloud-stt`; `watson-stt` |
+| `LEON_STT_PROVIDER`         | STT provider. | `coqui-stt` (default); `google-cloud-stt`; `watson-stt` |
 | `LEON_TTS`                  | Enable/disable TTS. | `true`; `false` (default) |
 | `LEON_TTS_PROVIDER`         | TTS provider. | `flite` (default); `google-cloud-tts`; `amazon-polly`; `watson-tts` |
 | `LEON_LOGGER`               | Enable/disable collaborative logger. | `true` (default); `false` |
