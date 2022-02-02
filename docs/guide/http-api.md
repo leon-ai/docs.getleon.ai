@@ -102,7 +102,7 @@ You can find the generated endpoints in the `core/pkgs-endpoints.json` file.
 
 #### Example 1
 
-Let's try an example with the run action of the greeting module.
+Let's try an example with the "run" action of the "greeting" module.
 
 ```bash title="Information"
 Package: leon
