@@ -44,7 +44,7 @@ Via cette endpoint, Léon gère la chaîne de caractères (query) que vous envoy
 
 | Méthode | URL          | Header                                                       | Body data |
 | ------ | ------------ | ------------------------------------------------------------ | --------- |
-| `POST` | `/api/query` | - `Content-Type: application/json`<br />- `x-api-key: {LEON_HTTP_API_KEY}` | `query`   |
+| `POST` | `/api/query` | - `Content-Type: application/json`<br />- `X-API-Key: {LEON_HTTP_API_KEY}` | `query`   |
 
 #### Exemple
 
@@ -54,7 +54,7 @@ POST http://localhost:1337/api/query
 
 # Headers
 Content-Type: application/json
-x-api-key: 72aeb5ba824580963114481144385d7199c106fc
+X-API-Key: 72aeb5ba824580963114481144385d7199c106fc
 
 # Body data
 { query: "Hello" }
@@ -94,7 +94,7 @@ Vous pouvez trouver les endpoints générés dans le fichier `core/pkgs-endpoint
 
 | Méthode                | URL                                  | Header                                                       |
 | --------------------- | ------------------------------------ | ------------------------------------------------------------ |
-| - `POST`<br />- `GET` | `/api/p/{PACKAGE}/{MODULE}/{ACTION}` | - `Content-Type: application/json`<br />- `x-api-key: {LEON_HTTP_API_KEY}` |
+| - `POST`<br />- `GET` | `/api/p/{PACKAGE}/{MODULE}/{ACTION}` | - `Content-Type: application/json`<br />- `X-API-Key: {LEON_HTTP_API_KEY}` |
 
 #### Exemple 1
 
@@ -113,7 +113,7 @@ GET http://localhost:1337/api/p/leon/greeting/run
 
 # Headers
 Content-Type: application/json
-x-api-key: 72aeb5ba824580963114481144385d7199c106fc
+X-API-Key: 72aeb5ba824580963114481144385d7199c106fc
 ```
 
 ```json title="Réponse"
@@ -157,7 +157,7 @@ POST http://localhost:1337/api/p/checker/isitdown/run
 
 # Headers
 Content-Type: application/json
-x-api-key: 72aeb5ba824580963114481144385d7199c106fc
+X-API-Key: 72aeb5ba824580963114481144385d7199c106fc
 
 # Body data
 { "url": [{ "value": "github.com" }, { "value": "twitch.tv" }] }
