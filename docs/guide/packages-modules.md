@@ -464,7 +464,7 @@ def run(string, entities):
 Leon uses [TinyDB](https://github.com/msiemens/tinydb) to deal with packages databases. Each package can have its own database and the database is managed by modules.
 
 For more information, you can refer to the:
-- [utils.db()](#db-dbtype-tinydb) function.
+- [utils.db()](#dbdbtype--tinydb) function.
 - [TinyDB](https://tinydb.readthedocs.io) documentation.
 - [YouTube module](https://github.com/leon-ai/leon/blob/develop/packages/videodownloader/youtube.py) as example.
 
