@@ -1,0 +1,219 @@
+---
+slug: /
+sidebar_position: 1
+---
+
+# Introduction
+
+## Qu'est-ce que Léon ?
+
+Léon est un **assistant personnel open source** qui peut vivre sur votre serveur.
+
+Il fait des choses lorsque vous lui demandez.
+
+Vous pouvez lui parler et il peut vous parler.
+Vous pouvez lui écrire et il peut également vous écrire.
+Si vous le voulez, Léon peut communiquer avec vous en étant hors ligne afin de protéger votre vie privée.
+
+Vous pouvez l'imaginer comme étant un deuxième cerveau.
+
+:::tip Astuce
+Léon est encore très jeune aujourd'hui. Si vous le souhaitez, vous pouvez aider en [contributant](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) ❤️
+
+:::
+
+## Démo
+
+Une vidéo est disponible [ici](https://www.youtube.com/watch?v=kXiOD6J0WIk).
+
+## Motivations
+
+1. En tant que développeurs (ou pas), nous **aimons créer** des choses, d'autant plus lorsqu'il s'agit d'**améliorer** notre **quotidien**. Alors plutôt que de construire un projet dédié pour chacune de ces idées, Léon peut nous aider grâce à sa structure de **paquets / modules** (compétences). Nous pensons que c'est toujours mieux que de laisser vos idées prendre la poussière pour toujours, n'est-ce pas ?
+2. Grâce à cette structure générique, **tout le monde** peut **créer** ses propres **modules** et les **partager**. De cette façon il y a seulement un noyau (pour les gouverner tous).
+3. Léon utilise des **concepts** d'**IA**, plutôt cool.
+4. La **vie privée** est **importante**, vous pouvez configurer Léon pour discuter avec lui **hors ligne**. Vous pouvez déjà **intéragir** avec lui sans **aucun service tiers**.
+5. Et enfin parce que l'**open source** c'est génial.
+
+## Essayer en un simple clic
+
+Gitpod va automatiquement vous installer un environnement et lancer une instance.
+
+[![Ouvrir avec Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/leon-ai/leon)
+
+## Installation
+
+import Tabs from '@theme/Tabs'
+import TabItem from '@theme/TabItem'
+
+<Tabs
+  defaultValue="cli"
+  values={[
+    { label: 'CLI', value: 'cli' },
+    { label: 'Docker', value: 'docker' },
+    { label: 'Manuelle', value: 'manual' }
+  ]}>
+  <TabItem value="cli">
+
+### Prérequis
+
+- **[Node.js](https://nodejs.org/) >= 16**
+> Le noyau de Léon est développé avec le runtime JavaScript Node.js.
+- **[npm](https://npmjs.com/) >= 8**
+> npm est le gestionnaire de paquets de Node.js. Léon en a besoin pour l'arbre de dépendances de son noyau.
+
+:::tip Tip
+
+Vous pouvez suivre le [manuel](/fr-FR/how-to/) pour installer ces prérequis.
+
+:::
+
+### Installer la CLI de Léon
+
+La CLI de Léon vous accompagnera tout au long de votre aventure afin de vous faciliter la tâche sur l'installation et bien plus encore.
+Pour installer la CLI de Léon il suffit d'exécuter cette commande :
+
+```bash
+npm install --global @leon-ai/cli
+```
+
+### Installer Léon
+
+Maintenant que la CLI est installée, vous pouvez donner naissance à Léon :
+
+```bash
+leon create birth
+```
+
+Par défaut, la CLI télécharge le code source depuis la branche Git stable (`master`). Mais vous pouvez aussi télécharger le code source depuis la branche Git `develop` qui est la branche par défaut contenant les derniers changements.
+Sur cette branche vous bénéficierez des derniers changements en avance mais soyez conscient qu'elle peut ne pas être aussi stable que la master :
+
+```bash
+leon create birth --develop
+```
+
+### Run Leon
+
+À ce niveau, Léon est né et peu déjà être lancé via cette commande :
+
+```bash
+leon start
+```
+
+  </TabItem>
+  <TabItem value="manual">
+
+### Prérequis
+
+- **[Node.js](https://nodejs.org/) >= 16**
+> Le noyau de Léon est développé avec le runtime JavaScript Node.js.
+- **[npm](https://npmjs.com/) >= 8**
+> npm est le gestionnaire de paquets de Node.js. Léon en a besoin pour l'arbre de dépendances de son noyau.
+- **[Python](https://www.python.org/downloads/) >= 3**
+> Aujourd'hui, les modules de Léon sont écrits en Python.
+- **[Pipenv](https://docs.pipenv.org) >= 2020.11.15**
+> Pipenv permet aux modules de Léon d'être exécutés dans un environnement dédié. Pipenv embarque également un gestionnaire de paquets Python pour l'arbre de dépendances des modules de Léon.
+- **OS supportés: Linux, macOS et Windows**
+> Devons-nous expliquer celui-ci ? :)
+
+:::tip Astuce
+
+Vous pouvez suivre le [manuel](/fr-FR/how-to/) pour installer ces prérequis.
+
+:::
+
+### Télécharger
+
+<Tabs
+  defaultValue="master"
+  values={[
+    { label: 'Git (stable)', value: 'master' },
+    { label: 'Git (dev)', value: 'dev' },
+    { label: 'Archive', value: 'archive' }
+  ]}>
+  <TabItem value="master">
+
+La branche `master` est une copie de la dernière mise à jour :
+
+```bash
+git clone -b master https://github.com/leon-ai/leon.git leon
+```
+
+  </TabItem>
+  <TabItem value="dev">
+
+La branche `develop` est la branche par défaut, c'est sur celle-ci que les derniers changements sont fusionnés. Via cette branche vous obtienderai les toutes dernières mises à jour, en revanche elle ne sera pas aussi stable que la `master` :
+
+```bash
+git clone https://github.com/leon-ai/leon.git leon
+```
+
+  </TabItem>
+  <TabItem value="archive">
+
+Vous pouvez télécharger la dernière archive en date en suivant [ce lien](https://github.com/leon-ai/leon/releases/latest).
+
+  </TabItem>
+</Tabs>
+
+### Installer
+
+Maintenant vous pouvez installer :
+
+```bash
+# Aller à la racine du projet
+cd leon
+
+# Installer
+npm install
+```
+
+### Utilisation
+
+Veuillez vous assurer que l'installation s'est correctement déroulée à l'aide de cette commande :
+
+```bash
+npm run check
+```
+
+Cette commande vous donne un rapport qui vous permet de voir à quel point Léon est installé / configuré. Ne vous inquiétez pas si vous voyez des avertissements dans le rapport, c'est simplement parce que vous n'avez probablement pas encore [configuré Léon](/fr-FR/configuration).
+
+Si le rapport mentionne que *Leon peut fonctionner correctement*, alors vous pouvez construire et lancer Léon :
+
+```bash
+# Construire
+npm run build
+
+# Lancer
+npm start
+
+# Allez sur http://localhost:1337
+# Hourra ! Léon fonctionne
+```
+
+  </TabItem>
+  <TabItem value="docker">
+
+Vous pouvez aussi utiliser Docker pour installer et exécuter Léon :
+
+```bash
+# Construire
+npm run docker:build
+
+# Lancer
+npm run docker:run
+
+# Allez sur http://localhost:1337
+# Hourra ! Léon fonctionne
+```
+
+  </TabItem>
+</Tabs>
+
+À ce stade vous pouvez déjà correspondre avec Léon par écrit et lui demander des choses.
+
+:::tip Astuce
+
+Pour voir ce qu'il peut faire, merci de vous référer à la [liste des paquets](https://github.com/leon-ai/leon/tree/develop/packages).
+
+:::
+

@@ -214,7 +214,7 @@ module.exports = {
           lastVersion: 'current',
           versions: {
             current: {
-              label: '1.0.0-beta.6+dev'
+              label: '1.0.0-beta.7+dev'
             }
           },
           editUrl: ({ locale, version, versionDocsDirPath, docPath }) => {

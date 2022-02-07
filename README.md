@@ -6,7 +6,7 @@ This repository contains the main documentation of Leon. It is available on [doc
 
 ## Development
 
-```
+```bash
 # Install dependencies
 npm install
 
@@ -21,3 +21,12 @@ npm run build
 # Serve locally
 npm run serve
 ```
+
+## Release Version
+
+```bash
+npm run docusaurus docs:version {semver}
+```
+- Then copy `i18n/[...]/current` to `i18n/[...]/version-*`
+- Modify `versions.current` in `docusaurus.config.js` with the new version `+dev`
+- Same for `i18n/[..]/current.json`
