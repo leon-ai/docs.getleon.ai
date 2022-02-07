@@ -20,3 +20,4 @@ The table below lists all the available commands:
 | `leon help`          | List all commands available in the CLI.       | |
 | `leon start`          | Start a Leon instance.       | <ul><li>`--port {port}`: run a Leon instance with a specific port.</li><li>`--name {name}`: run a Leon instance with a specific name.</li></ul> |
 | `leon info`          | Get basic information about installed Leon instances.       | <ul><li>`--name {name}`: Name of the Leon instance.</li></ul> |
+| `leon kill`          | Kill a Leon instance.       | <ul><li>`--name {name}`: Name of the Leon instance.</li></ul> |
