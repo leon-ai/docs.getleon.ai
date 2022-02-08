@@ -140,7 +140,7 @@ module.exports = {
             },
             {
               label: '#LeonAI',
-              href: 'https://twitter.com/hashtag/LeonAI'
+              href: 'https://twitter.com/search?f=live&q=%23LeonAI%20(from%3Alouistiti_fr)&src=typed_query'
             }
           ]
         },

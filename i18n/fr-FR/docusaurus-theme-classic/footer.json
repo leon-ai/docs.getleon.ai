@@ -29,7 +29,7 @@
   },
   "link.item.label.#LeonAI": {
     "message": "#LeonAI",
-    "description": "The label of footer link with label=#LeonAI linking to https://twitter.com/hashtag/LeonAI"
+    "description": "The label of footer link with label=#LeonAI linking to https://twitter.com/search?f=live&q=%23LeonAI%20(from%3Alouistiti_fr)&src=typed_query"
   },
   "link.item.label.Discord": {
     "message": "Discord",
