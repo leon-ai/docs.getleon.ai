@@ -214,6 +214,6 @@ Ces options peuvent être configurées au niveau des actions dans le fichier `pa
 | `http_api.entities` | Les entités qui peuvent être passées en tant que paramètres dans le body data | `[]`                                                  |
 
 :::tip Astuce
-- Pour les entités, vous pouvez prendre exemple sur : [`packages/trend/data/expressions/en.json`](https://github.com/leon-ai/leon/blob/develop/packages/trend/data/expressions/en.json).
+- Pour les entités, vous pouvez prendre exemple sur : [`packages/trend/data/expressions/en.json`](https://github.com/leon-ai/leon/blob/master/packages/trend/data/expressions/en.json).
 - Pour une liste complète du format des entités, veuillez [regarder ici](https://github.com/axa-group/nlp.js/blob/master/docs/v3/builtin-entity-extraction.md).
 :::

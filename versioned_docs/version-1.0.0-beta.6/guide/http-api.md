@@ -219,7 +219,7 @@ These options can be configured at the action level in the `packages/{PACKAGE}/d
 
 :::tip Tip
 
-- For entities, you can take example on [`packages/trend/data/expressions/en.json`](https://github.com/leon-ai/leon/blob/develop/packages/trend/data/expressions/en.json).
+- For entities, you can take example on [`packages/trend/data/expressions/en.json`](https://github.com/leon-ai/leon/blob/master/packages/trend/data/expressions/en.json).
 - For a full list of the entities format, please [check here](https://github.com/axa-group/nlp.js/blob/master/docs/v3/builtin-entity-extraction.md).
 
 :::

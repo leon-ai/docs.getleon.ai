@@ -97,7 +97,7 @@ If you are using a version **below** `1.0.0-beta.4`, from the step 3. do: Click 
 
 If a module has this option, once the module has been processed, you can synchronize your content via different methods.
 
-> E.g. the *YouTube* module of the *[Video Downloader Package](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader)* allows you to synchronize your downloaded videos on your Google Drive account or on your current device.
+> E.g. the *YouTube* module of the *[Video Downloader Package](https://github.com/leon-ai/leon/tree/master/packages/videodownloader)* allows you to synchronize your downloaded videos on your Google Drive account or on your current device.
 
 :::tip Tip
 To see if a module has this option, simply check the settings via this file: `packages/{PACKAGE NAME}/config/config.json`.

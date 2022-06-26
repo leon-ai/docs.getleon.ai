@@ -23,6 +23,6 @@ Le journal collaboratif est **activé par défaut**. Si vous souhaitez le désac
 :::tip Astuce
 Pour en savoir plus concernant le code, veuillez vous référer aux ressources suivantes :
 
-- La partie du code qui intéragit avec le journal collaboratif se strouve dans l'[NLU de Léon](https://github.com/leon-ai/leon/blob/develop/server/src/core/nlu.js).
+- La partie du code qui intéragit avec le journal collaboratif se strouve dans l'[NLU de Léon](https://github.com/leon-ai/leon/blob/master/server/src/core/nlu.js).
 - Le code source du journal collaboratif est disponible sur [ce répertoire GitHub](https://github.com/leon-ai/leon-logger).
 :::

@@ -11,13 +11,13 @@ Modules are the skills of Leon, this is thanks to them Leon is able to do things
 
 Packages contain an infinity of modules. A package is nothing more than a **folder containing modules**, you can consider them as a category of modules.
 
-> E.g. the *[Checker](https://github.com/leon-ai/leon/tree/develop/packages/checker)* package contains modules such as the *[Is It Down](https://github.com/leon-ai/leon/blob/develop/packages/checker/isitdown.py)* one because this package includes modules related to the "checking" purposes.
+> E.g. the *[Checker](https://github.com/leon-ai/leon/tree/master/packages/checker)* package contains modules such as the *[Is It Down](https://github.com/leon-ai/leon/blob/master/packages/checker/isitdown.py)* one because this package includes modules related to the "checking" purposes.
 
-The full packages list is available [here](https://github.com/leon-ai/leon/tree/develop/packages).
+The full packages list is available [here](https://github.com/leon-ai/leon/tree/master/packages).
 
 ### Directory Structure
 
-Packages are listed in the `packages` directory. Let's take the [*Video Downloader*](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) package as example.
+Packages are listed in the `packages` directory. Let's take the [*Video Downloader*](https://github.com/leon-ai/leon/tree/master/packages/videodownloader) package as example.
 
 Note the **package name must be lowercase and in English**.
 
@@ -42,17 +42,17 @@ videodownloader
 └── youtube.py
 ```
 
-- [`packages/videodownloader`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader): package name.
+- [`packages/videodownloader`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader): package name.
 - `packages/videodownloader/config/config.json`: package configuration. It contains the configuration of each of its module.
-- [`packages/videodownloader/config/config.sample.json`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/config/config.sample.json): sample configuration file. This file is copied during the setup to generate the file above.
-- [`packages/videodownloader/data/answers`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/answers): folder containing answers translations of each module.
-- [`packages/videodownloader/data/db`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/db): folder containing the package database.
-- [`packages/videodownloader/data/expressions`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/expressions): folder containing understanding dataset of each module. Those dataset are used to train the understanding model.
-- [`packages/videodownloader/test`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/test): folder containing tests of each module.
-- [`packages/videodownloader/README.md`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/README.md): file containing package/modules purposes.
-- [`packages/videodownloader/__init__.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/__init__.py): empty file allowing to load the package as a Python package.
-- [`packages/videodownloader/version.txt`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/version.txt): file containing the package version.
-- [`packages/videodownloader/youtube.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/youtube.py): *YouTube* module.
+- [`packages/videodownloader/config/config.sample.json`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/config/config.sample.json): sample configuration file. This file is copied during the setup to generate the file above.
+- [`packages/videodownloader/data/answers`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/data/answers): folder containing answers translations of each module.
+- [`packages/videodownloader/data/db`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/data/db): folder containing the package database.
+- [`packages/videodownloader/data/expressions`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/data/expressions): folder containing understanding dataset of each module. Those dataset are used to train the understanding model.
+- [`packages/videodownloader/test`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/test): folder containing tests of each module.
+- [`packages/videodownloader/README.md`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/README.md): file containing package/modules purposes.
+- [`packages/videodownloader/__init__.py`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/__init__.py): empty file allowing to load the package as a Python package.
+- [`packages/videodownloader/version.txt`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/version.txt): file containing the package version.
+- [`packages/videodownloader/youtube.py`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/youtube.py): *YouTube* module.
 
 Each package:
 - Has its own version.
@@ -76,13 +76,13 @@ When Leon understands what you told him, he:
 2. Do the job.
 3. Returns you the output of that execution.
 
-Each module has its own purpose and its own configuration. Do not hesitate to browse the [packages list](https://github.com/leon-ai/leon/tree/develop/packages) to understand their goals.
+Each module has its own purpose and its own configuration. Do not hesitate to browse the [packages list](https://github.com/leon-ai/leon/tree/master/packages) to understand their goals.
 
 Today, modules are written in Python but in the future they could also support other languages thanks to the [bridges](/bridges).
 
 ### Configuration
 
-Let's take the [*Video Downloader*](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) package again as example.
+Let's take the [*Video Downloader*](https://github.com/leon-ai/leon/tree/master/packages/videodownloader) package again as example.
 ```json
 {
   "youtube": {
@@ -143,13 +143,13 @@ Note that each expression of each module action has its own confidence.
 > }
 > ```
 
-> E.g. [*Who Am I* module English expressions](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/expressions/en.json) belonging to the *Leon* package. These expressions are wrapped inside the `run` action.
+> E.g. [*Who Am I* module English expressions](https://github.com/leon-ai/leon/blob/master/packages/leon/data/expressions/en.json) belonging to the *Leon* package. These expressions are wrapped inside the `run` action.
 
 ##### Fallbacks
 
 Despite the expressions you wrote, it might be possible Leon still does not understand some of them. This is where fallbacks jump in the game.
 
-In the [core/langs.json](https://github.com/leon-ai/leon/blob/develop/core/langs.json) file, you can find the list of the supported languages with several properties:
+In the [core/langs.json](https://github.com/leon-ai/leon/blob/master/core/langs.json) file, you can find the list of the supported languages with several properties:
 
 - `short`: the short language code.
 - `min_confidence`: the minimum confidence of the Leon's comprehension. If the confidence is smaller than the given one, Leon replies you he is not sure about what you said.
@@ -178,7 +178,7 @@ Answers are the data used by Leon to provide you results binded with the modules
 > }
 > ```
 
-> E.g. part of the [*Greeting* module English answers](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/answers/en.json) belonging to the *Leon* package.
+> E.g. part of the [*Greeting* module English answers](https://github.com/leon-ai/leon/blob/master/packages/leon/data/answers/en.json) belonging to the *Leon* package.
 
 ##### HTML
 
@@ -194,13 +194,13 @@ It is possible to use HTML in your answers.
 > }
 > ```
 
-> E.g. part of the [*GitHub* module English answers](https://github.com/leon-ai/leon/blob/develop/packages/trend/data/answers/en.json) belonging to the *Trend* package.
+> E.g. part of the [*GitHub* module English answers](https://github.com/leon-ai/leon/blob/master/packages/trend/data/answers/en.json) belonging to the *Trend* package.
 
 ## Create a Module
 
 :::tip Tip
-- Creating a module is one of the best way to contribute in Leon! Before doing that, please make sure you review [this document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) ❤️
-- For example, you could think of creating a To-Do List module *(although [this one already exists](https://github.com/leon-ai/leon/tree/develop/packages/calendar#to-do-list))*. Check out the [roadmap](http://roadmap.getleon.ai) to see what is in the pipeline.
+- Creating a module is one of the best way to contribute in Leon! Before doing that, please make sure you review [this document](https://github.com/leon-ai/leon/blob/master/.github/CONTRIBUTING.md) ❤️
+- For example, you could think of creating a To-Do List module *(although [this one already exists](https://github.com/leon-ai/leon/tree/master/packages/calendar#to-do-list))*. Check out the [roadmap](http://roadmap.getleon.ai) to see what is in the pipeline.
 - Don't hesitate to [open an issue](https://github.com/leon-ai/leon/issues/new/choose) if you have any questions.
 :::
 
@@ -250,7 +250,7 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py s
 
 #### 6. Share
 
-- I share my module to the world by [contributing](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
+- I share my module to the world by [contributing](https://github.com/leon-ai/leon/blob/master/.github/CONTRIBUTING.md).
 
 ### Actions (Module Functions)
 
@@ -330,7 +330,7 @@ Every time you communicate to Leon, he will creates a temporary query object JSO
 - `query`: your sentence.
 - `entities`: an array of the entities Leon has extracted from your sentence. An entity can be whatever you define as an entity (custom entity) or it can be a built-in entity such as a date duration, a number, a domain name, etc.
 
-The [server/src/query-object.sample.json](https://github.com/leon-ai/leon/blob/develop/server/src/query-object.sample.json) file is here to let you execute and test the behavior of your module code [on the fly](#on-the-fly) during its creation. Edit it according to your module properties.
+The [server/src/query-object.sample.json](https://github.com/leon-ai/leon/blob/master/server/src/query-object.sample.json) file is here to let you execute and test the behavior of your module code [on the fly](#on-the-fly) during its creation. Edit it according to your module properties.
 
 ### Entities
 
@@ -347,8 +347,8 @@ The full list is available [here](https://github.com/axa-group/nlp.js/blob/maste
 :::tip Tip
 Feel free to see some examples to understand how built-in entities are used. Those are perfect examples:
 
-- [packages/checker/isitdown.py](https://github.com/leon-ai/leon/blob/develop/packages/checker/isitdown.py)
-- [packages/trend/github.py](https://github.com/leon-ai/leon/blob/develop/packages/trend/github.py)
+- [packages/checker/isitdown.py](https://github.com/leon-ai/leon/blob/master/packages/checker/isitdown.py)
+- [packages/trend/github.py](https://github.com/leon-ai/leon/blob/master/packages/trend/github.py)
 
 As you can see, you can iterate over the entities to grab the information you need (domain names, dates, etc.).
 :::
@@ -370,7 +370,7 @@ They are represented by an array of objects:
 
 As you can see, a custom entity is made of a `type`, a `name` and more depending of its type.
 
-> E.g. see the [*create_list* action entities](https://github.com/leon-ai/leon/blob/develop/packages/calendar/data/expressions/en.json) of the *To-Do List* module.
+> E.g. see the [*create_list* action entities](https://github.com/leon-ai/leon/blob/master/packages/calendar/data/expressions/en.json) of the *To-Do List* module.
 
 Custom entities have two types listed below:
 
@@ -427,7 +427,7 @@ def create_list(string, entities):
 ```
 
 :::tip Tip
-You can take a look at the real [*To-Do List* module](https://github.com/leon-ai/leon/blob/develop/packages/calendar/todolist.py) of the *Calendar* package.
+You can take a look at the real [*To-Do List* module](https://github.com/leon-ai/leon/blob/master/packages/calendar/todolist.py) of the *Calendar* package.
 :::
 
 ##### Regex Entities
@@ -471,7 +471,7 @@ Leon uses [TinyDB](https://github.com/msiemens/tinydb) to deal with packages dat
 For more information, you can refer to the:
 - [utils.db()](#db-dbtype-tinydb) function.
 - [TinyDB](https://tinydb.readthedocs.io) documentation.
-- [YouTube module](https://github.com/leon-ai/leon/blob/develop/packages/videodownloader/youtube.py) as example.
+- [YouTube module](https://github.com/leon-ai/leon/blob/master/packages/videodownloader/youtube.py) as example.
 
 ### Installing Third Party Python Packages
 
@@ -581,7 +581,7 @@ describe('checker:isitdown', async () => {
   })
 })
 ```
-*These tests can be found in [packages/checker/test/isitdown.spec.js](https://github.com/leon-ai/leon/blob/develop/packages/checker/test/isitdown.spec.js)*
+*These tests can be found in [packages/checker/test/isitdown.spec.js](https://github.com/leon-ai/leon/blob/master/packages/checker/test/isitdown.spec.js)*
 
 Once you finished to write your tests, you can execute the following command to run them:
 
@@ -594,7 +594,7 @@ npm run test:module checker:isitdown
 
 ## Utils Functions
 
-Utils functions are available in [bridges/python/utils.py](https://github.com/leon-ai/leon/blob/develop/bridges/python/utils.py).
+Utils functions are available in [bridges/python/utils.py](https://github.com/leon-ai/leon/blob/master/bridges/python/utils.py).
 
 To use the following functions, do not forget to import the Python *utils* module at the beginning of your Leon's module:
 
@@ -605,7 +605,7 @@ import utils
 ```
 
 :::tip Tip
-You can also [contribute](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) by improving these functions or by adding new ones to make the modules creation even better.
+You can also [contribute](https://github.com/leon-ai/leon/blob/master/.github/CONTRIBUTING.md) by improving these functions or by adding new ones to make the modules creation even better.
 :::
 
 ### getqueryobj()

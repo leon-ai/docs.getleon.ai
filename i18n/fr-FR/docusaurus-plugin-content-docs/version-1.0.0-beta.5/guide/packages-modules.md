@@ -11,13 +11,13 @@ Les modules sont les compétences de Léon, c'est grâce à eux que Léon est ca
 
 Les paquets contiennent une infinité de modules. Un paquet n'est ni plus ni moins  qu'un **dossier contenant des modules**, vous pouvez les considérer comme étant une catégorie de modules.
 
-> Ex. le paquet *[Checker](https://github.com/leon-ai/leon/tree/develop/packages/checker)* contient des modules tels que le *[Is It Down](https://github.com/leon-ai/leon/blob/develop/packages/checker/isitdown.py)* car ce paquet inclut les modules ayant pour but la "vérification".
+> Ex. le paquet *[Checker](https://github.com/leon-ai/leon/tree/master/packages/checker)* contient des modules tels que le *[Is It Down](https://github.com/leon-ai/leon/blob/master/packages/checker/isitdown.py)* car ce paquet inclut les modules ayant pour but la "vérification".
 
-La liste complète des paquets est disponible [ici](https://github.com/leon-ai/leon/tree/develop/packages).
+La liste complète des paquets est disponible [ici](https://github.com/leon-ai/leon/tree/master/packages).
 
 ### Structure des dossiers
 
-Les paquets sont listés dans le répertoire `packages`. Prenons le paquet [*Video Downloader*](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) comme exemple.
+Les paquets sont listés dans le répertoire `packages`. Prenons le paquet [*Video Downloader*](https://github.com/leon-ai/leon/tree/master/packages/videodownloader) comme exemple.
 
 Notez que le **nom du paquet doit être en minuscule et en anglais**.
 
@@ -42,17 +42,17 @@ videodownloader
 └── youtube.py
 ```
 
-- [`packages/videodownloader`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) : nom du paquet.
+- [`packages/videodownloader`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader) : nom du paquet.
 - `packages/videodownloader/config/config.json` : configuration du paquet. Il contient la configuration de tous ses modules.
-- [`packages/videodownloader/config/config.sample.json`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/config/config.sample.json) : exemple de fichier de configuration. Ce fichier est copié pendant l'installation afin de générer le fichier ci-dessus.
-- [`packages/videodownloader/data/answers`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/answers) : dossier contenant la traduction des réponses de chaque module.
-- [`packages/videodownloader/data/db`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/db) : dossier contenant la base de donnée du paquet.
-- [`packages/videodownloader/data/expressions`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/data/expressions) : dossier contenant le jeux de données de compréhension de chaque module. Ces jeux de données sont utilisés pour entraîner le modèle de compréhension.
-- [`packages/videodownloader/test`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/test) : dossier contenant les tests de chaque module.
-- [`packages/videodownloader/README.md`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/README.md) : fichier contenant les objectifs du paquet et de ses modules.
-- [`packages/videodownloader/__init__.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/__init__.py) : fichier vide permettant de charger le paquet comme un paquet Python.
-- [`packages/videodownloader/version.txt`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/version.txt) : fichier contenant la version du paquet.
-- [`packages/videodownloader/youtube.py`](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader/youtube.py) : module *YouTube*.
+- [`packages/videodownloader/config/config.sample.json`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/config/config.sample.json) : exemple de fichier de configuration. Ce fichier est copié pendant l'installation afin de générer le fichier ci-dessus.
+- [`packages/videodownloader/data/answers`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/data/answers) : dossier contenant la traduction des réponses de chaque module.
+- [`packages/videodownloader/data/db`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/data/db) : dossier contenant la base de donnée du paquet.
+- [`packages/videodownloader/data/expressions`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/data/expressions) : dossier contenant le jeux de données de compréhension de chaque module. Ces jeux de données sont utilisés pour entraîner le modèle de compréhension.
+- [`packages/videodownloader/test`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/test) : dossier contenant les tests de chaque module.
+- [`packages/videodownloader/README.md`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/README.md) : fichier contenant les objectifs du paquet et de ses modules.
+- [`packages/videodownloader/__init__.py`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/__init__.py) : fichier vide permettant de charger le paquet comme un paquet Python.
+- [`packages/videodownloader/version.txt`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/version.txt) : fichier contenant la version du paquet.
+- [`packages/videodownloader/youtube.py`](https://github.com/leon-ai/leon/tree/master/packages/videodownloader/youtube.py) : module *YouTube*.
 
 Chaque paquet :
 - À sa propre version.
@@ -76,13 +76,13 @@ Quand Léon comprend ce que vous lui dites, il :
 2. Fait le job.
 3. Vous retourne le résultat de l'éxécution.
 
-Chaque module à son propre objectif et sa propre configuration. N'hésitez pas à parcourir la [liste des paquets](https://github.com/leon-ai/leon/tree/develop/packages) afin de comprendre leur buts.
+Chaque module à son propre objectif et sa propre configuration. N'hésitez pas à parcourir la [liste des paquets](https://github.com/leon-ai/leon/tree/master/packages) afin de comprendre leur buts.
 
 Aujourd'hui, les modules sont écrits en Python mais à l'avenir ils pourraient supportés d'autres langages grâce aux [connecteurs](/fr-FR/bridges).
 
 ### Configuration
 
-Prenons à nouveau le paquet [*Video Downloader*](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader) comme exemple.
+Prenons à nouveau le paquet [*Video Downloader*](https://github.com/leon-ai/leon/tree/master/packages/videodownloader) comme exemple.
 ```json
 {
   "youtube": {
@@ -146,13 +146,13 @@ Notez que chaque expression de chaque action de module a sa propre confiance (pr
 > }
 > ```
 
-> Ex. [les expressions françaises du module *Who Am I*](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/expressions/fr.json) appartiennent au paquet *Leon*. Ces expressions sont contenues dans l'action `run`.
+> Ex. [les expressions françaises du module *Who Am I*](https://github.com/leon-ai/leon/blob/master/packages/leon/data/expressions/fr.json) appartiennent au paquet *Leon*. Ces expressions sont contenues dans l'action `run`.
 
 ##### Fallbacks
 
 Malgré les expressions que vous avez écrit, il se peut que Léon ne les comprend toujours pas. C'est là que les fallbacks entrent en jeu.
 
-Dans le fichier [core/langs.json](https://github.com/leon-ai/leon/blob/develop/core/langs.json), vous pouvez trouver la liste des langues supportées avec plusieurs propriétés :
+Dans le fichier [core/langs.json](https://github.com/leon-ai/leon/blob/master/core/langs.json), vous pouvez trouver la liste des langues supportées avec plusieurs propriétés :
 
 - `short`: le code court de la langue.
 - `min_confidence`: la confiance (précision) minimum de la compréhension de Léon. Si cette confiance est plus petite que celle définie, alors Léon vous répond qu'il n'est pas sûr de ce que vous lui dites.
@@ -181,7 +181,7 @@ Les réponses sont les données utilisées par Léon qui permettent de vous four
 > }
 > ```
 
-> Ex. une partie des [réponses françaises du module *Greeting*](https://github.com/leon-ai/leon/blob/develop/packages/leon/data/answers/fr.json) appartenant au paquet *Leon*.
+> Ex. une partie des [réponses françaises du module *Greeting*](https://github.com/leon-ai/leon/blob/master/packages/leon/data/answers/fr.json) appartenant au paquet *Leon*.
 
 ##### HTML
 
@@ -197,13 +197,13 @@ Il est possible d'utiliser de l'HTML dans vos réponses.
 > }
 > ```
 
-> Ex. une partie des [réponses françaises du module *GitHub*](https://github.com/leon-ai/leon/blob/develop/packages/trend/data/answers/fr.json) appartenant au paquet *Trend*.
+> Ex. une partie des [réponses françaises du module *GitHub*](https://github.com/leon-ai/leon/blob/master/packages/trend/data/answers/fr.json) appartenant au paquet *Trend*.
 
 ## Créer un module
 
 :::tip Astuce
-- La création d'un module est l'une des meilleures façons de contribuer à Léon ! Avant toute chose, assurez-vous de prendre connaissance de [ce document](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) ❤️
-- Par exemple, vous pouvez imaginer créer un module to-do liste *(bien que [celui-ci existe déjà](https://github.com/leon-ai/leon/tree/develop/packages/calendar#to-do-list))*. Faites un tour sur la [roadmap](http://roadmap.getleon.ai) pour voir ce qu'il y a de prévu.
+- La création d'un module est l'une des meilleures façons de contribuer à Léon ! Avant toute chose, assurez-vous de prendre connaissance de [ce document](https://github.com/leon-ai/leon/blob/master/.github/CONTRIBUTING.md) ❤️
+- Par exemple, vous pouvez imaginer créer un module to-do liste *(bien que [celui-ci existe déjà](https://github.com/leon-ai/leon/tree/master/packages/calendar#to-do-list))*. Faites un tour sur la [roadmap](http://roadmap.getleon.ai) pour voir ce qu'il y a de prévu.
 - N'hésitez pas à [ouvrir une issue](https://github.com/leon-ai/leon/issues/new/choose) si vous avez la moindre question.
 :::
 
@@ -253,7 +253,7 @@ PIPENV_PIPFILE=bridges/python/Pipfile pipenv run python bridges/python/main.py s
 
 #### 6. Partager
 
-- Je partage mon module au monde entier en [contribuant](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md).
+- Je partage mon module au monde entier en [contribuant](https://github.com/leon-ai/leon/blob/master/.github/CONTRIBUTING.md).
 
 ### Actions (fonctions de module)
 
@@ -335,7 +335,7 @@ Chaque fois que vous communiquer avec Léon, il va créer un fichier d'objet de 
 - `query` : votre phrase.
 - `entities` : un tableau d'entités que Léon a extrait de votre phrase. Une entité peut être ce que vous voulez en fonction de ce que vous définissez (entité personnalisée) ou elle peut être une entité intégrée comme une durée dans le temps, un nombre, un nom de domaine, etc.
 
-Le fichier [server/src/query-object.sample.json](https://github.com/leon-ai/leon/blob/develop/server/src/query-object.sample.json) est présent pour que vous puissiez exécuter et tester le comportement du code de votre module [à la volée](#a-la-volee) pendant sa création. Modifiez le en fonction des propriétés de votre module.
+Le fichier [server/src/query-object.sample.json](https://github.com/leon-ai/leon/blob/master/server/src/query-object.sample.json) est présent pour que vous puissiez exécuter et tester le comportement du code de votre module [à la volée](#a-la-volee) pendant sa création. Modifiez le en fonction des propriétés de votre module.
 
 ### Entités
 
@@ -352,8 +352,8 @@ La liste complète est disponible [ici](https://github.com/axa-group/nlp.js/blob
 :::tip Astuce
 N'hésitez pas à consulter des exemples afin de comprendre comment ces entités sont utilisées. Ceux-ci sont des exemples parfaits :
 
-- [packages/checker/isitdown.py](https://github.com/leon-ai/leon/blob/develop/packages/checker/isitdown.py)
-- [packages/trend/github.py](https://github.com/leon-ai/leon/blob/develop/packages/trend/github.py)
+- [packages/checker/isitdown.py](https://github.com/leon-ai/leon/blob/master/packages/checker/isitdown.py)
+- [packages/trend/github.py](https://github.com/leon-ai/leon/blob/master/packages/trend/github.py)
 
 Comme vous voyez, vous pouvez itérer sur les entités pour récupérer les informations dont vous avez besoin (nom de domaines, dates, vos propres entités, etc.).
 :::
@@ -375,7 +375,7 @@ Elles sont représentées par un tableau d'objets :
 
 Comme vous pouvez le voir, une entité personnalisée comprend un `type`, un `name` et plus en fonction de son type.
 
-> Ex. consultez les [entités de l'action *create_list*](https://github.com/leon-ai/leon/blob/develop/packages/calendar/data/expressions/fr.json) du module *To-Do List*.
+> Ex. consultez les [entités de l'action *create_list*](https://github.com/leon-ai/leon/blob/master/packages/calendar/data/expressions/fr.json) du module *To-Do List*.
 
 Les entités personnalisées ont deux types listés ci-dessous :
 
@@ -430,7 +430,7 @@ def create_list(string, entities):
 ```
 
 :::tip Astuce
-Vous pouvez jeter un œil au réel [module *To-Do List*](https://github.com/leon-ai/leon/blob/develop/packages/calendar/todolist.py) du paquet *Calendar*.
+Vous pouvez jeter un œil au réel [module *To-Do List*](https://github.com/leon-ai/leon/blob/master/packages/calendar/todolist.py) du paquet *Calendar*.
 :::
 
 ##### Entités expressions régulières
@@ -474,7 +474,7 @@ Léon utilise [TinyDB](https://github.com/msiemens/tinydb) pour gérer les bases
 Pour plus d'informations, veuillez vous référer à :
 - La fonction [utils.db()](#db-dbtype-tinydb).
 - La documentation [TinyDB](https://tinydb.readthedocs.io).
-- L'exemple du [module YouTube](https://github.com/leon-ai/leon/blob/develop/packages/videodownloader/youtube.py).
+- L'exemple du [module YouTube](https://github.com/leon-ai/leon/blob/master/packages/videodownloader/youtube.py).
 
 ### Installer des paquets Python tiers
 
@@ -583,7 +583,7 @@ describe('checker:isitdown', async () => {
   })
 })
 ```
-*Ces tests peuvent être trouvés dans [packages/checker/test/isitdown.spec.js](https://github.com/leon-ai/leon/blob/develop/packages/checker/test/isitdown.spec.js)*
+*Ces tests peuvent être trouvés dans [packages/checker/test/isitdown.spec.js](https://github.com/leon-ai/leon/blob/master/packages/checker/test/isitdown.spec.js)*
 
 Une fois que vous avez terminé d'écrire vos tests, vous pouvez exécuter la commande suivante pour les exécuter :
 ```bash
@@ -595,7 +595,7 @@ npm run test:module checker:isitdown
 
 ## Fonctions utiles
 
-Les fonctions utilitaires sont disponibles dans [bridges/python/utils.py](https://github.com/leon-ai/leon/blob/develop/bridges/python/utils.py).
+Les fonctions utilitaires sont disponibles dans [bridges/python/utils.py](https://github.com/leon-ai/leon/blob/master/bridges/python/utils.py).
 
 Pour utiliser ces fonctions, n'oubliez pas d'importer le module Python *utils* au début de votre module Léon :
 
@@ -606,7 +606,7 @@ import utils
 ```
 
 :::tip Astuce
-Vous pouvez également [contribuer](https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md) en améliorant ces fonctions ou en ajoutant de nouvelles afin de rendre la création de modules encore meilleure.
+Vous pouvez également [contribuer](https://github.com/leon-ai/leon/blob/master/.github/CONTRIBUTING.md) en améliorant ces fonctions ou en ajoutant de nouvelles afin de rendre la création de modules encore meilleure.
 :::
 
 ### getqueryobj()

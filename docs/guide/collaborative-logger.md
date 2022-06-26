@@ -23,6 +23,6 @@ The collaborative logger is **enabled by default**. If you wish to disable it, s
 :::tip Tip
 If you wish to dig into the code, you can find the:
 
-- Part of the code which interacts with the collaborative logger in the [Leon's NLU](https://github.com/leon-ai/leon/blob/develop/server/src/core/nlu.js).
+- Part of the code which interacts with the collaborative logger in the [Leon's NLU](https://github.com/leon-ai/leon/blob/master/server/src/core/nlu.js).
 - Collaborative logger source code on [this GitHub repository](https://github.com/leon-ai/leon-logger).
 :::

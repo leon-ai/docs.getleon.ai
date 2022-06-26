@@ -96,7 +96,7 @@ IBM Watson a des identifiants pour chaque service STT et chaque service TTS.
 
 Si le module comprend cette option, une fois que le module ait terminé sa tâche, vous pouvez synchroniser votre contenu à l'aide de différentes méthodes.
 
-> Ex. le module *YouTube* du paquet *[Video Downloader Package](https://github.com/leon-ai/leon/tree/develop/packages/videodownloader)* vous permet de synchroniser les vidéos téléchargées sur votre compte Google Drive ou sur votre appareil actuel.
+> Ex. le module *YouTube* du paquet *[Video Downloader Package](https://github.com/leon-ai/leon/tree/master/packages/videodownloader)* vous permet de synchroniser les vidéos téléchargées sur votre compte Google Drive ou sur votre appareil actuel.
 
 :::tip Astuce
 Pour déterminer si un module comprend cette option, vérifiez simplement la configuration de celui-ci via ce fichier : `packages/{PACKAGE NAME}/config/config.json`.

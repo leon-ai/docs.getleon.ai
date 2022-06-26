@@ -5,7 +5,7 @@ sidebar_position: 12
 
 # Scripts
 
-Dans cette section vous prendrez connaissance des scripts npm disponibles. Ils sont situés dans le fichier [package.json](https://github.com/leon-ai/leon/blob/develop/package.json).
+Dans cette section vous prendrez connaissance des scripts npm disponibles. Ils sont situés dans le fichier [package.json](https://github.com/leon-ai/leon/blob/master/package.json).
 
 Ces scripts **doivent être exécutés à partir du répertoire racine du projet**.
 

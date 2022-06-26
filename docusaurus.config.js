@@ -166,7 +166,7 @@ module.exports = {
             },
             {
               label: 'Contribute',
-              href: 'https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md'
+              href: 'https://github.com/leon-ai/leon/blob/master/.github/CONTRIBUTING.md'
             },
             {
               label: 'Help',

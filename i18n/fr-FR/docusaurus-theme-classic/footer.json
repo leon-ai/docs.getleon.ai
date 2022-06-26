@@ -41,7 +41,7 @@
   },
   "link.item.label.Contribute": {
     "message": "Contribuer",
-    "description": "The label of footer link with label=Contribute linking to https://github.com/leon-ai/leon/blob/develop/.github/CONTRIBUTING.md"
+    "description": "The label of footer link with label=Contribute linking to https://github.com/leon-ai/leon/blob/master/.github/CONTRIBUTING.md"
   },
   "link.item.label.Help": {
     "message": "Aide",
