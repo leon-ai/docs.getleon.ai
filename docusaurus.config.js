@@ -124,7 +124,7 @@ module.exports = {
           items: [
             {
               label: 'Newsletter',
-              href: 'http://revue.getleon.ai'
+              href: 'https://newsletter.getleon.ai/subscription/form'
             },
             {
               label: 'Blog',
