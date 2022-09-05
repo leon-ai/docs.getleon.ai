@@ -53,6 +53,13 @@ module.exports = {
       textColor: '#FFF', // Defaults to `#000`.
       isCloseable: false
     },*/
+    announcementBar: {
+      content:
+        '<b>⚠️ No new documentation is being updated at the moment. We are working on the official release of Leon. Feel free to <a href="https://discord.com/invite/MNQqqKg" target="_blank">join us on Discord</a> ⚠️</b>',
+      backgroundColor: '#1C75DB',
+      textColor: '#FFF',
+      isCloseable: false,
+    },
     navbar: {
       title: 'Leon Docs',
       logo: {
