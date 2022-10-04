@@ -9,7 +9,7 @@ Some terms in the docs might be unknown to you; this section should help you ach
 
 ## Actions
 
-Actions represent the [modules](/glossary#modules) entry points.
+Actions represent the [module](/glossary#modules)'s entry points.
 > Attachment: [packages/calendar/todolist.py](https://github.com/leon-ai/leon/tree/master/packages/calendar/todolist.py) *example of the `To-Do List` module including actions such as `create_list`, `complete_todo`, etc*.
 
 ## Answers
@@ -85,7 +85,7 @@ Leon employs it to load the most appropriate [classifier](/glossary#classifier).
 
 Leon's packages contain one or an infinity of [modules](/glossary#modules). You can consider packages as a category of modules. This is where the [answers](/glossary#answers) and [expressions](/glossary#expressions) are stored.
 
-Alternatively, packages are what we call "domains" in the NLP (*Natural Language Processing*) field. Domain classification is a way to structure/label data for a better scalability. It helps Leon to make decisions on what to understand and improve his accuracy.
+Alternatively, packages are what we call "domains" in the NLP (*Natural Language Processing*) field. Domain classification is a way to structure/label data for better scalability. It helps Leon to make decisions on what to understand and improve his accuracy.
 
 > Attachment: [packages/leon](https://github.com/leon-ai/leon/tree/master/packages/leon) *example of the `Leon` package including modules related to Leon himself*.
 
