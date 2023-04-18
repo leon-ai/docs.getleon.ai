@@ -53,7 +53,7 @@ Please follow [this section](/offline).
 1. [Create a new IAM user](https://console.aws.amazon.com/iam/home#/users$new?step=details) on the AWS console. Choose a `User name` and in the `Access type` section, check `Programmatic access`. Then click `Next`.
 2. In the permissions section, use the `Attach existing policies directly` option and search for `Polly`. Then check the `AmazonPollyFullAccess` item. Then click `Next` (and skip the tag section).
 3. Hit the `Create user` button.
-4. You can see the `Access key ID` and you can also display the `Secret access key`. Copy both of them and paste them to the `server/src/config/voice/amazon.json` Leon's file.
+4. You can see the `Access key ID` and you can also display the `Secret access key`. Copy both of them and paste them to the `core/config/voice/amazon.json` Leon's file.
 
 ### Google Cloud
 
@@ -64,7 +64,7 @@ When using this provider, the credentials are the same for the STT and TTS.
 1. [Create or select a project](https://console.cloud.google.com/cloud-resource-manager) on the GCP (Google Cloud Platform).
 2. Enable the [STT API](https://console.cloud.google.com/apis/library/speech.googleapis.com) and/or the [TTS API](https://console.cloud.google.com/apis/library/texttospeech.googleapis.com).
 3. [Create a service account key](https://console.cloud.google.com/apis/credentials/serviceaccountkey).
-4. Download the JSON file and copy its content to the: `server/src/config/voice/google-cloud.json` Leon's file.
+4. Download the JSON file and copy its content to the: `core/config/voice/google-cloud.json` Leon's file.
 
 :::tip Tip
 The `GOOGLE_APPLICATION_CREDENTIALS` environment variable is used by Google to load the credentials.
@@ -80,17 +80,17 @@ IBM Watson has credentials for each STT service and each TTS service.
 1. [Click here](https://console.bluemix.net/catalog/services/speech-to-text) to create a Speech to Text service.
 2. Click on `Create` (or `Sign up to Create` if you do not have an account yet).
 3. Click on `Service credentials` in the left menu, then expand the generated service credential or create a new one.
-4. Copy `apikey` and `url`, then paste them to the following Leon's file: `server/src/config/voice/watson-stt.json`.
+4. Copy `apikey` and `url`, then paste them to the following Leon's file: `core/config/voice/watson-stt.json`.
 
 #### Watson TTS
 
 1. [Click here](https://console.bluemix.net/catalog/services/text-to-speech) to create a Text to Speech service.
 2. Click on `Create` (or `Sign up to Create` if you do not have an account yet).
 3. Click on `Service credentials` in the left menu, then expand the generated service credential or create a new one.
-4. Copy `API Key` and `URL`, then paste them to the following Leon's file: `server/src/config/voice/watson-tts.json`.
+4. Copy `API Key` and `URL`, then paste them to the following Leon's file: `core/config/voice/watson-tts.json`.
 
 :::tip Tip
-If you are using a version **below** `1.0.0-beta.4`, from the step 3. do: Click on `Manage` in the left menu, then on `Show Credentials`; copy `API Key` and `URL`, then paste them to the respected Leon's files: `server/src/config/voice/watson-stt.json` and `server/src/config/voice/watson-tts.json`.
+If you are using a version **below** `1.0.0-beta.4`, from the step 3. do: Click on `Manage` in the left menu, then on `Show Credentials`; copy `API Key` and `URL`, then paste them to the respected Leon's files: `core/config/voice/watson-stt.json` and `core/config/voice/watson-tts.json`.
 :::
 
 ## Synchronizer
